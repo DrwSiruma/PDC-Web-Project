@@ -2,20 +2,83 @@
 # General
 --------------------------------------------------------------*/
 body {
+    background: #eeeeee;
     font-family: "Open Sans", sans-serif;
-  }
+}
   
-  a {
+a {
     text-decoration: none;
-  }
+}
   
-  a:hover {
+a:hover {
     text-decoration: none;
-  }
+}
+
+@font-face { 
+    font-family: 'Dunkin'; 
+    src: url('../fonts/Dunkin_Sans.otf') format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+}
+
+.btn-orange {
+    color: #FFFFFF;
+    background-color: #FF671F;
+    border-color: #FF671F;
+}
+.btn-orange:hover, .btn-orange:focus, .btn-orange:active {
+    color: #eeeeee;
+    background-color: #af3700;
+    border-color: #af3700;
+}
   
   /* h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
   } */
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+}
+  
+.section-bg {
+    background-color: #eeeeee;
+}
+  
+.section-title {
+    text-align: center;
+    padding-bottom: 30px;
+}
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Dunkin';
+    color: #FF671F;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.section-title h2::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #eee;
+    bottom: 1px;
+}
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #DA1884;
+    bottom: 0;
+}
 
 /*--------------------------------------------------------------
 # Top Bar
@@ -378,4 +441,52 @@ body {
         align-items: center;
         justify-content: flex-end;
     }
+}
+/*--------------------------------------------------------------
+# Promo-Main
+--------------------------------------------------------------*/
+.promo-main .promo-main-card {
+    border-radius: 15px !important;
+    padding: 2.5rem 1.5rem !important;
+}
+.promo-main .promo-main-card h2 {
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Dunkin';
+    color: #FF671F;
+    text-transform: uppercase;
+    /* padding-bottom: 20px; */
+    position: relative;
+}
+.promo-main .promo-main-card .promo-text {
+    padding: 1.5rem 0 !important;
+}
+
+.carousel {
+    height: 100%;
+}
+
+/*--------------------------------------------------------------
+# Outlets
+--------------------------------------------------------------*/
+.outlet-main .swiper-slide img {
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.outlet-main .swiper-slide img:hover {
+    opacity: 1;
+}
+.outlet-main .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+}
+.outlet-main .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #FF671F;
+}
+.outlet-main .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #FF671F;
 }

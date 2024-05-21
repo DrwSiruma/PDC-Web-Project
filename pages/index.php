@@ -47,7 +47,7 @@
         <!-- ======= End Navigation ======= -->
 
         <!-- ======= Hero ======= -->
-        <section id="hero">
+        <section id="hero" class="hero">
             <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
                 <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -104,6 +104,92 @@
             </div>
         </section>
         <!-- ======= End Cta Section ======= -->
+
+        <!-- ======= Promo Section ======= -->
+        <section id="promo-main" class="promo-main">
+            <div class="container">
+                <div class="card shadow promo-main-card">
+                    <div class="card-body">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-7">
+                                <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                        <h2>See Our Local Promos</h2>
+                                        <div class="promo-text">
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        </div>
+                                        <button type="button" class="btn btn-orange mb-3">See More</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-5">
+                                <div id="carouseSlides" class="carousel slide h-100" data-bs-ride="carousel">
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img src="../assets/img/promo/dummy_img_1.jpg" class="d-block w-100" alt="image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../assets/img/promo/dummy_img_2.jpg" class="d-block w-100" alt="image">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img src="../assets/img/promo/dummy_img_3.jpg" class="d-block w-100" alt="image">
+                                        </div>
+                                        <!-- Add more slides as needed -->
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouseSlides" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouseSlides" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-bs-target="#carouselSlides" data-bs-slide-to="0" class="active"></li>
+                                        <li data-bs-target="#carouselSlides" data-bs-slide-to="1"></li>
+                                        <li data-bs-target="#carouselSlides" data-bs-slide-to="2"></li>
+                                        <!-- Add more indicators for additional slides -->
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ======= End Promo Section ======= -->
+
+        <!-- ======= Outlets Section ======= -->
+        <section id="outlet-main" class="outlet-main">
+            <div class="container">
+                <div class="section-title">
+                    <h2>See Our Outlets</h2>
+                </div>
+                <div class="outlet-slider swiper">
+                    <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-slide"><img src="../assets/img/outlets/atc.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/casimiro.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/centro.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/dona_isabel.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/dona_manuela.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/manila_times.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/moonwalk.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/naia.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/northgate.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/pitx.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/poblacion.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/sf_pilar.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/south_station.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/southville.jpg" class="img-fluid" alt=""></div>
+                        <div class="swiper-slide"><img src="../assets/img/outlets/verdant.jpg" class="img-fluid" alt=""></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- ======= End Outlets Section ======= -->
 
     </body>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

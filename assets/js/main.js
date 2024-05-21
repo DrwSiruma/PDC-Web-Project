@@ -84,5 +84,41 @@ window.addEventListener('scroll', () => {
       heroCarouselIndicators.innerHTML += "<li data-bs-target='#heroCarousel' data-bs-slide-to='" + index + "'></li>"
   });
 
+  /**
+   * Outlets Slider
+   */
+  new Swiper('.outlet-slider', {
+    speed: 400,
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'bullets',
+      clickable: true
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 40
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 80
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 80
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 120
+      }
+    }
+  });
+
 
 })()
