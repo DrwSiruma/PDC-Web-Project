@@ -469,12 +469,30 @@ section {
 /*--------------------------------------------------------------
 # Outlets
 --------------------------------------------------------------*/
-.outlet-main .swiper-slide img {
+/* .outlet-main .swiper-slide img {
     opacity: 0.5;
     transition: 0.3s;
 }
 .outlet-main .swiper-slide img:hover {
     opacity: 1;
+} */
+.outlet-main .outlet-card {
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(34, 34, 34, 0.07);
+    padding: 30px 20px;
+    background: #fff;
+}
+.outlet-main .outlet-card img {
+    max-width: 100%;
+    margin: 0 0 30px 0;
+}
+.outlet-main .outlet-card h4 {
+    font-weight: 700;
+    font-family: 'Dunkin';
+    color: #FF671F;
+    margin-bottom: 2px;
+    font-size: 12px;
 }
 .outlet-main .swiper-pagination {
     margin-top: 30px;

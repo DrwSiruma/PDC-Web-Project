@@ -48,10 +48,10 @@
             <div class="row">
             <div class="col-lg-9 text-center text-lg-start">
                 <h3>Who are we?</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Panda Development Corporation, founded on August 3, 1978, initially focused on real estate before expanding into the restaurant and fast-food sectors on June 4, 1994. Currently, it specializes in manufacturing and retailing doughnuts as a Dunkin’ franchisee in Muntinlupa, Parañaque, Las Piñas, and Quezon province. The company's main office is at Building 2-A, Philcrest Compound, Km. 23, West Service Road, Bo. Cupang, Muntinlupa City, with a satellite office at Maharlika Highway, Brgy. Isabang, Tayabas City.</p>
             </div>
             <div class="col-lg-3 cta-btn-container text-center">
-                <a href="#" class="cta-btn align-middle">Learn More</a>
+                <a href="about.php" class="cta-btn align-middle">Learn More</a>
             </div>
             </div>
 
@@ -123,8 +123,19 @@
             </div>
             <div class="outlet-slider swiper">
                 <div class="swiper-wrapper align-items-center">
-                    <div class="swiper-slide"><img src="../assets/img/outlets/atc.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/casimiro.jpg" class="img-fluid" alt=""></div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/atc.jpg" class="img-fluid" alt="">
+                            <h4>DUNKIN<span style="color: #DA1884">'</span> ATC</h4>
+                            <!-- <span class="text-primary"></span> -->
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/casimiro.jpg" class="img-fluid" alt="">
+                            <h4>DUNKIN<span style="color: #DA1884">'</span> CASIMIRO</h4>
+                        </div>
+                    </div>
                     <div class="swiper-slide"><img src="../assets/img/outlets/centro.jpg" class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src="../assets/img/outlets/dona_isabel.jpg" class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src="../assets/img/outlets/dona_manuela.jpg" class="img-fluid" alt=""></div>
@@ -134,8 +145,18 @@
                     <div class="swiper-slide"><img src="../assets/img/outlets/northgate.jpg" class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src="../assets/img/outlets/pitx.jpg" class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src="../assets/img/outlets/poblacion.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/sf_pilar.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/south_station.jpg" class="img-fluid" alt=""></div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/sf_pilar.jpg" class="img-fluid" alt="">
+                            <h4>DUNKIN<span style="color: #DA1884">'</span> SF PILAR</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/south_station.jpg" class="img-fluid" alt="">
+                            <h4>DUNKIN<span style="color: #DA1884">'</span> SOUTH STATION</h4>
+                        </div>
+                    </div>
                     <div class="swiper-slide"><img src="../assets/img/outlets/southville.jpg" class="img-fluid" alt=""></div>
                     <div class="swiper-slide"><img src="../assets/img/outlets/verdant.jpg" class="img-fluid" alt=""></div>
                 </div>
