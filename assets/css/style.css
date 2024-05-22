@@ -490,3 +490,50 @@ section {
 .outlet-main .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #FF671F;
 }
+
+/*--------------------------------------------------------------
+# Join-Main
+--------------------------------------------------------------*/
+.join-main {
+    background: #DA1884;
+    padding: 80px 0;
+}
+.join-main h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700;
+}
+.join-main p {
+    color: #fff;
+}
+.join-main .join-btn {
+    background-color: transparent;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 4px;
+}
+.join-main .join-btn:hover {
+    background: #fff;
+    color: #DA1884;
+}
+@media (max-width: 1024px) {
+    .join-main {
+        background-attachment: scroll;
+    }
+}
+@media (min-width: 769px) {
+    .join-main .join-btn-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}

@@ -102,7 +102,7 @@
                     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </div>
                 <div class="col-lg-3 cta-btn-container text-center">
-                    <a href="#" class="cta-btn align-middle">Join Now</a>
+                    <a href="#" class="cta-btn align-middle">Learn More</a>
                 </div>
                 </div>
 
@@ -195,6 +195,24 @@
             </div>
         </section>
         <!-- ======= End Outlets Section ======= -->
+
+        <!-- ======= Join-main Section ======= -->
+        <section id="join-main" class="join-main">
+            <div class="container">
+
+                <div class="row">
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h3>Want to join our team?</h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="col-lg-3 join-btn-container text-center">
+                    <a href="#" class="join-btn align-middle">Apply Here</a>
+                </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- ======= End Join-main Section ======= -->
 
     </body>
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
