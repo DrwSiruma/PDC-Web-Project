@@ -11,7 +11,7 @@
                             <div class="text-center">
                                 <img src="../assets/img/PDC-Logo.png" style="max-width:50%;vertical-align: middle;margin-bottom:30px;" class="img-fluid" alt="logo">
                             </div>
-                            <p>This is a short sentence</p>
+                            <!-- <p>This is a short sentence</p> -->
                         </div>
                         <!-- Grid column -->
 
