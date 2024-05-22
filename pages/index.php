@@ -12,11 +12,6 @@
         <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
         <!-- MAIN CSS -->
         <link href="../assets/css/style.css" rel="stylesheet">
-        <style>
-            .swiper-wrapper {
-                height: inherit!important;
-            }
-        </style>
     </head>
     <body>
         <!-- ======= Top Bar ======= -->

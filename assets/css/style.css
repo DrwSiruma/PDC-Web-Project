@@ -490,6 +490,9 @@ section {
 .outlet-main .swiper-pagination .swiper-pagination-bullet-active {
     background-color: #FF671F;
 }
+.outlet-main .swiper-wrapper {
+    height: inherit!important;
+}
 
 /*--------------------------------------------------------------
 # Join-Main
