@@ -26,7 +26,7 @@
                 </div>
                 <div class="social-links d-none d-md-block">
                     
-                    <a href="mailto:pdc_email@sample.com"><i class="bi bi-envelope-fill"></i></a>
+                    <a href="mailto:pandadevtcorp@yahoo.com"><i class="bi bi-envelope-fill"></i></a>
                     <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
                     
                 </div>
