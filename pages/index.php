@@ -126,39 +126,107 @@
                     <div class="swiper-slide">
                         <div class="outlet-card">
                             <img src="../assets/img/outlets/atc.jpg" class="img-fluid" alt="">
-                            <h4>DUNKIN<span style="color: #DA1884">'</span> ATC</h4>
-                            <!-- <span class="text-primary"></span> -->
+                            <h4>ATC</h4>
+                            <span class="text-primary">Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
                             <img src="../assets/img/outlets/casimiro.jpg" class="img-fluid" alt="">
-                            <h4>DUNKIN<span style="color: #DA1884">'</span> CASIMIRO</h4>
+                            <h4>CASIMIRO</h4>
+                            <span class="text-primary">Ground Floor Casimiro Commercial Center Building Baragay Talon Uno, Las Piñas City, Metro Manila.</span>
                         </div>
                     </div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/centro.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/dona_isabel.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/dona_manuela.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/manila_times.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/moonwalk.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/naia.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/northgate.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/pitx.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/poblacion.jpg" class="img-fluid" alt=""></div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/centro.jpg" class="img-fluid" alt="">
+                            <h4>CENTRO</h4>
+                            <span class="text-primary">Spectrum Midway, Alabang, Muntinlupa, Metro Manila.</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/dona_isabel.jpg" class="img-fluid" alt="">
+                            <h4>DOÑA ISABEL</h4>
+                            <span class="text-primary">#232 Doña Isabel Bldg. National rd. Bayanan, Muntinlupa, Metro Manila.</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/dona_manuela.jpg" class="img-fluid" alt="">
+                            <h4>DOÑA MANUELA</h4>
+                            <span class="text-primary">Doña Manuela Food Street, Alabang-Zapote Road Pamplona Tres, Las Pinas City, Metro Manila.</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/manila_times.jpg" class="img-fluid" alt="">
+                            <h4>MANILA TIMES</h4>
+                            <span class="text-primary">Aria, Talon Uno, Las Piñas City, Metro Manila.</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/moonwalk.jpg" class="img-fluid" alt="">
+                            <h4>MOONWALK</h4>
+                            <span class="text-primary">432 Alarang, Alabang–Zapote Rd, Talon 1, Las Piñas, Metro Manila.</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/naia.jpg" class="img-fluid" alt="">
+                            <h4>NAIA</h4>
+                            <span class="text-primary">Arry Plaza, 2142 Airport Rd, Ballaran, Parañaque, Metro Manila.</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/northgate.jpg" class="img-fluid" alt="">
+                            <h4>NORTHGATE</h4>
+                            <span class="text-primary">Northgate Ave, Fastbytes Northgate, Alabang, Muntinlupa, Metro Manila.</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/pitx.jpg" class="img-fluid" alt="">
+                            <h4>PITX</h4>
+                            <span class="text-primary">PITX, 8344 E3, Tambo, Parañaque, Metro Manila.</span>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/poblacion.jpg" class="img-fluid" alt="">
+                            <h4>POBLACION</h4>
+                            <span class="text-primary">National Road, Poblacion, Muntinlupa, Metro Manila.</span>
+                        </div>
+                    </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
                             <img src="../assets/img/outlets/sf_pilar.jpg" class="img-fluid" alt="">
-                            <h4>DUNKIN<span style="color: #DA1884">'</span> SF PILAR</h4>
+                            <h4>SF PILAR</h4>
+                            <span class="text-primary">101 Lexicor Building Alabang Zapote Road Corner San Francisco Sreet Almanza Road Almanza Uno Lone District, Las Piñas, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
                             <img src="../assets/img/outlets/south_station.jpg" class="img-fluid" alt="">
-                            <h4>DUNKIN<span style="color: #DA1884">'</span> SOUTH STATION</h4>
+                            <h4>SOUTH STATION</h4>
+                            <span class="text-primary">Green Bldg LS1-26, Alabang-South Station Ramp, Muntinlupa, Metro Manila.</span>
                         </div>
                     </div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/southville.jpg" class="img-fluid" alt=""></div>
-                    <div class="swiper-slide"><img src="../assets/img/outlets/verdant.jpg" class="img-fluid" alt=""></div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/southville.jpg" class="img-fluid" alt="">
+                            <h4>SOUTHVILLE</h4>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="outlet-card">
+                            <img src="../assets/img/outlets/verdant.jpg" class="img-fluid" alt="">
+                            <h4>VERDANT</h4>
+                            <span class="text-primary">Unit Door A8 Santiagel Building Verdant Avenue Corner Alabang Zapote Road Barangay Pamplona Tres, Las Piñas, Metro Manila.</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
