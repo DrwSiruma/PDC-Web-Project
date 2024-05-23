@@ -218,6 +218,7 @@
                         <div class="outlet-card">
                             <img src="../assets/img/outlets/southville.jpg" class="img-fluid" alt="">
                             <h4>SOUTHVILLE</h4>
+                            <span class="text-primary">Lot 1-A-A The Edge Building CAA Road (J. Aguilar Avenue) Pulang Lupa 2 1st District, Las Piñas, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
