@@ -22,7 +22,7 @@
         <section id="topbar" class="d-flex align-items-center">
             <div class="container d-flex justify-content-center justify-content-md-between">
                 <div class="contact-info d-flex align-items-center">
-                    <i class="bi bi-hourglass-split"></i> Office Hours&nbsp;<b>Mon - Fri: 9:00 am - 6:00 pm</b>
+                    <i class="bi bi-hourglass-split"></i> Office Hours :&nbsp;<b>Mon - Fri, 9:00 am - 6:00 pm</b>
                 </div>
                 <div class="social-links d-none d-md-block">
                     

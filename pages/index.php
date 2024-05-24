@@ -70,7 +70,7 @@
                                 <div class="col-auto">
                                     <h2>See Our Local Promos</h2>
                                     <div class="promo-text">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                        <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
                                     </div>
                                     <button type="button" class="btn btn-orange mb-3">See More</button>
                                 </div>
@@ -81,13 +81,13 @@
                             <div id="carouseSlides" class="carousel slide h-100" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="../assets/img/promo/dummy_img_1.jpg" class="d-block w-100" alt="image">
+                                        <img src="../assets/img/promo/BEARY IN LOVE.png" class="d-block w-100" alt="image">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../assets/img/promo/dummy_img_2.jpg" class="d-block w-100" alt="image">
+                                        <img src="../assets/img/promo/EASTER MUNCHKIN DEAL.png" class="d-block w-100" alt="image">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="../assets/img/promo/dummy_img_3.jpg" class="d-block w-100" alt="image">
+                                        <img src="../assets/img/promo/SUMMER DELIGHT PROMO.png" class="d-block w-100" alt="image">
                                     </div>
                                     <!-- Add more slides as needed -->
                                 </div>
@@ -125,105 +125,105 @@
                 <div class="swiper-wrapper align-items-center">
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/atc.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/atc.png" class="img-fluid" alt="">
                             <h4>ATC</h4>
                             <span class="text-primary">Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/casimiro.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
                             <h4>CASIMIRO</h4>
                             <span class="text-primary">Ground Floor Casimiro Commercial Center Building Baragay Talon Uno, Las Piñas City, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/centro.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
                             <h4>CENTRO</h4>
                             <span class="text-primary">Spectrum Midway, Alabang, Muntinlupa, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/dona_isabel.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/dona_isabel.png" class="img-fluid" alt="">
                             <h4>DOÑA ISABEL</h4>
                             <span class="text-primary">#232 Doña Isabel Bldg. National rd. Bayanan, Muntinlupa, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/dona_manuela.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/dona_manuela.png" class="img-fluid" alt="">
                             <h4>DOÑA MANUELA</h4>
                             <span class="text-primary">Doña Manuela Food Street, Alabang-Zapote Road Pamplona Tres, Las Pinas City, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/manila_times.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/manila_times.png" class="img-fluid" alt="">
                             <h4>MANILA TIMES</h4>
                             <span class="text-primary">Aria, Talon Uno, Las Piñas City, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/moonwalk.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/moonwalk.png" class="img-fluid" alt="">
                             <h4>MOONWALK</h4>
                             <span class="text-primary">432 Alarang, Alabang–Zapote Rd, Talon 1, Las Piñas, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/naia.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/naia.png" class="img-fluid" alt="">
                             <h4>NAIA</h4>
                             <span class="text-primary">Arry Plaza, 2142 Airport Rd, Ballaran, Parañaque, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/northgate.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/northgate.png" class="img-fluid" alt="">
                             <h4>NORTHGATE</h4>
                             <span class="text-primary">Northgate Ave, Fastbytes Northgate, Alabang, Muntinlupa, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/pitx.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
                             <h4>PITX</h4>
                             <span class="text-primary">PITX, 8344 E3, Tambo, Parañaque, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/poblacion.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/poblacion.png" class="img-fluid" alt="">
                             <h4>POBLACION</h4>
                             <span class="text-primary">National Road, Poblacion, Muntinlupa, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/sf_pilar.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/sf_pilar.png" class="img-fluid" alt="">
                             <h4>SF PILAR</h4>
                             <span class="text-primary">101 Lexicor Building Alabang Zapote Road Corner San Francisco Sreet Almanza Road Almanza Uno Lone District, Las Piñas, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/south_station.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
                             <h4>SOUTH STATION</h4>
                             <span class="text-primary">Green Bldg LS1-26, Alabang-South Station Ramp, Muntinlupa, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/southville.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/southville.png" class="img-fluid" alt="">
                             <h4>SOUTHVILLE</h4>
                             <span class="text-primary">Lot 1-A-A The Edge Building CAA Road (J. Aguilar Avenue) Pulang Lupa 2 1st District, Las Piñas, Metro Manila.</span>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/verdant.jpg" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/verdant.png" class="img-fluid" alt="">
                             <h4>VERDANT</h4>
                             <span class="text-primary">Unit Door A8 Santiagel Building Verdant Avenue Corner Alabang Zapote Road Barangay Pamplona Tres, Las Piñas, Metro Manila.</span>
                         </div>
@@ -242,7 +242,7 @@
             <div class="row">
             <div class="col-lg-9 text-center text-lg-start">
                 <h3>Want to join our team?</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> Are you passionate about delicious doughnuts and exceptional customer service? Join our team at Panda Development Corporation's Dunkin’ outlets! We're looking for enthusiastic, dedicated individuals to be part of our growing family in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Enjoy a dynamic work environment, opportunities for growth, and the chance to bring smiles to our customers every day. Visit our website to explore current job openings and apply today. Become a part of the Dunkin’ experience with Panda Development Corporation!</p>
             </div>
             <div class="col-lg-3 join-btn-container text-center">
                 <a href="careers.php" class="join-btn align-middle">Apply Here</a>

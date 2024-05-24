@@ -1,5 +1,5 @@
          <!-- ======= Footer Section ======= -->
-        <footer class="text-center text-lg-start text-white" style="background: #000;">
+        <footer class="text-center text-lg-start text-white" style="background: #000; font-size: 13px;">
             <!-- Grid container -->
             <div class="container p-4 pb-0">
                 <!-- Section: Links -->

@@ -85,10 +85,16 @@ section {
 --------------------------------------------------------------*/
 #topbar {
     background: #FF671F;
+    font-family: 'Dunkin';
+    text-transform: uppercase;
     font-size: 15px;
     height: 40px;
     padding: 0;
     color: #fff;
+}
+#topbar b {
+    font-weight: 500;
+    color: #000000;
 }
 #topbar .contact-info a {
     line-height: 0;
@@ -108,7 +114,7 @@ section {
 }
 #topbar .social-links a {
     color: #fff;
-    padding: 4px 12px;
+    padding: 5px;
     display: inline-block;
     line-height: 1px;
     transition: 0.3s;
@@ -463,6 +469,7 @@ section {
 }
 
 .carousel {
+    background: #000;
     height: 100%;
 }
 
@@ -482,6 +489,7 @@ section {
     box-shadow: 0px 0px 12px 0px rgba(34, 34, 34, 0.07);
     padding: 30px 20px;
     background: #fff;
+    height: 330px;
 }
 .outlet-main .outlet-card img {
     max-width: 100%;
