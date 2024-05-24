@@ -93,7 +93,6 @@
     <!-- VENDOR JS -->
     <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/vendor/bootstrap/js/bootstrap.min.js"></script>
-    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
     <!-- MAIN JS -->
     <script src="../assets/js/main.js"></script>
