@@ -847,3 +847,29 @@ section {
     font-size: 18px;
     margin: 0 2px;
 }
+
+/*--------------------------------------------------------------
+# Promo
+--------------------------------------------------------------*/
+.promo .promo-card {
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(34, 34, 34, 0.07);
+    padding: 30px 20px;
+    background: #fff;
+}
+.promo .promo-card img {
+    margin: 0 0 30px 0;
+}
+.promo .promo-card h4 {
+    font-weight: 700;
+    font-family: 'Dunkin';
+    margin-bottom: 2px;
+    font-size: 18px;
+    color: #FF671F;
+}
+.promo .promo-card p {
+    padding-top: 10px;
+    font-size: 12px;
+    color: #000000;
+}
