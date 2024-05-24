@@ -11,7 +11,7 @@
         <title>Panda Development Corp.</title>
 
         <!-- VENDOR CSS -->
-        <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
         <link href="../assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
         <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
