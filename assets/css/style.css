@@ -31,6 +31,10 @@ a:hover {
     background-color: #af3700;
     border-color: #af3700;
 }
+
+.text-orange {
+    color: #FF671F;
+}
   
   /* h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
@@ -87,7 +91,7 @@ section {
     background: #FF671F;
     font-family: 'Dunkin';
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 13px;
     height: 40px;
     padding: 0;
     color: #fff;
@@ -469,7 +473,7 @@ section {
 }
 
 .carousel {
-    background: #000;
+    background: radial-gradient(circle, #ffd1bc, #FF671F);
     height: 100%;
 }
 
@@ -629,6 +633,13 @@ section {
 /*--------------------------------------------------------------
 # Careers Page
 --------------------------------------------------------------*/
+.careers-hero {
+    background-image: url('../img/slides/slide-1.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5)!important;
+    background-blend-mode: multiply;
+}
 .careers .job-card {
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -731,4 +742,108 @@ section {
     .contact .btn-submit {
         width: auto;
     }
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+.about-hero {
+    background-image: url('../img/slides/slide-2.jpg');
+    background-size: cover; 
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5)!important;
+    background-blend-mode: multiply;
+}
+
+.cprofile .profile-title {
+    color: #FF671F;
+}
+.cprofile .card-custom {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.core .row {
+    overflow: hidden;
+  }
+.core .content-item {
+    padding: 40px;
+    border-left: 1px solid #aaa;
+    border-bottom: 1px solid #aaa;
+    margin: -1px;
+}
+.core .content-item span {
+    display: block;
+    font-size: 24px;
+    font-weight: 400;
+    color: #FF671F;
+  }
+.core .content-item h4 {
+    font-size: 26px;
+    font-weight: 300;
+    /* font-family: 'Dunkin'; */
+    color: #FF671F;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 20px 0;
+  }
+.core .content-item p {
+    color: #aaaaaa;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+@media (max-width: 768px) {
+    .core .content-item {
+      padding: 40px 0;
+    }
+}
+
+/*--------------------------------------------------------------
+# Team
+--------------------------------------------------------------*/
+.team .member {
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 12px 0px rgba(34, 34, 34, 0.07);
+    padding: 30px 20px;
+    background: #fff;
+}
+.team .member img {
+    max-width: 60%;
+    border-radius: 50%;
+    margin: 0 0 30px 0;
+}
+.team .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+}
+.team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 14px;
+    color: #FF671F;
+}
+.team .member p {
+    padding-top: 10px;
+    font-size: 12px;
+    color: #000000;
+}
+.team .member .social {
+    margin-top: 15px;
+}
+.team .member .social a {
+    color: #919191;
+    transition: 0.3s;
+}
+.team .member .social a:hover {
+    color: #af3700;
+}
+.team .member .social i {
+    font-size: 18px;
+    margin: 0 2px;
 }

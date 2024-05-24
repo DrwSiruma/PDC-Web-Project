@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
     <!-- ======= Hero ======= -->
-    <section id="hero" class="hero d-flex align-items-center" style="background-image: url('../assets/img/slides/slide-1.jpg'); background-size: cover; background-position: center;">
+    <section id="hero" class="hero d-flex align-items-center careers-hero">
         <div class="container text-center position-relative" data-aos="fade-in">
             <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
             <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
