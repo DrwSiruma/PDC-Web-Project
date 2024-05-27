@@ -6,7 +6,7 @@
             <div class="row">
             <div class="col-lg-9 text-center text-lg-start">
                 <h3>Contact Us</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> We'd love to hear from you! Whether you have questions, feedback, or need assistance, our team at Panda Development Corporation is here to help. Reach out to us through our main office at Building 2-A, Philcrest Compound, Km. 23, West Service Road, Bo. Cupang, Muntinlupa City. You can also contact us via phone, email or filling up the form below. Connect with us today and let us assist you with your needs.</p>
             </div>
             <div class="col-lg-3 send-btn-container text-center">
                 <a href="mailto:pandadevtcorp@yahoo.com" class="send-btn align-middle">Send Email</a>
@@ -24,7 +24,7 @@
                 <div class="ps-5 pe-5">
                     <div class="contact-card">
                         <h2>Contact Us</h2>
-                        <p>Let us tailor a service package that meets your needs. Tell us a little about your business, and we will get back to you with some suggestions.</p>
+                        <p>Please fill up this form and provide correct details together with your concerns.</p>
                         <form>
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>

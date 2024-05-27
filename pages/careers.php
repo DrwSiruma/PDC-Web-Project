@@ -2,7 +2,7 @@
     <!-- ======= Hero ======= -->
     <section id="hero" class="hero d-flex align-items-center careers-hero">
         <div class="container text-center position-relative" data-aos="fade-in">
-            <h2 class="animate__animated animate__fadeInDown">Sequi ea ut et est quaerat</h2>
+            <h2 class="animate__animated animate__fadeInDown">Panda Development Corporation</h2>
             <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
             <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
@@ -16,7 +16,7 @@
             <div class="row">
             <div class="col-lg-9 text-center text-lg-start">
                 <h3>Want to join us today?</h3>
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p> Are you passionate about delicious doughnuts and exceptional customer service? Join our team at Panda Development Corporation's Dunkin’ outlets! We're looking for enthusiastic, dedicated individuals to be part of our growing family in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Enjoy a dynamic work environment, opportunities for growth, and the chance to bring smiles to our customers every day. Visit our website to explore current job openings and apply today. Become a part of the Dunkin’ experience with Panda Development Corporation!</p>
             </div>
             <div class="col-lg-3 join-btn-container text-center">
                 <a href="#" class="join-btn align-middle">Apply Now</a>
@@ -39,8 +39,10 @@
                     <div class="card shadow-sm">
                         <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Image 1">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Empowering Leadership</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h5 class="card-title text-center text-orange">Empowering Leadership</h5>
+                            <p class="card-text">
+                                At Panda Development Corporation, our leadership empowers you to take initiative and make impactful decisions. We foster a culture of trust and collaboration, ensuring every team member feels valued and supported in their role.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -48,8 +50,10 @@
                     <div class="card shadow-sm">
                         <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Image 2">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Visionary Teams</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h5 class="card-title text-center text-orange">Visionary Teams</h5>
+                            <p class="card-text">
+                                Join our visionary teams at Panda Development Corporation, where innovative thinking and teamwork drive our success. You'll work alongside passionate professionals dedicated to delivering excellence and achieving common goals.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -57,8 +61,10 @@
                     <div class="card shadow-sm">
                         <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Image 3">
                         <div class="card-body">
-                            <h5 class="card-title text-center">Pathways to Growth</h5>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <h5 class="card-title text-center text-orange">Pathways to Growth</h5>
+                            <p class="card-text">
+                                We believe in your potential and provide clear pathways to growth within Panda Development Corporation. With ongoing training, mentorship, and career advancement opportunities, you can build a fulfilling and dynamic career with us.
+                            </p>
                         </div>
                     </div>
                 </div>
