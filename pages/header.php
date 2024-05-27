@@ -11,6 +11,10 @@
 
         <title>Panda Development Corp.</title>
 
+        <!-- Favicons -->
+        <link href="../assets/img/favicon.png" rel="icon">
+        <link href="../assets/img/favicon.png" rel="apple-touch-icon">
+
         <!-- VENDOR CSS -->
         <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
         <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
