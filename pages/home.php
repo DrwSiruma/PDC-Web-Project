@@ -65,7 +65,7 @@
                                     <div class="promo-text">
                                         <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
                                     </div>
-                                    <button type="button" class="btn btn-orange mb-3">See More</button>
+                                    <a href="promos.php" class="btn btn-orange mb-3">See More</a>
                                 </div>
                             </div>
                         </div>

@@ -39,10 +39,10 @@
         <!-- ======= Navigation ======= -->
         <header class="header">
             <div class="container d-flex align-items-center">
-                <a href="index.php" class="logo me-auto"><img src="../assets/img/PDC-Logo.png" alt="logo" class="img-fluid"></a>
+                <a href="home.php" class="logo me-auto"><img src="../assets/img/PDC-Logo.png" alt="logo" class="img-fluid"></a>
                 
                 <nav id="navbar" class="navbar"><ul>
-                    <li><a class="nav-link <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>" href="index.php">Home</a></li>
+                    <li><a class="nav-link <?php echo ($current_page == 'home.php') ? 'active' : ''; ?>" href="home.php">Home</a></li>
                     <li><a class="nav-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>" href="about.php">About</a></li>
                     <li><a class="nav-link <?php echo (in_array($current_page, $career_page)) ? 'active' : ''; ?>" href="careers.php">Careers</a></li>
                     <li><a class="nav-link <?php echo ($current_page == 'promos.php') ? 'active' : ''; ?>" href="promos.php">Promos</a></li>
