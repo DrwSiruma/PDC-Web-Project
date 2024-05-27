@@ -195,7 +195,7 @@
                     </div>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/sf_pilar.png" class="img-fluid" alt="">
+                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
                             <h4>SF PILAR</h4>
                             <span class="text-primary">101 Lexicor Building Alabang Zapote Road Corner San Francisco Sreet Almanza Road Almanza Uno Lone District, Las Piñas, Metro Manila.</span>
                         </div>

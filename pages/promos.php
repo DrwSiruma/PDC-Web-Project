@@ -39,40 +39,67 @@
                 <h2>Promos</h2>
             </div>
 
-            <div class="row">
-                <div class="col-lg-4 col-md-6 align-items-stretch">
-                    <div class="p-3">
-                        <div class="promo-card">
-                            <img src="../assets/img/promo/BEARY IN LOVE.png" alt="">
-                            <h4>Local Promo 1</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
-                            <!-- <button class="btn"></button> -->
+            <div class="card shadow promo-card">
+                <div class="card-body">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-5">
+                            <img src="../assets/img/promo/BEARY IN LOVE.png" class="d-block w-100" alt="image">
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <h2 class="p-2">BEARy in Love</h2>
+                                    <div class="promo-text">
+                                        <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
+                                    </div>
+                                    <div class="promo-runs">Promo runs until February 12-15, 2024</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 align-items-stretch">
-                    <div class="p-3">
-                        <div class="promo-card">
-                            <img src="../assets/img/promo/EASTER MUNCHKIN DEAL.png" alt="">
-                            <h4>Local Promo 2</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
+            <div class="card shadow promo-card">
+                <div class="card-body">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-5">
+                            <img src="../assets/img/promo/EASTER MUNCHKIN DEAL.png" class="d-block w-100" alt="image">
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <h2 class="p-2">Easter Munchkin Deal</h2>
+                                    <div class="promo-text">
+                                        <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
+                                    </div>
+                                    <div class="promo-runs">Promo runs until March 31, 2024</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-lg-4 col-md-6 align-items-stretch">
-                    <div class="p-3">
-                        <div class="promo-card">
-                            <img src="../assets/img/promo/SUMMER DELIGHT PROMO.png" alt="">
-                            <h4>Local Promo 3</h4>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </p>
+            <div class="card shadow promo-card">
+                <div class="card-body">
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-md-5">
+                            <img src="../assets/img/promo/SUMMER DELIGHT PROMO.png" class="d-block w-100" alt="image">
+                        </div>
+
+                        <div class="col-md-7">
+                            <div class="row justify-content-center">
+                                <div class="col-auto">
+                                    <h2 class="p-2">Summer Delight Promo</h2>
+                                    <div class="promo-text">
+                                        <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
+                                    </div>
+                                    <div class="promo-runs">Promo runs until April 26, 2024</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
