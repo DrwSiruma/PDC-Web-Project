@@ -885,3 +885,24 @@ section {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
+/*--------------------------------------------------------------
+# Application form
+--------------------------------------------------------------*/
+.application-form {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn-app-form {
+    color: #fff;
+    background-color: #FF671F;
+    border-color: #FF671F;
+}
+.btn-app-form:hover {
+    background-color: #af3700;
+    border-color: #af3700;
+}

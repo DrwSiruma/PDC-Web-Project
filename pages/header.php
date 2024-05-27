@@ -1,6 +1,7 @@
 <?php
     // Get the current script name
     $current_page = basename($_SERVER['PHP_SELF']);
+    $career_page = ['careers.php', 'application-form.php'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +44,7 @@
                 <nav id="navbar" class="navbar"><ul>
                     <li><a class="nav-link <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>" href="index.php">Home</a></li>
                     <li><a class="nav-link <?php echo ($current_page == 'about.php') ? 'active' : ''; ?>" href="about.php">About</a></li>
-                    <li><a class="nav-link <?php echo ($current_page == 'careers.php') ? 'active' : ''; ?>" href="careers.php">Careers</a></li>
+                    <li><a class="nav-link <?php echo (in_array($current_page, $career_page)) ? 'active' : ''; ?>" href="careers.php">Careers</a></li>
                     <li><a class="nav-link <?php echo ($current_page == 'promos.php') ? 'active' : ''; ?>" href="promos.php">Promos</a></li>
                     <li><a class="nav-link <?php echo ($current_page == 'contact.php') ? 'active' : ''; ?>" href="contact.php">Contact Us</a></li>
                 </ul><i class="bi bi-list mobile-nav-toggle"></i></nav>
