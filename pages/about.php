@@ -57,9 +57,9 @@
                 <div class="col-lg-4 col-md-6 content-item">
                     <h4>Result Driven</h4>
                     <p>
-                        •We are serious about our goals. We proactively MAKE THINGS HAPPEN.
+                        • We are serious about our goals. We proactively MAKE THINGS HAPPEN.
                         <br />
-                        •We have a strong PASSION TO EXCEL. We commit to be BETTER THAN OUR BEST every day.
+                        • We have a strong PASSION TO EXCEL. We commit to be BETTER THAN OUR BEST every day.
                         <br />
                         • We are CRITICAL THINKERS. The results we produce are products of a well-thought-out actions.</p>
                 </div>
@@ -67,7 +67,7 @@
                 <div class="col-lg-4 col-md-6 content-item">
                     <h4>Synergy</h4>
                     <p>
-                        •We have more to WIN. We believe our individual efforts makes up our success.
+                        • We have more to WIN. We believe our individual efforts makes up our success.
                         <br />
                         • We are self-disciplined. We believe success begins with each team member’s initiative.
                         <br />
@@ -101,10 +101,10 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="member">
                         <img src="../assets/img/team/default.png" alt="">
-                        <h4>MA. CONSUELO GUERERRO</h4>
-                        <span>President</span>
+                        <h4>MA. PILAR LORENZO</h4>
+                        <span>Chairman</span>
                         <p>
-                            Meet the President of Panda Development Corporation, a visionary leader driving our success in the dynamic food industry. With a rich background in business management and a commitment to excellence, our president has been instrumental in expanding our Dunkin' franchise operations across Muntinlupa, Parañaque, Las Piñas, and Quezon province. Under their leadership, Panda Development Corporation continues to thrive, delivering quality products and exceptional customer service. Learn more about our president's journey and contributions to our company's growth and innovation.
+                            Introducing the Chairman of Panda Development Corporation, whose strategic foresight and leadership have been pivotal in guiding our company towards sustained growth and success. With extensive experience in corporate governance and a deep understanding of market dynamics, our chairman ensures that we uphold the highest standards of excellence in all our endeavors. Their vision has helped shape our journey, driving expansion and innovation across our Dunkin’ franchises. Discover more about our chairman’s impact and leadership.
                         </p>
                     </div>
                 </div>
@@ -112,10 +112,10 @@
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="member">
                         <img src="../assets/img/team/default.png" alt="">
-                        <h4>MA. PILAR LORENZO</h4>
-                        <span>Chairman</span>
+                        <h4>MA. CONSUELO GUERERRO</h4>
+                        <span>President</span>
                         <p>
-                            Introducing the Chairman of Panda Development Corporation, whose strategic foresight and leadership have been pivotal in guiding our company towards sustained growth and success. With extensive experience in corporate governance and a deep understanding of market dynamics, our chairman ensures that we uphold the highest standards of excellence in all our endeavors. Their vision has helped shape our journey, driving expansion and innovation across our Dunkin’ franchises. Discover more about our chairman’s impact and leadership.
+                            Meet the President of Panda Development Corporation, a visionary leader driving our success in the dynamic food industry. With a rich background in business management and a commitment to excellence, our president has been instrumental in expanding our Dunkin' franchise operations across Muntinlupa, Parañaque, Las Piñas, and Quezon province. Under their leadership, Panda Development Corporation continues to thrive, delivering quality products and exceptional customer service. Learn more about our president's journey and contributions to our company's growth and innovation.
                         </p>
                     </div>
                 </div>

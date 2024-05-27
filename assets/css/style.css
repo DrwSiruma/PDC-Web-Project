@@ -91,7 +91,7 @@ section {
     background: #FF671F;
     font-family: 'Dunkin';
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 12px;
     height: 40px;
     padding: 0;
     color: #fff;
@@ -791,7 +791,7 @@ section {
     margin: 20px 0;
   }
 .core .content-item p {
-    color: #aaaaaa;
+    color: #000000;
     font-size: 15px;
     margin: 0;
     padding: 0;
