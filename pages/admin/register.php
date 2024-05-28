@@ -1,10 +1,12 @@
 <?php
 session_start();
 
-// Retrieve any error message from the session
-$error = isset($_SESSION['error']) ? $_SESSION['error'] : '';
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../index/login.php");
+    exit();
+}
 
-// Clear the error message after displaying it
+$error = isset($_SESSION['error']) ? $_SESSION['error'] : '';
 unset($_SESSION['error']);
 ?>
 <!DOCTYPE html>
@@ -25,33 +27,36 @@ unset($_SESSION['error']);
         <link href="../../assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
         <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
         <!-- MAIN CSS -->
-        <link href="../../assets/css/login.css" rel="stylesheet">
+        <link href="../../assets/css/register.style.css" rel="stylesheet">
     </head>
     <body>
 
     
-    <div class="login-form">
+    <div class="register-form">
         <div class="logo text-center mb-4">
             <img src="../../assets/img/PDC-white.png" alt="Logo">
         </div>
         <?php if (!empty($error)) : ?>
             <div class="alert alert-danger"><?php echo $error; ?></div>
         <?php endif; ?>
-        <form id="loginForm" action="process-login.php" method="post">
+        <form action="process-register.php" method="post">
             <div class="mb-3 input-group">
                 <span class="input-group-text"><i class="fas fa-user"></i></span>
-                <input type="text" class="form-control" id="userId" name="userId" placeholder="User ID" required>
+                <input type="text" class="form-control" name="username" placeholder="Username" required>
             </div>
             <div class="mb-3 input-group">
                 <span class="input-group-text"><i class="fas fa-lock"></i></span>
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
-                <span class="input-group-text" id="togglePassword"><i class="far fa-eye"></i></span>
+                <input type="password" class="form-control" name="password" placeholder="Password" required>
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="rememberMe" name="rememberMe">
-                <label class="form-check-label" for="rememberMe">Remember me</label>
+            <div class="mb-3 input-group">
+                <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                <select class="form-control" name="role" required>
+                    <option value="" hidden>Select Role</option>
+                    <option value="admin">Admin</option>
+                    <option value="support">Support</option>
+                </select>
             </div>
-            <button type="submit" class="btn w-100 mb-3 btn-primary btn-block">Login</button>
+            <button type="submit" class="btn w-100 mb-3 btn-primary btn-block">Register</button>
         </form>
     </div>
 

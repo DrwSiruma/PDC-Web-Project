@@ -1,0 +1,46 @@
+body {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.register-form {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background-color: #111;
+    border-radius: 10px;
+}
+.register-form h2 {
+    color: #FF671F;
+}
+.register-form label {
+    color: #DA1884;
+}
+.register-form .form-control {
+    background-color: #222;
+    color: #fff;
+    border-color: #FF671F;
+}
+.register-form .btn-primary {
+    background: linear-gradient(to right, #FF671F, #DA1884);
+    border: none;
+}
+.register-form .btn-primary:hover {
+    background: linear-gradient(to right, #DA1884, #FF671F);
+}
+.register-form a {
+    color: gold;
+}
+.register-form .input-group-text {
+    background-color: #FF671F !important;
+    color: #fff !important;
+    border: 1px solid #FF671F;
+}
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
