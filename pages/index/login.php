@@ -63,6 +63,12 @@ unset($_SESSION['error']);
         </form>
     </div>
 
+    <footer>
+        <div class="text-center mt-5 mb-2">
+            © 2024 Copyright: Panda Development Corporation.
+        </div>
+    </footer>
+
     </body>
     <!-- VENDOR JS -->
     <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

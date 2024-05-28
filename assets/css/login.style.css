@@ -54,3 +54,12 @@ body {
     max-width: 100px;
     height: auto;
 }
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

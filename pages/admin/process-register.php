@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if (empty($username) || empty($password) || empty($role)) {
         $_SESSION['error'] = "All fields are required.";
-        header("Location: register.php");
+        header("Location: admin.register.php");
         exit();
     } else {
         // Check if the username already exists
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($result->num_rows > 0) {
             $_SESSION['error'] = "Username already exists.";
-            header("Location: register.php");
+            header("Location: admin.register.php");
             exit();
         } else {
             // Encrypt the password
@@ -37,12 +37,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit();
             } else {
                 $_SESSION['error'] = "Failed to register. Please try again.";
-                header("Location: register.php");
+                header("Location: admin.register.php");
                 exit();
             }
         }
     }
 } else {
-    header("Location: register.php");
+    header("Location: admin.register.php");
     exit();
 }
