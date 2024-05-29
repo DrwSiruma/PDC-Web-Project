@@ -9,15 +9,15 @@
             <div class="carousel-inner" role="listbox">
 
                 <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(../assets/img/slides/slide-1.jpg)">
+                <div class="carousel-item active" style="background-image: url(../assets/img/slides/slide4.jpg)">
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(../assets/img/slides/slide-2.jpg)">
+                <div class="carousel-item" style="background-image: url(../assets/img/slides/slide3.jpg)">
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url(../assets/img/slides/slide-3.jpg)">
+                <div class="carousel-item" style="background-image: url(../assets/img/slides/slide6.jpg)">
                 </div>
 
             </div>
@@ -61,9 +61,9 @@
                         <div class="col-md-7">
                             <div class="row justify-content-center">
                                 <div class="col-auto">
-                                    <h2>See Our Local Promos</h2>
+                                    <h2>See Our Promos</h2>
                                     <div class="promo-text">
-                                        <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
+                                        <p>Check out our exciting promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
                                     </div>
                                     <a href="promos.php" class="btn btn-orange mb-3">See More</a>
                                 </div>

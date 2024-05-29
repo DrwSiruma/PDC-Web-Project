@@ -626,7 +626,7 @@ section {
 # Join Us Page
 --------------------------------------------------------------*/
 .wylwwu .card img {
-    height: 200px;
+    height: auto;
     object-fit: cover;
 }
 
@@ -634,7 +634,7 @@ section {
 # Careers Page
 --------------------------------------------------------------*/
 .careers-hero {
-    background-image: url('../img/slides/slide-1.jpg');
+    background-image: url('../img/slides/filipino-workers.jpg');
     background-size: cover; 
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5)!important;
@@ -748,7 +748,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about-hero {
-    background-image: url('../img/slides/slide-2.jpg');
+    background-image: url('../img/slides/slide1.jpg');
     background-size: cover; 
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5)!important;

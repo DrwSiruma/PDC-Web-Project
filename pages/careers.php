@@ -3,7 +3,9 @@
     <section id="hero" class="hero d-flex align-items-center careers-hero">
         <div class="container text-center position-relative" data-aos="fade-in">
             <h2 class="animate__animated animate__fadeInDown">Panda Development Corporation</h2>
-            <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+            <p class="animate__animated animate__fadeInUp">
+                At Panda Development Corporation, we are committed to creating exceptional experiences and fostering growth through innovation, quality, and collaboration. Join us as we pave the way for a brighter, more successful tomorrow.
+            </p>
             <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
     </section>
@@ -37,7 +39,8 @@
             <div class="row">
                 <div class="col-md-4 mb-3">
                     <div class="card shadow-sm">
-                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Image 1">
+                        <!-- <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Image 2"> -->
+                        <img src="../assets/img/slides/empowering-leadership.jpg" class="card-img-top" alt="Image 1">
                         <div class="card-body">
                             <h5 class="card-title text-center text-orange">Empowering Leadership</h5>
                             <p class="card-text">
@@ -48,7 +51,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card shadow-sm">
-                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Image 2">
+                        <img src="../assets/img/slides/visionary-teams.jpg" class="card-img-top" alt="Image 2">
                         <div class="card-body">
                             <h5 class="card-title text-center text-orange">Visionary Teams</h5>
                             <p class="card-text">
@@ -59,7 +62,7 @@
                 </div>
                 <div class="col-md-4 mb-3">
                     <div class="card shadow-sm">
-                        <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Image 3">
+                        <img src="../assets/img/slides/pathways-to-growth.jpg" class="card-img-top" alt="Image 1">
                         <div class="card-body">
                             <h5 class="card-title text-center text-orange">Pathways to Growth</h5>
                             <p class="card-text">

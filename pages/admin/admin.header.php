@@ -29,6 +29,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
         <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
         <link href="../../assets/vendor/fontawesome/css/all.min.css" rel="stylesheet">
         <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="../../assets/vendor/datatables/jquery.dataTables.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- MAIN CSS -->
         <link href="../../assets/css/admin.style.css" rel="stylesheet">
@@ -57,7 +58,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="admin.register.php"><span class="fas fa-user-plus mr-3"></span>&nbsp;Add User</a>
                     </li>
                     <li class="<?php echo ($current_page == 'admin.accounts.php') ? 'active' : ''; ?>">
-                        <a href="#"><span class="fas fa-users mr-3"></span>&nbsp;Manage Accounts</a>
+                        <a href="admin.accounts.php"><span class="fas fa-users mr-3"></span>&nbsp;Manage Accounts</a>
                     </li>
                     <li class="<?php echo ($current_page == 'admin.settings.php') ? 'active' : ''; ?>">
                         <a href="#"><span class="fas fa-cog mr-3"></span>&nbsp;Settings</a>
