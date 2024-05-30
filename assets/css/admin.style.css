@@ -7,6 +7,14 @@ body {
 .text-orange {
     color: #FF671F;
 }
+.text-pink {
+    color: #DA1884;
+}
+.btn-orange {
+    color: #fff;
+    background-color: #FF671F;
+    border-color: #FF671F;
+}
 
 /* .sidebar {
     background-color: #111;

@@ -7,6 +7,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     exit();
 }
 
+// Retrieve any error message from the session
+$error = isset($_SESSION['error']) ? $_SESSION['error'] : '';
+unset($_SESSION['error']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
 
@@ -62,7 +65,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="admin.accounts.php"><span class="fas fa-users mr-3"></span>&nbsp;Manage Accounts</a>
                     </li>
                     <li class="<?php echo ($current_page == 'admin.settings.php') ? 'active' : ''; ?>">
-                        <a href="#"><span class="fas fa-cog mr-3"></span>&nbsp;Settings</a>
+                        <a href="admin.settings.php"><span class="fas fa-cog mr-3"></span>&nbsp;Settings</a>
                     </li>
                     <li>
                         <a href="../../includes/logout.php"><span class="fas fa-sign-out-alt mr-3"></span>&nbsp;Sign Out</a>
