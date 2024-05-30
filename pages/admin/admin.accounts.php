@@ -32,7 +32,7 @@
                                             <!-- <td scope="row"><?php //echo $rows["activity"]; ?></td>
                                             <td scope="row"><?php //echo $rows["post_date"]; ?></td> -->
                                         
-                                            <td>#2632</td>
+                                            <td>#2632 </td>
                                             <td>panda_dev</td>
                                             <td>support</td>
                                             <td>31 Jul 2020</td>
