@@ -1,7 +1,10 @@
-accout for admin:
+
+
+#user accounts
+-acc for admin:
 username: panda_admmin
 password: Test@123
 
-acc for support:
+-acc for support:
 username: panda_admin
 password: 1234
