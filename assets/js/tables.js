@@ -16,7 +16,11 @@ $(document).ready(function () {
     searching: true,
     paging: true,
     info: true,
-    ordering: false,
+    ordering: true,
     lengthChange: true,
+    // columnDefs: [
+    //     { targets: 3, orderDataType: 'datetime' }
+    // ],
+    order: [[3, 'asc']]
     });
 });

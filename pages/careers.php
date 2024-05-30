@@ -6,7 +6,6 @@
             <p class="animate__animated animate__fadeInUp">
                 At Panda Development Corporation, we are committed to creating exceptional experiences and fostering growth through innovation, quality, and collaboration. Join us as we pave the way for a brighter, more successful tomorrow.
             </p>
-            <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
         </div>
     </section>
     <!-- ======= End Hero ======= -->

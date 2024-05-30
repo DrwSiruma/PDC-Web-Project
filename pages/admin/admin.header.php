@@ -1,5 +1,6 @@
 <?php
 session_start();
+include('../../includes/connection.php');
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
     header("Location: ../index/login.php");
@@ -44,7 +45,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <button type="button" id="sidebarCollapse" class="btn btn-orange">
                     </button>
                 </div>
-                <div class="img bg-wrap text-center py-4" style="background-image: url(../../assets/img/slides/slide-1.jpg);">
+                <div class="img bg-wrap text-center py-4" style="background-image: url(../../assets/img/slides/slide1.jpg);">
                     <div class="user-logo">
                         <div class="img" style="background-image: url(../../assets/img/PDC-square.png);"></div>
                         <h3><?php echo $_SESSION['username']; ?></h3>

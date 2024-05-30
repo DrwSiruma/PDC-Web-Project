@@ -24,23 +24,19 @@
                                 </thead>
                                 <tbody>
                                     <?php
-                                        // include('../includes/connection.php');
-                                        // $stud_qry = mysqli_query($connection, "SELECT * FROM activity_log ORDER BY post_date DESC");
-                                        // while($rows=mysqli_fetch_array($stud_qry)){ 
+                                        $user_qry = mysqli_query($conn, "SELECT * FROM tbl_user");
+                                        while($rows=mysqli_fetch_array($user_qry)){ 
                                     ?>
                                         <tr>
-                                            <!-- <td scope="row"><?php //echo $rows["activity"]; ?></td>
-                                            <td scope="row"><?php //echo $rows["post_date"]; ?></td> -->
-                                        
-                                            <td>#2632 </td>
-                                            <td>panda_dev</td>
-                                            <td>support</td>
-                                            <td>31 Jul 2020</td>
-                                            <td>31 Jul 2020</td>
-                                            <td><span class="badge bg-success">Active</span></td>
+                                            <td><?php echo $rows["id"]; ?></td>
+                                            <td><?php echo $rows["username"]; ?></td>
+                                            <td><?php echo $rows["role"]; ?></td>
+                                            <td><?php echo $rows["created"]; ?></td>
+                                            <td><?php echo $rows["updated"]; ?></td>
+                                            <td><span class="badge bg-success"><?php echo $rows["status"]; ?></span></td>
                                             <td><button class="btn btn-sm btn-outline-light"><i class="fas fa-cog"></i></button></td>
                                         </tr>
-                                    <?php //} ?>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>

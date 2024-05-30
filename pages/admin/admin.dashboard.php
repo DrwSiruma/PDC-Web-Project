@@ -3,6 +3,83 @@
             <div id="content" class="p-4 p-md-5 pt-5">
                 <h2 class="mb-4 text-orange">Dashboard</h2>
                 <hr />
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
+                        <div class="card py-2 bg-dark">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-0">
+                                        <div class="text-xs font-weight-bold text-orange text-uppercase mb-1">Total Accounts</div>
+                                        <div class="h6 mb-0">
+                                            <?php
+                                                $acc_qry = "SELECT COUNT(*) FROM tbl_user WHERE status='Active'";
+                                                $result = mysqli_query($conn, $acc_qry) or die(mysqli_error($db));
+                                                while ($row = mysqli_fetch_array($result)) {
+                                                    if($row[0] <= 0) {
+                                                        echo "0";
+                                                    }
+                                                    else {
+                                                        echo "$row[0]";
+                                                    }
+                                                    
+                                                }
+                                            ?>&nbsp;Account(s)
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-users fa-2x"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
+                        <div class="card py-2 bg-dark">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-0">
+                                        <div class="text-xs font-weight-bold text-orange text-uppercase mb-1">Total Uploaded Files</div>
+                                        <div class="h6 mb-0">
+                                            <?php
+                                                // $query = "SELECT COUNT(*) FROM userinfo WHERE status='1'";
+                                                // $result = mysqli_query($connection, $query) or die(mysqli_error($db));
+                                                // while ($row = mysqli_fetch_array($result)) {
+                                                //     echo "$row[0]";
+                                                // }
+                                            ?>0&nbsp;File(s)
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-upload fa-2x"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 col-12 mb-3">
+                        <div class="card py-2 bg-dark">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-0">
+                                        <div class="text-xs font-weight-bold text-orange text-uppercase mb-1">Total Messages</div>
+                                        <div class="h6 mb-0">
+                                            <?php
+                                                // $query = "SELECT COUNT(*) FROM userinfo WHERE status='1'";
+                                                // $result = mysqli_query($connection, $query) or die(mysqli_error($db));
+                                                // while ($row = mysqli_fetch_array($result)) {
+                                                //     echo "$row[0]";
+                                                // }
+                                            ?>0&nbsp;Message(s)
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-envelope fa-2x"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="card bg-dark">
                     <div class="card-header">
