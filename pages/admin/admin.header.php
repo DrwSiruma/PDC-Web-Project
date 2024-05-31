@@ -15,6 +15,7 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
+$accounts_page = ['admin.accounts.php', 'admin.user.php'];
 
 // echo "Welcome, Admin " . $_SESSION['username'];
 ?>
@@ -64,7 +65,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                     <li class="<?php echo ($current_page == 'admin.register.php') ? 'active' : ''; ?>">
                         <a href="admin.register.php"><span class="fas fa-user-plus mr-3"></span>&nbsp;Add User</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'admin.accounts.php') ? 'active' : ''; ?>">
+                    <li class="<?php echo (in_array($current_page, $accounts_page)) ? 'active' : ''; ?>">
                         <a href="admin.accounts.php"><span class="fas fa-users mr-3"></span>&nbsp;Manage Accounts</a>
                     </li>
                     <li class="<?php echo ($current_page == 'admin.settings.php') ? 'active' : ''; ?>">
