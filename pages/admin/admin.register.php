@@ -26,6 +26,9 @@
                                     <option value="" hidden>Select Role</option>
                                     <option value="admin">Admin</option>
                                     <option value="support">Support</option>
+                                    <option value="dev">Dev</option>
+                                    <option value="marketing">Marketing</option>
+                                    <option value="hr">HR</option>
                                 </select>
                             </div>
                             <button type="submit" class="btn w-100 mb-3 btn-primary btn-block">Register</button>
