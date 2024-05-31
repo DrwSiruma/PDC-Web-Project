@@ -10,6 +10,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
 // Retrieve any error message from the session
 $error = isset($_SESSION['error']) ? $_SESSION['error'] : '';
 unset($_SESSION['error']);
+// Retrieve any success message from the session
+$success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
+unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
 
