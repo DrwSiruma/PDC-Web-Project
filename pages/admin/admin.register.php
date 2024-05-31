@@ -11,6 +11,9 @@
                         <?php if (!empty($error)) : ?>
                             <div class="alert alert-danger"><?php echo $error; ?></div>
                         <?php endif; ?>
+                        <?php if (!empty($success)) : ?>
+                            <div class="alert alert-success"><?php echo $success; ?></div>
+                        <?php endif; ?>
                         <form action="process-register.php" method="post">
                             <div class="mb-3 input-group">
                                 <span class="input-group-text"><i class="fas fa-user"></i></span>

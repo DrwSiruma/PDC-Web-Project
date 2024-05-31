@@ -33,6 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bind_param("sss", $username, $hashedPassword, $role);
 
             if ($stmt->execute()) {
+                $_SESSION['success'] = "User addeed successfully.";
                 header("Location: admin.dashboard.php");
                 exit();
             } else {
