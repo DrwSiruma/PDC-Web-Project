@@ -106,7 +106,7 @@
                                     <tr class="highlight">
                                         <td>#2633</td>
                                         <td>panda_support</td>
-                                        <td>added img_123456.jpg to local Promo section</td>
+                                        <td>added img_123456.jpg to Promo section</td>
                                         <td>Aug 01, 2024</td>
                                     </tr>
                                 </tbody>

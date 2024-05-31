@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_SESSION['id']; // Use session id for update
 
     if (empty($username)) {
-        $_SESSION['error'] = "All fields are required.";
+        $_SESSION['profile-error'] = "All fields are required.";
         header("Location: admin.settings.php");
         exit();
     } else {
@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $result = $stmt->get_result();
 
         if ($result->num_rows > 0) {
-            $_SESSION['error'] = "Username already exists.";
+            $_SESSION['profile-error'] = "Username already exists.";
             header("Location: admin.settings.php");
             exit();
         } else {
@@ -31,10 +31,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             if ($stmt->execute()) {
                 $_SESSION['username'] = $username; // Update session username
+                $_SESSION['profile-success'] = "Changed Successfully.";
                 header("Location: admin.settings.php");
                 exit();
             } else {
-                $_SESSION['error'] = "Failed to update information. Please try again.";
+                $_SESSION['profile-error'] = "Failed to update information. Please try again.";
                 header("Location: admin.settings.php");
                 exit();
             }

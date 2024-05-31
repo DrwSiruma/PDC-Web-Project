@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("si", $new_hashed_password, $id);
 
     if ($stmt->execute()) {
-        $_SESSION['success'] = "Password updated successfully.";
+        $_SESSION['pass-success'] = "Password updated successfully.";
         header("Location: admin.settings.php");
         exit();
     } else {
