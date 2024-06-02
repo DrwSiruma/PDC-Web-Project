@@ -2,7 +2,7 @@
 
 #user accounts
 -acc for admin:
-username: panda_admmin
+username: panda_admin
 password: Test@123
 
 -acc for support:
