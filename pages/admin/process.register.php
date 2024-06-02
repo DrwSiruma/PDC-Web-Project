@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
     $role = trim($_POST['role']);
+    $branch = isset($_POST['branch']) ? trim($_POST['branch']) : null;
 
     if (empty($username) || empty($password) || empty($role)) {
         $_SESSION['error'] = "All fields are required.";
@@ -28,9 +29,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
             // Insert new user into the database
-            $sql = "INSERT INTO tbl_user (username, password, role) VALUES (?, ?, ?)";
+            $sql = "INSERT INTO tbl_user (username, password, role, branch) VALUES (?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sss", $username, $hashedPassword, $role);
+            $stmt->bind_param("sss", $username, $hashedPassword, $role, $branch);
 
             if ($stmt->execute()) {
                 $_SESSION['success'] = "User added successfully.";
