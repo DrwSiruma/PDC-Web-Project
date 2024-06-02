@@ -11,5 +11,5 @@
     <!-- MAIN JS -->
     <script src="../../assets/js/side.nav.js"></script>
     <script src="../../assets/js/tables.js"></script>
-    <script src="../../assets/js/admin.jd"></script>
+    <script src="../../assets/js/admin.js"></script>
 </html>

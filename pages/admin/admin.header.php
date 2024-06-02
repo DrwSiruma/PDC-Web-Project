@@ -16,6 +16,7 @@ unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
 $accounts_page = ['admin.accounts.php', 'admin.user.php'];
+$outlet_page = ['admin.outlet.php', 'admin.add.outlet.php'];
 
 // echo "Welcome, Admin " . $_SESSION['username'];
 ?>
@@ -67,6 +68,9 @@ $accounts_page = ['admin.accounts.php', 'admin.user.php'];
                     </li>
                     <li class="<?php echo (in_array($current_page, $accounts_page)) ? 'active' : ''; ?>">
                         <a href="admin.accounts.php"><span class="fas fa-users mr-3"></span>&nbsp;Manage Accounts</a>
+                    </li>
+                    <li class="<?php echo (in_array($current_page, $outlet_page)) ? 'active' : ''; ?>">
+                        <a href="admin.outlet.php"><span class="fas fa-store mr-3"></span>&nbsp;Outlets</a>
                     </li>
                     <li class="<?php echo ($current_page == 'admin.settings.php') ? 'active' : ''; ?>">
                         <a href="admin.settings.php"><span class="fas fa-cog mr-3"></span>&nbsp;Settings</a>

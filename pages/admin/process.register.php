@@ -33,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bind_param("sss", $username, $hashedPassword, $role);
 
             if ($stmt->execute()) {
-                $_SESSION['success'] = "User addeed successfully.";
-                header("Location: admin.dashboard.php");
+                $_SESSION['success'] = "User added successfully.";
+                header("Location: admin.register.php");
                 exit();
             } else {
                 $_SESSION['error'] = "Failed to register. Please try again.";

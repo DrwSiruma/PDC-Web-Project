@@ -64,7 +64,7 @@ unset($_SESSION['error']);
     </div>
 
     <footer>
-        <div class="text-center mt-5 mb-2">
+        <div class="text-center mt-3 mb-2">
             © 2024 Copyright: Panda Development Corporation.
         </div>
     </footer>

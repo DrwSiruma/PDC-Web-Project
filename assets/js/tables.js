@@ -24,3 +24,14 @@ $(document).ready(function () {
     order: [[3, 'asc']]
     });
 });
+
+// Store Table
+$(document).ready(function () {
+    var table = $('#store_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});

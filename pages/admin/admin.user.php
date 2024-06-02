@@ -42,12 +42,27 @@ if (isset($_GET['id'])) {
                                 <div class="row mt-2">
                                     <div class="col-md-12">
                                         <label for="role">Role :</label>
-                                        <select class="form-control" id="role" name="role">
+                                        <select class="form-control" id="role" name="role" onchange="toggleBranchSelection()">
                                             <option value="admin" <?php if ($user['role'] == 'admin') echo 'selected'; ?>>Admin</option>
                                             <option value="support" <?php if ($user['role'] == 'support') echo 'selected'; ?>>Support</option>
                                             <option value="dev" <?php if ($user['role'] == 'dev') echo 'selected'; ?>>Dev</option>
                                             <option value="marketing" <?php if ($user['role'] == 'marketing') echo 'selected'; ?>>Marketing</option>
                                             <option value="hr" <?php if ($user['role'] == 'hr') echo 'selected'; ?>>HR</option>
+                                            <option value="outlet" <?php if ($user['role'] == 'outlet') echo 'selected'; ?>>Outlet</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-2" id="branch-section" style="display: none;">
+                                    <div class="col-md-12">
+                                        <label for="branch">Branch :</label>
+                                        <select class="form-control" id="branch" name="branch">
+                                            <option value="" <?php if ($user['branch'] == '') echo 'selected'; ?> hidden>Select Branch</option>
+                                            <?php
+                                                $outlet_qry = mysqli_query($conn, "SELECT * FROM tbl_outlet WHERE `status` = 'Active'");
+                                                while($rows=mysqli_fetch_array($outlet_qry)){ 
+                                            ?>
+                                                <option value="<?php echo $rows['short_name']; ?>" <?php if ($user['branch'] == $rows['short_name']) echo 'selected'; ?>><?php echo $rows['store_name']; ?></option>
+                                            <?php } ?>
                                         </select>
                                     </div>
                                 </div>
