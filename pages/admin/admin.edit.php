@@ -6,6 +6,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = intval($_POST['id']);
     $username = trim($_POST['username']);
     $role = trim($_POST['role']);
+    $branch = isset($_POST['branch']) ? trim($_POST['branch']) : null;
     $status = trim($_POST['status']);
 
     if (empty($username) || empty($role) || empty($status)) {
@@ -26,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         } else {
             // Update user in the database
-            $sql = "UPDATE tbl_user SET username = ?, role = ?, status = ?, updated = NOW() WHERE id = ?";
+            $sql = "UPDATE tbl_user SET username = ?, role = ?, branch = ?, status = ?, updated = NOW() WHERE id = ?";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sssi", $username, $role, $status, $id);
+            $stmt->bind_param("ssssi", $username, $role, $branch, $status, $id);
 
             if ($stmt->execute()) {
                 $_SESSION['profile-success'] = "User updated successfully.";
