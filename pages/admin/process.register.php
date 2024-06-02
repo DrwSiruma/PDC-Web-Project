@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Insert new user into the database
             $sql = "INSERT INTO tbl_user (username, password, role, branch) VALUES (?, ?, ?, ?)";
             $stmt = $conn->prepare($sql);
-            $stmt->bind_param("sss", $username, $hashedPassword, $role, $branch);
+            $stmt->bind_param("ssss", $username, $hashedPassword, $role, $branch);
 
             if ($stmt->execute()) {
                 $_SESSION['success'] = "User added successfully.";
