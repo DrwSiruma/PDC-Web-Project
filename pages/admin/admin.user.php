@@ -48,7 +48,7 @@ if (isset($_GET['id'])) {
                                             <option value="dev" <?php if ($user['role'] == 'dev') echo 'selected'; ?>>Dev</option>
                                             <option value="marketing" <?php if ($user['role'] == 'marketing') echo 'selected'; ?>>Marketing</option>
                                             <option value="hr" <?php if ($user['role'] == 'hr') echo 'selected'; ?>>HR</option>
-                                            <option value="outlet" <?php if ($user['role'] == 'outlet') echo 'selected'; ?>>Outlet</option>
+                                            <option value="outlet" <?php if ($user['role'] == 'outlet') echo 'selected'; ?> disabled>Outlet</option>
                                         </select>
                                     </div>
                                 </div>

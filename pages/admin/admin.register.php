@@ -32,7 +32,7 @@
                                     <option value="dev">Dev</option>
                                     <option value="marketing">Marketing</option>
                                     <option value="hr">HR</option>
-                                    <option value="outlet">Outlet</option>
+                                    <option value="outlet" disabled>Outlet</option>
                                 </select>
                             </div>
                             <div class="mb-3 input-group" id="branch-section" style="display: none;">

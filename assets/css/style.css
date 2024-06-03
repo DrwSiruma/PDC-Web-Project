@@ -803,49 +803,110 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Team
+# awards
 --------------------------------------------------------------*/
-.team .member {
+.awards .icon-box {
     text-align: center;
-    margin-bottom: 20px;
-    box-shadow: 0px 0px 12px 0px rgba(34, 34, 34, 0.07);
-    padding: 30px 20px;
+    padding: 70px 20px 80px 20px;
+    transition: all ease-in-out 0.3s;
     background: #fff;
+    box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.1);
 }
-.team .member img {
-    max-width: 60%;
-    border-radius: 50%;
-    margin: 0 0 30px 0;
+.awards .icon-box .icon {
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+    position: relative;
 }
-.team .member h4 {
-    font-weight: 700;
-    margin-bottom: 2px;
-    font-size: 18px;
+.awards .icon-box .icon i {
+    font-size: 36px;
+    transition: 0.5s;
+    position: relative;
 }
-.team .member span {
-    font-style: italic;
-    display: block;
+.awards .icon-box .icon svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.awards .icon-box .icon svg path {
+    transition: 0.5s;
+    fill: #f5f5f5;
+}
+.awards .icon-box h4 {
+    font-weight: 600;
+    margin: 10px 0 15px 0;
+    font-size: 22px;
+}
+.awards .icon-box h4 a {
+    color: #222222;
+    transition: ease-in-out 0.3s;
+}
+.awards .icon-box p {
+    line-height: 24px;
     font-size: 14px;
-    color: #FF671F;
+    margin-bottom: 0;
 }
-.team .member p {
-    padding-top: 10px;
-    font-size: 12px;
-    color: #000000;
+.awards .icon-box:hover {
+    border-color: #fff;
+    box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
 }
-.team .member .social {
-    margin-top: 15px;
+.awards .iconbox-blue i {
+    color: #47aeff;
 }
-.team .member .social a {
-    color: #919191;
-    transition: 0.3s;
+.awards .iconbox-blue:hover .icon i {
+    color: #fff;
 }
-.team .member .social a:hover {
-    color: #af3700;
+.awards .iconbox-blue:hover .icon path {
+    fill: #47aeff;
 }
-.team .member .social i {
-    font-size: 18px;
-    margin: 0 2px;
+.awards .iconbox-orange i {
+    color: #ff5828;
+}
+.awards .iconbox-orange:hover .icon i {
+    color: #fff;
+}
+.awards .iconbox-orange:hover .icon path {
+    fill: #ff5828;
+}
+.awards .iconbox-pink i {
+    color: #DA1884;
+}
+.awards .iconbox-pink:hover .icon i {
+    color: #fff;
+}
+.awards .iconbox-pink:hover .icon path {
+    fill: #DA1884;
+}
+.awards .iconbox-yellow i {
+    color: #ffbb2c;
+}
+.awards .iconbox-yellow:hover .icon i {
+    color: #fff;
+}
+.awards .iconbox-yellow:hover .icon path {
+    fill: #ffbb2c;
+}
+.awards .iconbox-red i {
+    color: #ff5828;
+}
+.awards .iconbox-red:hover .icon i {
+    color: #fff;
+}
+.awards .iconbox-red:hover .icon path {
+    fill: #ff5828;
+}
+.awards .iconbox-teal i {
+    color: #11dbcf;
+}
+.awards .iconbox-teal:hover .icon i {
+    color: #fff;
+}
+.awards .iconbox-teal:hover .icon path {
+    fill: #11dbcf;
 }
 
 /*--------------------------------------------------------------
