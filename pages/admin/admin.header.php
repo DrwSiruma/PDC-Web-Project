@@ -19,6 +19,7 @@ $accounts_page = ['admin.accounts.php', 'admin.user.php'];
 $outlet_page = ['admin.outlet.php', 'admin.add.outlet.php', 'admin.edit.outlet.php'];
 
 // echo "Welcome, Admin " . $_SESSION['username'];
+include('../../includes/upload_size.php');
 ?>
 
 <!DOCTYPE html>

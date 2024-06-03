@@ -41,12 +41,10 @@
                                         <div class="text-xs font-weight-bold text-orange text-uppercase mb-1">Total Uploaded Files</div>
                                         <div class="h6 mb-0">
                                             <?php
-                                                // $query = "SELECT COUNT(*) FROM userinfo WHERE status='1'";
-                                                // $result = mysqli_query($connection, $query) or die(mysqli_error($db));
-                                                // while ($row = mysqli_fetch_array($result)) {
-                                                //     echo "$row[0]";
-                                                // }
-                                            ?>0&nbsp;File(s)
+                                                $directory = '../../uploads/';
+                                                $totalFiles  = getFileCount($directory);
+                                                echo $totalFiles;
+                                            ?>&nbsp;File(s)
                                         </div>
                                     </div>
                                     <div class="col-auto">
@@ -61,19 +59,17 @@
                             <div class="card-body">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-0">
-                                        <div class="text-xs font-weight-bold text-orange text-uppercase mb-1">Total Messages</div>
+                                        <div class="text-xs font-weight-bold text-orange text-uppercase mb-1">Total File Sizes</div>
                                         <div class="h6 mb-0">
                                             <?php
-                                                // $query = "SELECT COUNT(*) FROM userinfo WHERE status='1'";
-                                                // $result = mysqli_query($connection, $query) or die(mysqli_error($db));
-                                                // while ($row = mysqli_fetch_array($result)) {
-                                                //     echo "$row[0]";
-                                                // }
-                                            ?>0&nbsp;Message(s)
+                                                $directory = '../../uploads/';
+                                                $totalSize = getDirectorySize($directory);
+                                                echo formatSize($totalSize);
+                                            ?>
                                         </div>
                                     </div>
                                     <div class="col-auto">
-                                        <i class="fas fa-envelope fa-2x"></i>
+                                        <i class="fas fa-hdd fa-2x"></i>
                                     </div>
                                 </div>
                             </div>
