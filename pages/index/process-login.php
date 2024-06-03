@@ -2,6 +2,19 @@
 include('../../includes/connection.php');
 session_start();
 
+function log_activity($conn, $user_id, $activity) {
+    $sql = "INSERT INTO tbl_activity (user_id, activity, date_posted) VALUES (?, ?, NOW(6))";
+    $stmt = $conn->prepare($sql);
+    if ($stmt) {
+        $stmt->bind_param("is", $user_id, $activity);
+        $stmt->execute();
+        $stmt->close();
+    } else {
+        // Handle the error appropriately in a real application
+        error_log("Failed to prepare statement for logging activity: " . $conn->error);
+    }
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
@@ -24,6 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['id'] = $user['id'];
                     $_SESSION['role'] = $user['role'];
                     $_SESSION['username'] = $user['username'];
+
+                    // Log the login activity
+                    log_activity($conn, $user['id'], "User logged in");
 
                     if ($user['role'] === 'admin') {
                         header("Location: ../admin/admin.dashboard.php");

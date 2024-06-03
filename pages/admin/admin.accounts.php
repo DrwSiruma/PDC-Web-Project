@@ -19,7 +19,7 @@
                             <table class="table table-bordered table-striped table-dark table-sm w-100" id="acc_table">
                                 <thead>
                                     <tr>
-                                        <th>Id</th>
+                                        <th>User Id</th>
                                         <th>Username</th>
                                         <th>Role</th>
                                         <th>Created</th>
@@ -34,7 +34,7 @@
                                         while($rows=mysqli_fetch_array($user_qry)){ 
                                     ?>
                                         <tr>
-                                            <td><?php echo $rows["id"]; ?></td>
+                                            <td>#<?php echo $rows["id"]; ?></td>
                                             <td><?php echo $rows["username"]; ?></td>
                                             <td><?php echo $rows["role"]; ?></td>
                                             <td><?php echo $rows["created"]; ?></td>

@@ -2,6 +2,19 @@
 include('../../includes/connection.php');
 session_start();
 
+function log_activity($conn, $user_id, $activity) {
+    $sql = "INSERT INTO tbl_activity (user_id, activity, date_posted) VALUES (?, ?, NOW(6))";
+    $stmt = $conn->prepare($sql);
+    if ($stmt) {
+        $stmt->bind_param("is", $user_id, $activity);
+        $stmt->execute();
+        $stmt->close();
+    } else {
+        // Handle the error appropriately in a real application
+        error_log("Failed to prepare statement for logging activity: " . $conn->error);
+    }
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $store_name = trim($_POST['store_name']);
     $short_name = trim($_POST['short_name']);
@@ -62,6 +75,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bind_param("sssss", $store_name, $short_name, $address, $status, $target_file);
 
     if ($stmt->execute()) {
+        $new_outlet_id = $stmt->insert_id;
+                
+        $admin_id = $_SESSION['id'];
+        log_activity($conn, $admin_id, "Added new outlet : $store_name, id: #$new_outlet_id");
+        
         $_SESSION['outlet-success'] = "Outlet added successfully.";
     } else {
         $_SESSION['outlet-error'] = "Failed to add outlet. Please try again.";

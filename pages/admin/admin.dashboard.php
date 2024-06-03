@@ -93,18 +93,17 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>#2632</td>
-                                        <td>panda_dev</td>
-                                        <td>signed in</td>
-                                        <td>Jul 31, 2024</td>
-                                    </tr>
-                                    <tr class="highlight">
-                                        <td>#2633</td>
-                                        <td>panda_support</td>
-                                        <td>added img_123456.jpg to Promo section</td>
-                                        <td>Aug 01, 2024</td>
-                                    </tr>
+                                    <?php
+                                        $activity_qry = mysqli_query($conn, "SELECT a.*, u.id as userid, u.username FROM tbl_activity a INNER JOIN tbl_user u ON a.user_id = u.id ORDER BY date_posted DESC");
+                                        while($rows=mysqli_fetch_array($activity_qry)){ 
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $rows["userid"]; ?></td>
+                                            <td><?php echo $rows["username"]; ?></td>
+                                            <td><?php echo $rows["activity"]; ?></td>
+                                            <td><?php echo $rows["date_posted"]; ?></td>
+                                        </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>
