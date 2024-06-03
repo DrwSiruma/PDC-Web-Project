@@ -12,7 +12,7 @@
     <?php endif; ?>
 
     <div class="ps-5 pe-5">
-        <form method="post" action="admin.add.outlet.php" enctype="multipart/form-data">
+        <form method="post" action="process.add.outlet.php" enctype="multipart/form-data">
             <div class="row mt-2">
                 <div class="col-md-12">
                     <label for="store_name">Store Name :</label>

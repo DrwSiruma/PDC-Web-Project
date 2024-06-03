@@ -5,11 +5,11 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $store_name = trim($_POST['store_name']);
     $short_name = trim($_POST['short_name']);
-    $address = trim($_POST['address']);
+    $address = trim($_POST['address']); 
     $status = trim($_POST['status']);
 
     // Image upload handling
-    $target_dir = "../../uploads/outlets";
+    $target_dir = "../../uploads/outlets/";
     $image = $_FILES['image']['name'];
     $target_file = $target_dir . basename($image);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -43,7 +43,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    if (empty($store_name) || empty($short_name) || empty($address) || empty($status)) {
+    if (empty($image) || empty($store_name) || empty($short_name) || empty($address) || empty($status)) {
         $_SESSION['outlet-error'] = "All fields are required.";
         header("Location: admin.add.outlet.php");
         exit();

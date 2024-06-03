@@ -19,6 +19,7 @@
                             <table class="table table-bordered table-striped table-dark table-sm w-100" id="store_table">
                                 <thead>
                                     <tr>
+                                        <th>Image</th>
                                         <th>Store</th>
                                         <th>Store Code</th>
                                         <th>Address</th>
@@ -34,6 +35,7 @@
                                         while($rows=mysqli_fetch_array($outlet_qry)){ 
                                     ?>
                                         <tr>
+                                            <td><img src="<?php echo $rows["image_path"]; ?>" style="width: 60px; height: auto;" /></td>
                                             <td><?php echo $rows["store_name"]; ?></td>
                                             <td><?php echo $rows["short_name"]; ?></td>
                                             <td><?php echo $rows["address"]; ?></td>
@@ -47,11 +49,11 @@
                                             <td>
                                                 <a class="btn btn-sm btn-outline-light" href="admin.edit.outlet.php?id=<?php echo $rows['id']; ?>" title="Edit Outlet"><i class="fas fa-pen"></i></a>
                                                 <?php if ($rows['status'] == 'Active') { ?>
-                                                    <a class="btn btn-sm btn-outline-light" href="admin.status.outlet.php?id=<?php echo $rows['id']; ?>&status=Closed" title="Close Store">
+                                                    <a class="btn btn-sm btn-outline-light" href="process.status.outlet.php?id=<?php echo $rows['id']; ?>&status=Closed" title="Close Store">
                                                         <i class="fas fa-lock"></i>
                                                     </a>
                                                 <?php } else { ?>
-                                                    <a class="btn btn-sm btn-outline-light" href="admin.status.outlet.php?id=<?php echo $rows['id']; ?>&status=Active" title="Open Store">
+                                                    <a class="btn btn-sm btn-outline-light" href="process.status.outlet.php?id=<?php echo $rows['id']; ?>&status=Active" title="Open Store">
                                                         <i class="fas fa-lock-open"></i>
                                                     </a>
                                                 <?php } ?>

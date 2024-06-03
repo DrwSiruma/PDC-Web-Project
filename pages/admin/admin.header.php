@@ -16,7 +16,7 @@ unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
 $accounts_page = ['admin.accounts.php', 'admin.user.php'];
-$outlet_page = ['admin.outlet.php', 'admin.add.outlet.php'];
+$outlet_page = ['admin.outlet.php', 'admin.add.outlet.php', 'admin.edit.outlet.php'];
 
 // echo "Welcome, Admin " . $_SESSION['username'];
 ?>
