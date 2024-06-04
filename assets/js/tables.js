@@ -35,3 +35,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+// Home Hero Table
+$(document).ready(function () {
+    var table = $('#hhero_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});

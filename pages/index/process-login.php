@@ -2,11 +2,11 @@
 include('../../includes/connection.php');
 session_start();
 
-function log_activity($conn, $user_id, $activity) {
-    $sql = "INSERT INTO tbl_activity (user_id, activity, date_posted) VALUES (?, ?, NOW(6))";
+function log_activity($conn, $user_id, $activity, $type) {
+    $sql = "INSERT INTO tbl_activity (user_id, activity, type, date_posted) VALUES (?, ?, ?, NOW(6))";
     $stmt = $conn->prepare($sql);
     if ($stmt) {
-        $stmt->bind_param("is", $user_id, $activity);
+        $stmt->bind_param("iss", $user_id, $activity, $type);
         $stmt->execute();
         $stmt->close();
     } else {
@@ -39,12 +39,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['username'] = $user['username'];
 
                     // Log the login activity
-                    log_activity($conn, $user['id'], "User logged in");
+                    log_activity($conn, $user['id'], "User logged in", "Login");
 
                     if ($user['role'] === 'admin') {
                         header("Location: ../admin/admin.dashboard.php");
                     } elseif ($user['role'] === 'support') {
                         header("Location: ../support/support.dashboard.php");
+                    } elseif ($user['role'] === 'dev') {
+                        header("Location: ../dev/dev.dashboard.php");
                     }
                     exit();
                 } else {

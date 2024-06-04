@@ -2,7 +2,7 @@
 session_start();
 include('../../includes/connection.php');
 
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'dev') {
     header("Location: ../index/login.php");
     exit();
 }
@@ -15,10 +15,7 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
-$accounts_page = ['admin.accounts.php', 'admin.user.php'];
-$outlet_page = ['admin.outlet.php', 'admin.add.outlet.php', 'admin.edit.outlet.php'];
 
-// echo "Welcome, Admin " . $_SESSION['username'];
 include('../../includes/upload_size.php');
 ?>
 
@@ -28,7 +25,7 @@ include('../../includes/upload_size.php');
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>Admin - Panda Development Corp.</title>
+        <title>Dev - Panda Development Corp.</title>
 
         <!-- Favicons -->
         <link href="../../assets/img/favicon.png" rel="icon">
@@ -43,7 +40,6 @@ include('../../includes/upload_size.php');
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- MAIN CSS -->
         <link href="../../assets/css/main.style.css" rel="stylesheet">
-        <?php echo ($current_page == 'admin.register.php') ? '<link href="../../assets/css/register.style.css" rel="stylesheet">' : ''; ?>
         
     </head>
     <body>
@@ -61,20 +57,20 @@ include('../../includes/upload_size.php');
                     </div>
                 </div>
                 <ul class="list-unstyled components mb-5">
-                    <li class="<?php echo ($current_page == 'admin.dashboard.php') ? 'active' : ''; ?>">
-                        <a href="admin.dashboard.php"><span class="fas fa-home mr-3"></span>&nbsp;Dashboard</a>
+                    <li class="<?php echo ($current_page == 'dev.dashboard.php') ? 'active' : ''; ?>">
+                        <a href="dev.dashboard.php"><span class="fas fa-home mr-3"></span>&nbsp;Dashboard</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'admin.register.php') ? 'active' : ''; ?>">
-                        <a href="admin.register.php"><span class="fas fa-user-plus mr-3"></span>&nbsp;Add User</a>
+                    <li class="<?php echo ($current_page == 'dev.home.php') ? 'active' : ''; ?>">
+                        <a href="dev.home.php"><span class="fas fa-home mr-3"></span>&nbsp;Manage Home Page</a>
                     </li>
-                    <li class="<?php echo (in_array($current_page, $accounts_page)) ? 'active' : ''; ?>">
-                        <a href="admin.accounts.php"><span class="fas fa-users mr-3"></span>&nbsp;Manage Accounts</a>
+                    <li class="<?php echo ($current_page == 'dev.about.php') ? 'active' : ''; ?>">
+                        <a href="dev.about.php"><span class="fas fa-info-circle mr-3"></span>&nbsp;Manage About Page</a>
                     </li>
-                    <li class="<?php echo (in_array($current_page, $outlet_page)) ? 'active' : ''; ?>">
-                        <a href="admin.outlet.php"><span class="fas fa-store mr-3"></span>&nbsp;Outlets</a>
+                    <li class="<?php echo ($current_page == 'dev.careers.php') ? 'active' : ''; ?>">
+                        <a href="dev.careers.php"><span class="fas fa-briefcase mr-3"></span>&nbsp;Manage Careers Page</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'admin.settings.php') ? 'active' : ''; ?>">
-                        <a href="admin.settings.php"><span class="fas fa-cog mr-3"></span>&nbsp;Settings</a>
+                    <li class="<?php echo ($current_page == 'dev.promo.php') ? 'active' : ''; ?>">
+                        <a href="dev.promo.php"><span class="fas fa-tags mr-3"></span>&nbsp;Manage Promo Page</a>
                     </li>
                     <li>
                         <a href="../../includes/logout.php"><span class="fas fa-sign-out-alt mr-3"></span>&nbsp;Sign Out</a>
