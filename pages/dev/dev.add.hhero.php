@@ -1,7 +1,7 @@
 <?php include('dev.header.php'); ?>
 
 <div id="content" class="p-4 p-md-5 pt-5">
-    <h2 class="mb-4 text-orange">Add New Hero</h2>
+    <h2 class="mb-4 text-orange">Add New Hero Image</h2>
     <hr />
 
     <?php if (!empty($_SESSION['hhero-error'])) : ?>

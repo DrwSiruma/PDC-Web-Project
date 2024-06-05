@@ -15,6 +15,7 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
+$home_page = ['dev.home.php', 'dev.add.hhero.php', 'dev.edit.hhero.php'];
 
 include('../../includes/upload_size.php');
 ?>
@@ -60,7 +61,7 @@ include('../../includes/upload_size.php');
                     <li class="<?php echo ($current_page == 'dev.dashboard.php') ? 'active' : ''; ?>">
                         <a href="dev.dashboard.php"><span class="fas fa-home mr-3"></span>&nbsp;Dashboard</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'dev.home.php') ? 'active' : ''; ?>">
+                    <li class="<?php echo (in_array($current_page, $home_page)) ? 'active' : ''; ?>">
                         <a href="dev.home.php"><span class="fas fa-home mr-3"></span>&nbsp;Manage Home Page</a>
                     </li>
                     <li class="<?php echo ($current_page == 'dev.about.php') ? 'active' : ''; ?>">

@@ -20,7 +20,7 @@
                         <thead>
                             <tr>
                                 <th>Image</th>
-                                <th>File Path</th>
+                                <th>Name</th>
                                 <th>Title</th>
                                 <th>Status</th>
                                 <th>Created</th>
@@ -30,12 +30,23 @@
                         </thead>
                         <tbody>
                             <?php
-                                $hero_qry = mysqli_query($conn, "SELECT * FROM tbl_home_hero");
+                                $hero_qry = mysqli_query($conn, "
+                                    SELECT 
+                                    h.*, 
+                                    u1.id as uploaded_by_userid, 
+                                    u1.username as uploaded_by_username,
+                                    u2.id as modified_by_userid, 
+                                    u2.username as modified_by_username
+                                    FROM tbl_home_hero h
+                                    LEFT JOIN tbl_user u1 ON h.uploaded_by = u1.id
+                                    LEFT JOIN tbl_user u2 ON h.modified_by = u2.id
+                                    ORDER BY h.created DESC;
+                                ");
                                 while($rows=mysqli_fetch_array($hero_qry)){ 
                             ?>
                                 <tr>
                                     <td><img src="<?php echo $rows["file_path"]; ?>" style="width: 60px; height: auto;" /></td>
-                                    <td><?php echo $rows["file_path"]; ?></td>
+                                    <td><?php echo $rows["image_name"]; ?></td>
                                     <td><?php echo $rows["title"]; ?></td>
                                     <td>
                                         <span class="badge <?php echo $rows["status"] == 'Published' ? 'bg-success' : 'bg-secondary'; ?>">
@@ -43,7 +54,7 @@
                                         </span>
                                     </td>
                                     <td><?php echo $rows["created"]; ?></td>
-                                    <td><?php echo $rows["uploaded_by"]; ?></td>
+                                    <td><?php echo $rows["uploaded_by_username"]; ?></td>
                                     <td>
                                         <a class="btn btn-sm btn-outline-light" href="dev.edit.hhero.php?id=<?php echo $rows['id']; ?>" title="Edit"><i class="fas fa-pen"></i></a>
                                         <?php if ($rows['status'] == 'Published') { ?>

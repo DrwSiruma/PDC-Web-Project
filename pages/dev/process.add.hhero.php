@@ -3,7 +3,7 @@ include('../../includes/connection.php');
 session_start();
 
 function log_activity($conn, $user_id, $activity, $type) {
-    $sql = "INSERT INTO tbl_activity (user_id, activity, date_posted) VALUES (?, ?, NOW(6))";
+    $sql = "INSERT INTO tbl_activity (user_id, activity, type, date_posted) VALUES (?, ?, ?, NOW(6))";
     $stmt = $conn->prepare($sql);
     if ($stmt) {
         $stmt->bind_param("iss", $user_id, $activity, $type);
@@ -70,12 +70,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new hero into the database
-    $sql = "INSERT INTO tbl_home_hero (file_path, title, status, created, uploaded_by, updated, modified_by) VALUES (?, ?, ?, NOW(), ?, NOW(), ?)";
+    $sql = "INSERT INTO tbl_home_hero (image_name, file_path, title, status, created, uploaded_by, updated, modified_by) VALUES (?, ?, ?, ?, NOW(), ?, NOW(), ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $target_file, $title, $status, $id, $id);
+    if ($stmt === false) {
+        error_log("Failed to prepare statement for inserting hero: " . $conn->error);
+        $_SESSION['hhero-error'] = "Failed to prepare the database statement. Please try again.";
+        header("Location: dev.add.hhero.php");
+        exit();
+    }
+
+    $stmt->bind_param("ssssss", $image, $target_file, $title, $status, $id, $id);
 
     if ($stmt->execute()) {
-        log_activity($conn, $id, "Added new image: ".basename($image)." in home hero section", "Content");
+        log_activity($conn, $id, "Added new image: ".basename($image)." titled: $title in home hero section", "Content");
         
         $_SESSION['hhero-success'] = "Image added successfully.";
     } else {

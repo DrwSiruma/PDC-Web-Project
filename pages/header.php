@@ -1,4 +1,5 @@
 <?php
+    include('../includes/connection.php');
     // Get the current script name
     $current_page = basename($_SERVER['PHP_SELF']);
     $career_page = ['careers.php', 'application-form.php'];

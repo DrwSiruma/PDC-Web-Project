@@ -8,17 +8,21 @@
 
             <div class="carousel-inner" role="listbox">
 
-                <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(../assets/img/slides/slide4.jpg)">
+            <?php
+                $hero_qry = mysqli_query($conn, "SELECT * FROM tbl_home_hero WHERE `status` = 'Published' ORDER BY created DESC;");
+                $firstItem = true; // Flag to check the first item
+
+                while($rows = mysqli_fetch_array($hero_qry)) { 
+            ?>
+
+                <!-- Slide -->
+                <div class="carousel-item <?php echo $firstItem ? 'active' : '' ?>" style="background-image: url(../uploads/home/<?php echo $rows['image_name'] ?>)">
                 </div>
 
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(../assets/img/slides/slide3.jpg)">
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url(../assets/img/slides/slide6.jpg)">
-                </div>
+            <?php
+                    $firstItem = false; // Set the flag to false after the first iteration
+                }
+            ?>
 
             </div>
 
