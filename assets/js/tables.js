@@ -46,3 +46,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+// About Hero Table
+$(document).ready(function () {
+    var table = $('#ahero_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});

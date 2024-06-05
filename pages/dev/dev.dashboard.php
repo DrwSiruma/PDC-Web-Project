@@ -127,6 +127,40 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+                        <div class="card py-2 bg-dark">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-0">
+                                        <div class="text-xs font-weight-bold text-orange text-uppercase mb-1">CAREER APPLICANTS</div>
+                                        <div class="h6 mb-0">
+                                            0 Applicant(s)
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-briefcase fa-2x"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 mb-3">
+                        <div class="card py-2 bg-dark">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-0">
+                                        <div class="text-xs font-weight-bold text-orange text-uppercase mb-1">CONTACT MESSAGE(S)</div>
+                                        <div class="h6 mb-0">
+                                            0 Message(s)
+                                        </div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-briefcase fa-2x"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

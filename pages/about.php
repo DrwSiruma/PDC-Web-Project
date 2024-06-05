@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
     <!-- ======= Hero ======= -->
-    <section id="hero" class="hero d-flex align-items-center about-hero">
+    <section id="hero" class="hero d-flex align-items-center about-hero" style="background-image: url('../assets/img/slides/slide1.jpg');">
         <div class="container text-center position-relative" data-aos="fade-in">
             <h2 class="animate__animated animate__fadeInDown">Panda Development Corporation</h2>
             <p class="animate__animated animate__fadeInUp"><i>Above and Beyond.</i></p>
