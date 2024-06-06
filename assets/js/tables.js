@@ -91,3 +91,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+// Promo Hero Table
+$(document).ready(function () {
+    var table = $('#phero_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: true,
+    lengthChange: true,
+    });
+});
