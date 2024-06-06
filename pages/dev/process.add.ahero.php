@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new hero into the database
-    $sql = "INSERT INTO tbl_about_hero (image_name, file_path, title, status, created, uploaded_by, updated, modified_by) VALUES (?, ?, ?, ?, NOW(), ?, NOW(), ?)";
+    $sql = "INSERT INTO tbl_about_hero (image_name, file_path, title, status, updated, modified_by) VALUES (?, ?, ?, ?, NOW(), ?)";
     $stmt = $conn->prepare($sql);
     if ($stmt === false) {
         error_log("Failed to prepare statement for inserting hero: " . $conn->error);
@@ -79,7 +79,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    $stmt->bind_param("ssssss", $image, $target_file, $title, $status, $id, $id);
+    $stmt->bind_param("sssss", $image, $target_file, $title, $status, $id);
 
     if ($stmt->execute()) {
         log_activity($conn, $id, "Added new image: ".basename($image)." titled: $title in about hero section", "Content");

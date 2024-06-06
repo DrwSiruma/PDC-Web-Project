@@ -16,6 +16,7 @@ unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
 $home_page = ['dev.home.php', 'dev.add.hhero.php', 'dev.edit.hhero.php'];
+$about_page = ['dev.about.php', 'dev.add.ahero.php', 'dev.edit.ahero.php'];
 
 include('../../includes/upload_size.php');
 ?>
@@ -64,7 +65,7 @@ include('../../includes/upload_size.php');
                     <li class="<?php echo (in_array($current_page, $home_page)) ? 'active' : ''; ?>">
                         <a href="dev.home.php"><span class="fas fa-home mr-3"></span>&nbsp;Manage Home Page</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'dev.about.php') ? 'active' : ''; ?>">
+                    <li class="<?php echo (in_array($current_page, $about_page)) ? 'active' : ''; ?>">
                         <a href="dev.about.php"><span class="fas fa-info-circle mr-3"></span>&nbsp;Manage About Page</a>
                     </li>
                     <li class="<?php echo ($current_page == 'dev.careers.php') ? 'active' : ''; ?>">

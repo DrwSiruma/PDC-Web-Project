@@ -1,5 +1,5 @@
 
-// Activity Log Table
+// Activity Log Table 1
 $(document).ready(function () {
     var table = $('#al_table').DataTable({
     searching: true,
@@ -7,6 +7,18 @@ $(document).ready(function () {
     info: true,
     ordering: false,
     lengthChange: true,
+    });
+});
+
+// Activity Log Table 2
+$(document).ready(function () {
+    var table = $('#al2_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    pageLength: 5
     });
 });
 

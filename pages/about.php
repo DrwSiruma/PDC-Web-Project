@@ -1,6 +1,10 @@
 <?php include('header.php'); ?>
     <!-- ======= Hero ======= -->
-    <section id="hero" class="hero d-flex align-items-center about-hero" style="background-image: url('../assets/img/slides/slide1.jpg');">
+    <?php
+        $about_qry = mysqli_query($conn, "SELECT * FROM tbl_about_hero WHERE id = '13' AND status = 'Published'");
+        $rows=mysqli_fetch_array($about_qry)
+    ?>
+    <section id="hero" class="hero d-flex align-items-center about-hero" style="background-image: url('../uploads/about/<?php echo $rows['image_name']; ?>');">
         <div class="container text-center position-relative" data-aos="fade-in">
             <h2 class="animate__animated animate__fadeInDown">Panda Development Corporation</h2>
             <p class="animate__animated animate__fadeInUp"><i>Above and Beyond.</i></p>

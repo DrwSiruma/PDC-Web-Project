@@ -11,7 +11,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-striped table-dark table-sm w-100" id="al_table">
+                            <table class="table table-bordered table-striped table-dark table-sm w-100" id="al2_table">
                                 <thead>
                                     <tr>
                                         <th>Username</th>
