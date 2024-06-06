@@ -54,7 +54,7 @@ $(document).ready(function () {
     searching: true,
     paging: true,
     info: true,
-    ordering: false,
+    ordering: true,
     lengthChange: true,
     });
 });
@@ -62,6 +62,28 @@ $(document).ready(function () {
 // About Hero Table
 $(document).ready(function () {
     var table = $('#ahero_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});
+
+// Careers Hero Table
+$(document).ready(function () {
+    var table = $('#chero_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});
+
+// WYLWWU Table
+$(document).ready(function () {
+    var table = $('#wylwwu_table').DataTable({
     searching: true,
     paging: true,
     info: true,

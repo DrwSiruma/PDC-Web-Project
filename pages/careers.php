@@ -1,6 +1,10 @@
 <?php include('header.php'); ?>
     <!-- ======= Hero ======= -->
-    <section id="hero" class="hero d-flex align-items-center careers-hero">
+    <?php
+        $careers_qry = mysqli_query($conn, "SELECT * FROM tbl_careers_hero WHERE id = '14' AND status = 'Published'");
+        $rows=mysqli_fetch_array($careers_qry)
+    ?>
+    <section id="hero" class="hero d-flex align-items-center careers-hero" style="background-image: url('../uploads/careers/<?php echo $rows['image_name']; ?>');">
         <div class="container text-center position-relative" data-aos="fade-in">
             <h2 class="animate__animated animate__fadeInDown">Panda Development Corporation</h2>
             <p class="animate__animated animate__fadeInUp">
@@ -36,40 +40,21 @@
             </div>
 
             <div class="row">
+                <?php
+                    $wylwwu_qry = mysqli_query($conn, "SELECT * FROM tbl_careers_wylwwu WHERE `status` = 'Published';");
+
+                    while($wylwwu_row = mysqli_fetch_array($wylwwu_qry)) { 
+                ?>
                 <div class="col-md-4 mb-3">
                     <div class="card shadow-sm">
-                        <!-- <img src="https://via.placeholder.com/600x400" class="card-img-top" alt="Image 2"> -->
-                        <img src="../assets/img/slides/empowering-leadership.jpg" class="card-img-top" alt="Image 1">
+                        <img src="../uploads/careers/<?php echo $wylwwu_row['image_name']; ?>" class="card-img-top" alt="Image 1">
                         <div class="card-body">
-                            <h5 class="card-title text-center text-orange">Empowering Leadership</h5>
-                            <p class="card-text">
-                                At Panda Development Corporation, our leadership empowers you to take initiative and make impactful decisions. We foster a culture of trust and collaboration, ensuring every team member feels valued and supported in their role.
-                            </p>
+                            <h5 class="card-title text-center text-orange"><?php echo $wylwwu_row['title']; ?></h5>
+                            <p class="card-text"><?php echo $wylwwu_row['description']; ?></p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card shadow-sm">
-                        <img src="../assets/img/slides/visionary-teams.jpg" class="card-img-top" alt="Image 2">
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-orange">Visionary Teams</h5>
-                            <p class="card-text">
-                                Join our visionary teams at Panda Development Corporation, where innovative thinking and teamwork drive our success. You'll work alongside passionate professionals dedicated to delivering excellence and achieving common goals.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card shadow-sm">
-                        <img src="../assets/img/slides/pathways-to-growth.jpg" class="card-img-top" alt="Image 1">
-                        <div class="card-body">
-                            <h5 class="card-title text-center text-orange">Pathways to Growth</h5>
-                            <p class="card-text">
-                                We believe in your potential and provide clear pathways to growth within Panda Development Corporation. With ongoing training, mentorship, and career advancement opportunities, you can build a fulfilling and dynamic career with us.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <?php } ?>
             </div>
         </div>
     </section>

@@ -634,7 +634,7 @@ section {
 # Careers Page
 --------------------------------------------------------------*/
 .careers-hero {
-    background-image: url('../img/slides/filipino-workers.jpg');
+    /* background-image: url('../img/slides/filipino-workers.jpg'); */
     background-size: cover; 
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5)!important;
