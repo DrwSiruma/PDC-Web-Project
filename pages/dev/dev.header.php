@@ -18,7 +18,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 $home_page = ['dev.home.php', 'dev.add.hhero.php', 'dev.edit.hhero.php'];
 $about_page = ['dev.about.php', 'dev.add.ahero.php', 'dev.edit.ahero.php'];
 $careers_page = ['dev.careers.php', 'dev.add.chero.php', 'dev.edit.chero.php', 'dev.add.wylwwu.php', 'dev.edit.wylwwu.php'];
-$promo_page = ['dev.promo.php', 'dev.add.phero.php', 'dev.edit.phero.php'];
+$promo_page = ['dev.promo.php', 'dev.add.phero.php', 'dev.edit.phero.php', 'dev.add.promo.php', 'dev.edit.promo.php'];
 
 include('../../includes/upload_size.php');
 ?>

@@ -7,17 +7,21 @@
 
             <div class="carousel-inner" role="listbox">
 
-                <!-- Slide 1 -->
-                <div class="carousel-item active" style="background-image: url(../assets/img/slides/slide-1.jpg)">
-                </div>
+                <?php
+                    $hero_qry = mysqli_query($conn, "SELECT * FROM tbl_promo_hero WHERE `status` = 'Published' ORDER BY created DESC;");
+                    $firstItem = true; // Flag to check the first item
 
-                <!-- Slide 2 -->
-                <div class="carousel-item" style="background-image: url(../assets/img/slides/slide-2.jpg)">
-                </div>
+                    while($rows = mysqli_fetch_array($hero_qry)) { 
+                ?>
 
-                <!-- Slide 3 -->
-                <div class="carousel-item" style="background-image: url(../assets/img/slides/slide-3.jpg)">
-                </div>
+                    <!-- Slide -->
+                    <div class="carousel-item <?php echo $firstItem ? 'active' : '' ?>" style="background-image: url(../uploads/promo/<?php echo $rows['image_name'] ?>)">
+                    </div>
+
+                <?php
+                        $firstItem = false; // Set the flag to false after the first iteration
+                    }
+                ?>
 
             </div>
 
@@ -39,71 +43,56 @@
                 <h2>Promos</h2>
             </div>
 
-            <div class="card shadow promo-card">
-                <div class="card-body">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-md-5">
-                            <img src="../assets/img/promo/BEARY IN LOVE.png" class="d-block w-100" alt="image">
-                        </div>
+            <?php
+                function format_promo_date($from, $to) {
+                    $from_date = new DateTime($from);
+                    $to_date = new DateTime($to);
+                
+                    $from_day = $from_date->format('j');
+                    $from_month = $from_date->format('F');
+                    $from_year = $from_date->format('Y');
+                
+                    $to_day = $to_date->format('j');
+                    $to_month = $to_date->format('F');
+                    $to_year = $to_date->format('Y');
+                
+                    if ($from_year != $to_year) {
+                        return "$from_month $from_day, $from_year - $to_month $to_day, $to_year";
+                    } elseif ($from_month != $to_month) {
+                        return "$from_month $from_day - $to_month $to_day, $from_year";
+                    } elseif ($from_day != $to_day) {
+                        return "$from_month $from_day-$to_day, $from_year";
+                    } else {
+                        return "$from_month $from_day, $from_year";
+                    }
+                }
 
-                        <div class="col-md-7">
-                            <div class="row justify-content-center">
-                                <div class="col-auto">
-                                    <h2 class="p-2">BEARy in Love</h2>
-                                    <div class="promo-text">
-                                        <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
+                $promo_qry = mysqli_query($conn, "SELECT * FROM tbl_promo WHERE `status` = 'Posted' ORDER BY created ASC;");
+
+                while($promo_row = mysqli_fetch_array($promo_qry)) { 
+            ?>
+
+                <div class="card shadow promo-card">
+                    <div class="card-body">
+                        <div class="row align-items-center justify-content-center">
+                            <div class="col-md-5">
+                                <img src="../uploads/promo/<?php echo $promo_row['image_name']; ?>" class="d-block w-100" alt="image">
+                            </div>
+
+                            <div class="col-md-7">
+                                <div class="row justify-content-center">
+                                    <div class="col-auto">
+                                        <h2 class="p-2"><?php echo $promo_row['title']; ?></h2>
+                                        <div class="promo-text"><?php echo $promo_row['description']; ?></div>
+                                        <div class="promo-runs">Promo runs until&nbsp;<?php echo format_promo_date($promo_row["promo_from"], $promo_row["promo_to"]); ?></div>
                                     </div>
-                                    <div class="promo-runs">Promo runs until February 12-15, 2024</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="card shadow promo-card">
-                <div class="card-body">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-md-5">
-                            <img src="../assets/img/promo/EASTER MUNCHKIN DEAL.png" class="d-block w-100" alt="image">
-                        </div>
-
-                        <div class="col-md-7">
-                            <div class="row justify-content-center">
-                                <div class="col-auto">
-                                    <h2 class="p-2">Easter Munchkin Deal</h2>
-                                    <div class="promo-text">
-                                        <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
-                                    </div>
-                                    <div class="promo-runs">Promo runs until March 31, 2024</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card shadow promo-card">
-                <div class="card-body">
-                    <div class="row align-items-center justify-content-center">
-                        <div class="col-md-5">
-                            <img src="../assets/img/promo/SUMMER DELIGHT PROMO.png" class="d-block w-100" alt="image">
-                        </div>
-
-                        <div class="col-md-7">
-                            <div class="row justify-content-center">
-                                <div class="col-auto">
-                                    <h2 class="p-2">Summer Delight Promo</h2>
-                                    <div class="promo-text">
-                                        <p>Check out our exciting local promotions at our Dunkin’ outlets! Enjoy exclusive deals on your favorite Dunkin’ doughnuts and beverages at our locations in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Whether you're craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don't miss out—treat yourself today!</p>
-                                    </div>
-                                    <div class="promo-runs">Promo runs until April 26, 2024</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            <?php } ?>
         </div>
     </section>
 <?php include('footer.php'); ?>
