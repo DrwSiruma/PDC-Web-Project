@@ -11,11 +11,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $target_dir = "../../uploads/outlets/";
     $image = $_FILES['image']['name'];
     $image_path = '';
+    $image_name = '';
 
     // Fetch the current outlet data
     $outlet_qry = mysqli_query($conn, "SELECT * FROM tbl_outlet WHERE id = $id");
     $outlet = mysqli_fetch_assoc($outlet_qry);
     $current_image_path = $outlet['image_path'];
+    $current_image_name = $outlet['image_name'];
 
     // Check if a new image is uploaded
     if (!empty($image)) {
@@ -50,6 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit();
         }
         $image_path = $target_file;
+        $image_name = $image;
 
         // Delete the old image if a new one is uploaded
         if (!empty($current_image_path) && file_exists($current_image_path)) {
@@ -59,9 +62,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Update the outlet in the database
     if (!empty($image_path)) {
-        $sql = "UPDATE tbl_outlet SET store_name=?, short_name=?, address=?, status=?, image_path=?, updated=NOW() WHERE id=?";
+        $sql = "UPDATE tbl_outlet SET store_name=?, short_name=?, address=?, status=?, image_path=?, image_name=?, updated=NOW() WHERE id=?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssi", $store_name, $short_name, $address, $status, $image_path, $id);
+        $stmt->bind_param("ssssssi", $store_name, $short_name, $address, $status, $image_path, $image_name, $id);
     } else {
         $sql = "UPDATE tbl_outlet SET store_name=?, short_name=?, address=?, status=?, updated=NOW() WHERE id=?";
         $stmt = $conn->prepare($sql);

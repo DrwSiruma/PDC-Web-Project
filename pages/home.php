@@ -75,33 +75,40 @@
                         </div>
 
                         <div class="col-md-5">
-                            <div id="carouseSlides" class="carousel slide h-100" data-bs-ride="carousel">
+                            <div id="carouselSlides" class="carousel slide h-100" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img src="../assets/img/promo/BEARY IN LOVE.png" class="d-block w-100" alt="image">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../assets/img/promo/EASTER MUNCHKIN DEAL.png" class="d-block w-100" alt="image">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img src="../assets/img/promo/SUMMER DELIGHT PROMO.png" class="d-block w-100" alt="image">
-                                    </div>
-                                    <!-- Add more slides as needed -->
+                                    <?php
+                                        $promo_qry = mysqli_query($conn, "SELECT * FROM tbl_promo WHERE `status` = 'Posted' ORDER BY created ASC;");
+                                        $firstItem2 = true; // Flag to check the first item
+                                        $slideIndex = 0; // Counter for the slide index
+                                        while ($promo_row = mysqli_fetch_array($promo_qry)) {
+                                    ?>
+                                        <div class="carousel-item <?php echo $firstItem2 ? 'active' : '' ?>">
+                                            <img src="../uploads/promo/<?php echo $promo_row['image_name']; ?>" class="d-block w-100" alt="image">
+                                        </div>
+                                    <?php
+                                            $firstItem2 = false;
+                                            $slideIndex++;
+                                        }
+                                    ?>
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#carouseSlides" data-bs-slide="prev">
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlides" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
                                 </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#carouseSlides" data-bs-slide="next">
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselSlides" data-bs-slide="next">
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Next</span>
                                 </button>
                                 <!-- Indicators -->
                                 <ol class="carousel-indicators">
-                                    <li data-bs-target="#carouselSlides" data-bs-slide-to="0" class="active"></li>
-                                    <li data-bs-target="#carouselSlides" data-bs-slide-to="1"></li>
-                                    <li data-bs-target="#carouselSlides" data-bs-slide-to="2"></li>
-                                    <!-- Add more indicators for additional slides -->
+                                    <?php
+                                        for ($i = 0; $i < $slideIndex; $i++) {
+                                    ?>
+                                        <li data-bs-target="#carouselSlides" data-bs-slide-to="<?php echo $i; ?>" class="<?php echo $i === 0 ? 'active' : ''; ?>"></li>
+                                    <?php
+                                        }
+                                    ?>
                                 </ol>
                             </div>
                         </div>
@@ -120,111 +127,20 @@
             </div>
             <div class="outlet-slider swiper">
                 <div class="swiper-wrapper align-items-center">
+
+                <?php
+                    $outlet_qry = mysqli_query($conn, "SELECT * FROM tbl_outlet WHERE `status` = 'Active' ORDER BY store_name ASC;");
+
+                    while($outlet_row = mysqli_fetch_array($outlet_qry)) { 
+                ?>
                     <div class="swiper-slide">
                         <div class="outlet-card">
-                            <img src="../assets/img/outlets/atc.png" class="img-fluid" alt="">
-                            <h4>ATC</h4>
-                            <span class="text-primary">Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila.</span>
+                            <img src="../uploads/outlets/<?php echo $outlet_row['image_name']; ?>" class="img-fluid" alt="">
+                            <h4><?php echo $outlet_row['store_name']; ?></h4>
+                            <span class="text-primary"><?php echo $outlet_row['address']; ?></span>
                         </div>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
-                            <h4>CASIMIRO</h4>
-                            <span class="text-primary">Ground Floor Casimiro Commercial Center Building Baragay Talon Uno, Las Piñas City, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
-                            <h4>CENTRO</h4>
-                            <span class="text-primary">Spectrum Midway, Alabang, Muntinlupa, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/dona_isabel.png" class="img-fluid" alt="">
-                            <h4>DOÑA ISABEL</h4>
-                            <span class="text-primary">#232 Doña Isabel Bldg. National rd. Bayanan, Muntinlupa, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/dona_manuela.png" class="img-fluid" alt="">
-                            <h4>DOÑA MANUELA</h4>
-                            <span class="text-primary">Doña Manuela Food Street, Alabang-Zapote Road Pamplona Tres, Las Pinas City, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/manila_times.png" class="img-fluid" alt="">
-                            <h4>MANILA TIMES</h4>
-                            <span class="text-primary">Aria, Talon Uno, Las Piñas City, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/moonwalk.png" class="img-fluid" alt="">
-                            <h4>MOONWALK</h4>
-                            <span class="text-primary">432 Alarang, Alabang–Zapote Rd, Talon 1, Las Piñas, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/naia.png" class="img-fluid" alt="">
-                            <h4>NAIA</h4>
-                            <span class="text-primary">Arry Plaza, 2142 Airport Rd, Ballaran, Parañaque, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/northgate.png" class="img-fluid" alt="">
-                            <h4>NORTHGATE</h4>
-                            <span class="text-primary">Northgate Ave, Fastbytes Northgate, Alabang, Muntinlupa, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
-                            <h4>PITX</h4>
-                            <span class="text-primary">PITX, 8344 E3, Tambo, Parañaque, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/poblacion.png" class="img-fluid" alt="">
-                            <h4>POBLACION</h4>
-                            <span class="text-primary">National Road, Poblacion, Muntinlupa, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
-                            <h4>SF PILAR</h4>
-                            <span class="text-primary">101 Lexicor Building Alabang Zapote Road Corner San Francisco Sreet Almanza Road Almanza Uno Lone District, Las Piñas, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/dunkin_store_clipart.png" class="img-fluid" alt="">
-                            <h4>SOUTH STATION</h4>
-                            <span class="text-primary">Green Bldg LS1-26, Alabang-South Station Ramp, Muntinlupa, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/southville.png" class="img-fluid" alt="">
-                            <h4>SOUTHVILLE</h4>
-                            <span class="text-primary">Lot 1-A-A The Edge Building CAA Road (J. Aguilar Avenue) Pulang Lupa 2 1st District, Las Piñas, Metro Manila.</span>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../assets/img/outlets/verdant.png" class="img-fluid" alt="">
-                            <h4>VERDANT</h4>
-                            <span class="text-primary">Unit Door A8 Santiagel Building Verdant Avenue Corner Alabang Zapote Road Barangay Pamplona Tres, Las Piñas, Metro Manila.</span>
-                        </div>
-                    </div>
+                <?php } ?>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>

@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
     <!-- ======= Hero ======= -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero" style="display: none;">
         <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
             <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>

@@ -3,10 +3,10 @@ include('../../includes/connection.php');
 session_start();
 
 function log_activity($conn, $user_id, $activity, $type) {
-    $sql = "INSERT INTO tbl_activity (user_id, activity, date_posted) VALUES (?, ?, NOW(6))";
+    $sql = "INSERT INTO tbl_activity (user_id, activity, type, date_posted) VALUES (?, ?, ?, NOW(6))";
     $stmt = $conn->prepare($sql);
     if ($stmt) {
-        $stmt->bind_param("iss", $user_id, $activity, $type);
+        $stmt->bind_param("iss", $user_id, $activity, $type); // Corrected type specifiers
         $stmt->execute();
         $stmt->close();
     } else {
@@ -18,7 +18,7 @@ function log_activity($conn, $user_id, $activity, $type) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $store_name = trim($_POST['store_name']);
     $short_name = trim($_POST['short_name']);
-    $address = trim($_POST['address']); 
+    $address = trim($_POST['address']);
     $status = trim($_POST['status']);
 
     // Image upload handling
@@ -70,16 +70,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new outlet into the database
-    $sql = "INSERT INTO tbl_outlet (store_name, short_name, address, status, image_path, created, updated) VALUES (?, ?, ?, ?, ?, NOW(), NOW())";
+    $sql = "INSERT INTO tbl_outlet (store_name, short_name, address, status, image_path, image_name, created, updated) VALUES (?, ?, ?, ?, ?, ?, NOW(), NOW())";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $store_name, $short_name, $address, $status, $target_file);
+    $stmt->bind_param("ssssss", $store_name, $short_name, $address, $status, $target_file, $image);
 
     if ($stmt->execute()) {
         $new_outlet_id = $stmt->insert_id;
-                
+
         $admin_id = $_SESSION['id'];
-        log_activity($conn, $admin_id, "Added new outlet : $store_name, id: #$new_outlet_id", "Outlet");
-        
+        log_activity($conn, $admin_id, "Added new outlet: $store_name, id: #$new_outlet_id", "Outlet");
+
         $_SESSION['outlet-success'] = "Outlet added successfully.";
     } else {
         $_SESSION['outlet-error'] = "Failed to add outlet. Please try again.";

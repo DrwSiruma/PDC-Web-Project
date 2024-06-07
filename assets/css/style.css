@@ -502,6 +502,7 @@ section {
 .outlet-main .outlet-card h4 {
     font-weight: 700;
     font-family: 'Dunkin';
+    text-transform: uppercase;
     color: #FF671F;
     margin-bottom: 2px;
     font-size: 12px;
