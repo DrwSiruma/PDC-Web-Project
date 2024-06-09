@@ -29,7 +29,7 @@ function format_promo_date($from, $to) {
         <h2 class="mb-4 text-orange">Promo Page Content Management</h2>
         <hr />
 
-        <div class="card bg-dark mb-3">
+        <div class="card bg-dark mb-3" style="display: none;">
             <div class="card-header">
                 <h3><i class="fas fa-images"></i> Hero Section <a href="dev.add.phero.php" class="btn btn-sm btn-orange"><i class="fas fa-plus"></i></a></h3>
             </div>
@@ -144,7 +144,7 @@ function format_promo_date($from, $to) {
                                 <tr>
                                     <td><img src="<?php echo $promo_row["file_path"]; ?>" style="width: 60px; height: auto;" /></td>
                                     <td><?php echo $promo_row["title"]; ?></td>
-                                    <td><?php echo $promo_row["description"]; ?></td>
+                                    <td class="wrap"><?php echo $promo_row["description"]; ?></td>
                                     <td><?php echo format_promo_date($promo_row["promo_from"], $promo_row["promo_to"]); ?></td>
                                     <td>
                                         <span class="badge <?php echo $promo_row["status"] == 'Posted' ? 'bg-success' : 'bg-secondary'; ?>">
