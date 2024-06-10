@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 07, 2024 at 12:01 PM
+-- Generation Time: Jun 10, 2024 at 11:57 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -141,7 +141,31 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (78, '2', 'User logged out', 'Logout', '2024-06-07 15:34:08.222949'),
 (79, '1', 'User logged in', 'Login', '2024-06-07 15:34:27.905169'),
 (80, '1', 'Added new outlet: Southville, id: #7', 'Outlet', '2024-06-07 15:37:33.969182'),
-(81, '1', 'User logged out', 'Logout', '2024-06-07 17:27:29.748618');
+(81, '1', 'User logged out', 'Logout', '2024-06-07 17:27:29.748618'),
+(82, '6', 'User logged in', 'Login', '2024-06-10 08:55:59.417652'),
+(83, '6', 'Added IT Specialist as new career', 'Career', '2024-06-10 10:35:52.920564'),
+(84, '6', 'Added Store Manager as new career', 'Career', '2024-06-10 10:37:00.883871'),
+(85, '6', 'Added Service Crew - Dunkin\' as new career', 'Career', '2024-06-10 10:42:28.404646'),
+(86, '6', 'Added Marketing Staff as new career', 'Career', '2024-06-10 10:44:40.700718'),
+(87, '6', 'Updated career ID 3', 'Career', '2024-06-10 17:01:02.170500'),
+(88, '6', 'Updated career ID 3', 'Career', '2024-06-10 17:01:29.491566');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_applicants`
+--
+
+CREATE TABLE `tbl_applicants` (
+  `id` int(100) NOT NULL,
+  `fullname` varchar(1000) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `contact` varchar(100) NOT NULL,
+  `cover` longtext NOT NULL,
+  `status` varchar(100) NOT NULL,
+  `date_applied` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `doc` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
@@ -233,9 +257,19 @@ CREATE TABLE `tbl_opportunities` (
   `description` varchar(2000) NOT NULL,
   `type1` varchar(100) NOT NULL DEFAULT 'On Site',
   `type2` varchar(100) NOT NULL DEFAULT 'Full-time',
-  `status` enum('Active','Inactive') NOT NULL,
+  `status` enum('Posted','Unposted') NOT NULL,
   `created` datetime(6) NOT NULL DEFAULT current_timestamp(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_opportunities`
+--
+
+INSERT INTO `tbl_opportunities` (`id`, `name`, `description`, `type1`, `type2`, `status`, `created`) VALUES
+(1, 'IT Specialist', 'We\'re looking for an experienced IT Specialist to join our team.', 'On site', 'Full-time', 'Posted', '2024-06-10 10:35:52.000000'),
+(2, 'Store Manager', 'We\'re looking for a Store Manager to join our team.', 'On site', 'Full-time', 'Posted', '2024-06-10 10:37:00.000000'),
+(3, 'Service Crew - Dunkin\'', 'We\'re looking for a Service Crew to join our team.', 'On Site', 'Full-time', 'Posted', '2024-06-10 10:42:28.000000'),
+(4, 'Marketing Staff', 'We\'re looking for a Marketing Staff to join our team.', 'On site', 'Full-time', 'Posted', '2024-06-10 10:44:40.000000');
 
 -- --------------------------------------------------------
 
@@ -371,6 +405,12 @@ ALTER TABLE `tbl_activity`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_applicants`
+--
+ALTER TABLE `tbl_applicants`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_careers_hero`
 --
 ALTER TABLE `tbl_careers_hero`
@@ -433,7 +473,13 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+
+--
+-- AUTO_INCREMENT for table `tbl_applicants`
+--
+ALTER TABLE `tbl_applicants`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tbl_careers_hero`
@@ -457,7 +503,7 @@ ALTER TABLE `tbl_home_hero`
 -- AUTO_INCREMENT for table `tbl_opportunities`
 --
 ALTER TABLE `tbl_opportunities`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_outlet`
