@@ -24,10 +24,13 @@
                     <label for="phone" class="form-label">Position</label>
                     <select class="form-control" id="position" name="position" required>
                         <option selected hidden></option>
-                        <option value="1" <?php echo ($selected_position == '1') ? 'selected' : ''; ?>>IT Specialist</option>
-                        <option value="2" <?php echo ($selected_position == '2') ? 'selected' : ''; ?>>Store Manager</option>
-                        <option value="3" <?php echo ($selected_position == '3') ? 'selected' : ''; ?>>Service Crew</option>
-                        <option value="4" <?php echo ($selected_position == '4') ? 'selected' : ''; ?>>Marketing Staff</option>
+                        <?php
+                            $career_qry = mysqli_query($conn, "SELECT * FROM tbl_opportunities WHERE `status` = 'Posted';");
+
+                            while($career_row = mysqli_fetch_array($career_qry)) { 
+                        ?>
+                            <option value="<?php echo $career_row['id']; ?>" <?php echo ($selected_position == $career_row["id"]) ? 'selected' : ''; ?>><?php echo $career_row['name']; ?></option>
+                        <?php } ?>
                     </select>
                 </div>
                 <div class="mb-3">

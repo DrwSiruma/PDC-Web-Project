@@ -247,6 +247,10 @@ a[data-toggle="collapse"] {
     background-color: #DA1884;
     color: #fff;
 }
+.table-dark tr:hover {
+    /* background-color: #FF671F !important; */
+    cursor: pointer;
+}
 .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter, .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing, .dataTables_wrapper .dataTables_paginate {
     color: #fff !important;
 }

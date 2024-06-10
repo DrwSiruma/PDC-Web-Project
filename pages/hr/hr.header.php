@@ -15,6 +15,7 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
+$about_page = ['hr.careers.php', 'hr.edit.career.php'];
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +63,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                         <a href="hr.careers.php"><span class="fas fa-briefcase mr-3"></span>&nbsp;Careers</a>
                     </li>
                     <li class="<?php echo ($current_page == 'hr.add.career.php') ? 'active' : ''; ?>">
-                        <a href="hr.add.career.php"><span class="fas fa-home mr-3"></span>&nbsp;Add New Career</a>
+                        <a href="hr.add.career.php"><span class="fas fa-briefcase-medical mr-3"></span>&nbsp;Add New Career</a>
                     </li>
                     <li>
                         <a href="../../includes/logout.php"><span class="fas fa-sign-out-alt mr-3"></span>&nbsp;Sign Out</a>

@@ -23,8 +23,13 @@
         <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
         <!-- MAIN CSS -->
         <link href="../assets/css/style.css" rel="stylesheet">
+        <link href="../assets/css/loader.style.css" rel="stylesheet">
     </head>
     <body>
+        <!-- ======= Loader ======= -->
+        <div class="loader-overlay">
+            <div class="loader"></div>
+        </div>
         <!-- ======= Top Bar ======= -->
         <section id="topbar" class="d-flex align-items-center">
             <div class="container d-flex justify-content-center justify-content-md-between">

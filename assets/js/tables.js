@@ -113,3 +113,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+// Career Table
+$(document).ready(function () {
+    var table = $('#career_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: true,
+    lengthChange: true,
+    });
+});

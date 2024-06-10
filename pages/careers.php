@@ -68,69 +68,27 @@
                 <p>We're looking for passionate people to join us on our mission. We value flat hierarchies, clear communication, and full ownership and responsibility</p>
             </div>
 
-            <div class="job-card">
-                <div class="row align-items-center">
-                    <div class="col-md-10">
-                        <div class="job-title">IT Specialist</div>
-                        <p>We're looking for an experienced IT Specialist to join our team.</p>
-                        <div class="mb-2">
-                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-geo-alt"></i> On site</span>
-                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-clock"></i> Full-time</span>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-md-end text-center">
-                        <a href="application-form.php?id=1" class="apply-btn rounded-pill">Apply Now&nbsp;<i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php
+                $career_qry = mysqli_query($conn, "SELECT * FROM tbl_opportunities WHERE `status` = 'Posted';");
 
+                while($career_row = mysqli_fetch_array($career_qry)) { 
+            ?>
             <div class="job-card">
                 <div class="row align-items-center">
                     <div class="col-md-10">
-                        <div class="job-title">Store Manager</div>
-                        <p>We're looking for a Store Manager to join our team.</p>
+                        <div class="job-title"><?php echo $career_row['name']; ?></div>
+                        <p><?php echo $career_row['description']; ?></p>
                         <div class="mb-2">
-                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-geo-alt"></i> On site</span>
-                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-clock"></i> Full-time</span>
+                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-geo-alt"></i> <?php echo $career_row['type1']; ?></span>
+                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-clock"></i> <?php echo $career_row['type2']; ?></span>
                         </div>
                     </div>
                     <div class="col-md-2 text-md-end text-center">
-                        <a href="application-form.php?id=2" class="apply-btn rounded-pill">Apply Now&nbsp;<i class="fas fa-external-link-alt"></i></a>
+                        <a href="application-form.php?id=<?php echo $career_row['id']; ?>" class="apply-btn rounded-pill">Apply Now&nbsp;<i class="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
-
-            <div class="job-card">
-                <div class="row align-items-center">
-                    <div class="col-md-10">
-                        <div class="job-title">Service Crew</div>
-                        <p>We're looking for a Service Crew to join our team.</p>
-                        <div class="mb-2">
-                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-geo-alt"></i> On site</span>
-                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-clock"></i> Full-time</span>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-md-end text-center">
-                        <a href="application-form.php?id=3" class="apply-btn rounded-pill">Apply Now&nbsp;<i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="job-card">
-                <div class="row align-items-center">
-                    <div class="col-md-10">
-                        <div class="job-title">Marketing Staff</div>
-                        <p>We're looking for a Marketing Staff to join our team.</p>
-                        <div class="mb-2">
-                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-geo-alt"></i> On site</span>
-                            <span class="badge bg-light border border-dark border-2 text-dark rounded-pill"><i class="bi bi-clock"></i> Full-time</span>
-                        </div>
-                    </div>
-                    <div class="col-md-2 text-md-end text-center">
-                        <a href="application-form.php?id=4" class="apply-btn rounded-pill">Apply Now&nbsp;<i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </section>
     <!-- ======= End Careers Section ======= -->
