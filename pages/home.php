@@ -124,6 +124,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>See Our Outlets</h2>
+                <p style="font-weight: bold;">View all <a href="#" class="text-orange">Future Dunkin' Outlets</a></p>
             </div>
             <div class="outlet-slider swiper">
                 <div class="swiper-wrapper align-items-center">
@@ -134,10 +135,12 @@
                     while($outlet_row = mysqli_fetch_array($outlet_qry)) { 
                 ?>
                     <div class="swiper-slide">
-                        <div class="outlet-card">
-                            <img src="../uploads/outlets/<?php echo $outlet_row['image_name']; ?>" class="img-fluid" alt="">
-                            <h4><?php echo $outlet_row['store_name']; ?></h4>
-                            <span class="text-primary"><?php echo $outlet_row['address']; ?></span>
+                        <div class="card shadow-sm">
+                            <img src="../uploads/outlets/<?php echo $outlet_row['image_name']; ?>" class="card-img-top" alt="">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-orange"><?php echo $outlet_row['store_name']; ?></h5>
+                                <a href="outlet.details.php?id=<?php echo $outlet_row['id']; ?>" class="btn btn-sm btn-orange mt-2">Store details <i class="fas fa-external-link-alt"></i></a>
+                            </div>
                         </div>
                     </div>
                 <?php } ?>

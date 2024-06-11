@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 10, 2024 at 11:57 AM
+-- Generation Time: Jun 11, 2024 at 11:55 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -148,7 +148,12 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (85, '6', 'Added Service Crew - Dunkin\' as new career', 'Career', '2024-06-10 10:42:28.404646'),
 (86, '6', 'Added Marketing Staff as new career', 'Career', '2024-06-10 10:44:40.700718'),
 (87, '6', 'Updated career ID 3', 'Career', '2024-06-10 17:01:02.170500'),
-(88, '6', 'Updated career ID 3', 'Career', '2024-06-10 17:01:29.491566');
+(88, '6', 'Updated career ID 3', 'Career', '2024-06-10 17:01:29.491566'),
+(89, '6', 'User logged in', 'Login', '2024-06-11 09:35:53.587121'),
+(90, '6', 'User logged out', 'Logout', '2024-06-11 11:33:38.403203'),
+(91, '6', 'User logged in', 'Login', '2024-06-11 14:16:00.457205'),
+(92, '6', 'User logged out', 'Logout', '2024-06-11 16:56:03.838917'),
+(93, '1', 'User logged in', 'Login', '2024-06-11 16:56:11.042298');
 
 -- --------------------------------------------------------
 
@@ -166,6 +171,14 @@ CREATE TABLE `tbl_applicants` (
   `date_applied` datetime(6) NOT NULL DEFAULT current_timestamp(6),
   `doc` varchar(1000) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_applicants`
+--
+
+INSERT INTO `tbl_applicants` (`id`, `fullname`, `email`, `contact`, `cover`, `status`, `date_applied`, `doc`) VALUES
+(1, 'Andrew Siruma', 'andrew@sample.com', '09121231234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pending', '2024-06-11 13:55:56.174650', 'ComputerScienceResumedocx.pdf'),
+(2, 'Andrew Siruma', 'andrew@sample.com', '09121231234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pending', '2024-06-11 14:15:39.070726', '6667eb8b1123b_ComputerScienceResumedocx.pdf');
 
 -- --------------------------------------------------------
 
@@ -295,7 +308,7 @@ CREATE TABLE `tbl_outlet` (
 
 INSERT INTO `tbl_outlet` (`id`, `store_name`, `short_name`, `address`, `status`, `updated`, `created`, `image_path`, `image_name`) VALUES
 (1, 'Alabang Town Center', 'ATC', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', '2024-06-03 09:41:52.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
-(2, 'Festival', 'FSI', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Active', '2024-06-03 13:41:06.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
+(2, 'Festival', 'FSI', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Active', '2024-06-11 16:56:41.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
 (3, 'Moonwalk', 'Moonwalk', '432 Alarang, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', '2024-06-03 10:14:12.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
 (4, 'Verdant', 'Verdant', 'Unit Door A8 Santiagel Building Verdant Avenue Corner Alabang Zapote Road Barangay Pamplona Tres, Las PiÃ±as, Metro Manila.', 'Active', '2024-06-03 14:54:32.000000', '2024-06-03 14:54:32.000000', '../../uploads/outlets/verdant.png', 'verdant.png'),
 (5, 'Northgate', 'Northgate', 'Northgate Ave, Fastbytes Northgate, Alabang, Muntinlupa, Metro Manila.', 'Active', '2024-06-04 09:49:21.000000', '2024-06-04 09:49:21.000000', '../../uploads/outlets/northgate.png', 'northgate.png'),
@@ -473,13 +486,13 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=89;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
 --
 ALTER TABLE `tbl_applicants`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_careers_hero`

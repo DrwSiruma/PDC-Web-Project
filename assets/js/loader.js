@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loaderOverlay = document.querySelector('.loader-overlay');
 
     // Show loader on link click
-    document.querySelectorAll('a').forEach(link => {
+    document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', function(event) {
             loaderOverlay.style.display = 'flex';
         });
