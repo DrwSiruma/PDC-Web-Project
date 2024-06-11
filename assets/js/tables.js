@@ -124,3 +124,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+// Applicant Table
+$(document).ready(function () {
+    var table = $('#applicant_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: true,
+    lengthChange: true,
+    });
+});
