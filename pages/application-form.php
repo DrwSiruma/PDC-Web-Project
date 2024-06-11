@@ -2,11 +2,18 @@
     // Retrieve the 'id' from the URL if it exists
     $selected_position = isset($_GET['id']) ? $_GET['id'] : '';
 
-    include('header.php'); 
+    include('header.php');
+    session_start() 
 ?>
     <div class="container">
         <div class="application-form">
             <h2 class="text-center mb-4">Application Form</h2>
+            <?php if (isset($_SESSION['application-error'])) : ?>
+                <div class="alert alert-danger"><?php echo $_SESSION['application-error']; unset($_SESSION['application-error']); ?></div>
+            <?php endif; ?>
+            <?php if (isset($_SESSION['application-success'])) : ?>
+                <div class="alert alert-success"><?php echo $_SESSION['application-success']; unset($_SESSION['application-success']); ?></div>
+            <?php endif; ?>
             <form action="submit_application.php" method="post" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label for="name" class="form-label">Full Name</label>
