@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2024 at 11:55 AM
+-- Generation Time: Jun 13, 2024 at 11:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -153,7 +153,12 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (90, '6', 'User logged out', 'Logout', '2024-06-11 11:33:38.403203'),
 (91, '6', 'User logged in', 'Login', '2024-06-11 14:16:00.457205'),
 (92, '6', 'User logged out', 'Logout', '2024-06-11 16:56:03.838917'),
-(93, '1', 'User logged in', 'Login', '2024-06-11 16:56:11.042298');
+(93, '1', 'User logged in', 'Login', '2024-06-11 16:56:11.042298'),
+(94, '1', 'User logged in', 'Login', '2024-06-13 08:34:56.282678'),
+(95, '1', 'Added new outlet: DoÃ±a Manuela, id: #8', 'Outlet', '2024-06-13 10:00:13.591209'),
+(96, '1', 'User logged out', 'Logout', '2024-06-13 10:58:32.715438'),
+(97, '2', 'User logged in', 'Login', '2024-06-13 10:58:38.532241'),
+(98, '2', 'User logged out', 'Logout', '2024-06-13 10:58:42.614482');
 
 -- --------------------------------------------------------
 
@@ -293,7 +298,9 @@ INSERT INTO `tbl_opportunities` (`id`, `name`, `description`, `type1`, `type2`, 
 CREATE TABLE `tbl_outlet` (
   `id` int(100) NOT NULL,
   `store_name` varchar(100) DEFAULT NULL,
-  `short_name` varchar(100) DEFAULT NULL,
+  `branch_code` varchar(100) DEFAULT NULL,
+  `outlet_code` varchar(100) NOT NULL,
+  `shop_type` enum('a','b','c') NOT NULL,
   `address` varchar(1000) DEFAULT NULL,
   `status` enum('Active','Closed') NOT NULL,
   `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
@@ -306,13 +313,14 @@ CREATE TABLE `tbl_outlet` (
 -- Dumping data for table `tbl_outlet`
 --
 
-INSERT INTO `tbl_outlet` (`id`, `store_name`, `short_name`, `address`, `status`, `updated`, `created`, `image_path`, `image_name`) VALUES
-(1, 'Alabang Town Center', 'ATC', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', '2024-06-03 09:41:52.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
-(2, 'Festival', 'FSI', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Active', '2024-06-11 16:56:41.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
-(3, 'Moonwalk', 'Moonwalk', '432 Alarang, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', '2024-06-03 10:14:12.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
-(4, 'Verdant', 'Verdant', 'Unit Door A8 Santiagel Building Verdant Avenue Corner Alabang Zapote Road Barangay Pamplona Tres, Las PiÃ±as, Metro Manila.', 'Active', '2024-06-03 14:54:32.000000', '2024-06-03 14:54:32.000000', '../../uploads/outlets/verdant.png', 'verdant.png'),
-(5, 'Northgate', 'Northgate', 'Northgate Ave, Fastbytes Northgate, Alabang, Muntinlupa, Metro Manila.', 'Active', '2024-06-04 09:49:21.000000', '2024-06-04 09:49:21.000000', '../../uploads/outlets/northgate.png', 'northgate.png'),
-(7, 'Southville', 'Southville', 'Lot 1-A-A The Edge Building CAA Road (J. Aguilar Avenue) Pulang Lupa 2 1st District, Las PiÃ±as, Metro Manila.', 'Active', '2024-06-07 15:51:28.000000', '2024-06-07 15:37:33.000000', '../../uploads/outlets/southville.png', 'southville.png');
+INSERT INTO `tbl_outlet` (`id`, `store_name`, `branch_code`, `outlet_code`, `shop_type`, `address`, `status`, `updated`, `created`, `image_path`, `image_name`) VALUES
+(1, 'Alabang Town Center', '057', 'PDC001', 'b', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', '2024-06-13 08:59:54.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
+(2, 'Festival Mall', '00072', 'PDC033', 'b', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Active', '2024-06-13 10:22:19.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
+(3, 'Moonwalk', '018', 'PDC008', 'b', '432 Real ST, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', '2024-06-13 10:23:54.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
+(4, 'Verdant', '053', 'PDC017', 'a', 'UNIT/DOOR NO.48 SANTIAGUEL BLDG. PAMPLONA DOS NCR, FOURTH DISTRICT CITY OF LAS PINAS', 'Active', '2024-06-13 10:25:31.000000', '2024-06-03 14:54:32.000000', '../../uploads/outlets/verdant.png', 'verdant.png'),
+(5, 'Northgate', '060', 'PDC009', 'b', 'Space No. 204 Fastbytes Northgate Alabang Muntinlupa City', 'Active', '2024-06-13 10:30:31.000000', '2024-06-04 09:49:21.000000', '../../uploads/outlets/northgate.png', 'northgate.png'),
+(7, 'Southville', '062', 'PDC014', 'b', 'Lot 1-A-A The Edge Building CAA Road (J. Aguilar Avenue) Pulang Lupa 2 1st District, Las PiÃ±as, Metro Manila.', 'Active', '2024-06-13 10:39:39.000000', '2024-06-07 15:37:33.000000', '../../uploads/outlets/southville.png', 'southville.png'),
+(8, 'DoÃ±a Manuela', '00066', 'PDC028', 'b', 'Unit A Food ST. Alabang Zapote RD. Pamplona Tres, City of Las PiÃ±as', 'Active', '2024-06-13 10:00:13.000000', '2024-06-13 10:00:13.000000', '../../uploads/outlets/dona_manuela.png', 'dona_manuela.png');
 
 -- --------------------------------------------------------
 
@@ -486,7 +494,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -522,7 +530,7 @@ ALTER TABLE `tbl_opportunities`
 -- AUTO_INCREMENT for table `tbl_outlet`
 --
 ALTER TABLE `tbl_outlet`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tbl_promo`

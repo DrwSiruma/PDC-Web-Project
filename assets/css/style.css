@@ -35,7 +35,11 @@ a:hover {
 .text-orange {
     color: #FF671F;
 }
-  
+
+.text-pink {
+    color: #DA1884
+}
+
   /* h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
   } */
@@ -552,6 +556,10 @@ section {
     flex-direction: column;
     gap: 1.5rem;
     margin: 0;
+}
+.outlet_details .outlet-image {
+    width: 100%;
+    height: auto;
 }
 
 /*--------------------------------------------------------------
