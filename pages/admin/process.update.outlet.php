@@ -5,7 +5,9 @@ session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $_POST['id'];
     $store_name = trim($_POST['store_name']);
-    $short_name = trim($_POST['short_name']);
+    $branch_code = trim($_POST['branch_code']);
+    $outlet_code = trim($_POST['outlet_code']);
+    $shop_type = trim($_POST['shop_type']);
     $address = trim($_POST['address']);
     $status = trim($_POST['status']);
     $target_dir = "../../uploads/outlets/";
@@ -62,13 +64,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Update the outlet in the database
     if (!empty($image_path)) {
-        $sql = "UPDATE tbl_outlet SET store_name=?, short_name=?, address=?, status=?, image_path=?, image_name=?, updated=NOW() WHERE id=?";
+        $sql = "UPDATE tbl_outlet SET store_name=?, branch_code=?, outlet_code=?, shop_type=?, address=?, status=?, image_path=?, image_name=?, updated=NOW() WHERE id=?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssssi", $store_name, $short_name, $address, $status, $image_path, $image_name, $id);
+        $stmt->bind_param("ssssssssi", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $image_path, $image_name, $id);
     } else {
-        $sql = "UPDATE tbl_outlet SET store_name=?, short_name=?, address=?, status=?, updated=NOW() WHERE id=?";
+        $sql = "UPDATE tbl_outlet SET store_name=?, branch_code=?, outlet_code=?, shop_type=?, address=?, status=?, updated=NOW() WHERE id=?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssssi", $store_name, $short_name, $address, $status, $id);
+        $stmt->bind_param("ssssssi", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $id);
     }
 
     if ($stmt->execute()) {

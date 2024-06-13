@@ -15,14 +15,31 @@
         <form method="post" action="process.add.outlet.php" enctype="multipart/form-data">
             <div class="row mt-2">
                 <div class="col-md-12">
-                    <label for="store_name">Store Name :</label>
+                    <label for="store_name">Outlet Name :</label>
                     <input type="text" class="form-control" id="store_name" name="store_name" required>
                 </div>
             </div>
             <div class="row mt-2">
                 <div class="col-md-12">
-                    <label for="short_name">Short Name :</label>
-                    <input type="text" class="form-control" id="short_name" name="short_name" required>
+                    <label for="branch_code">Branch Code :</label>
+                    <input type="text" class="form-control" id="branch_code" name="branch_code" required>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <label for="outlet_code">Outlet Code :</label>
+                    <input type="text" class="form-control" id="outlet_code" name="outlet_code" required>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-12">
+                    <label for="shop_type">Shop Type :</label>
+                    <select class="form-control" id="shop_type" name="shop_type" required>
+                        <option value="" selected hidden></option>
+                        <option value="a">Type A</option>
+                        <option value="b">Type B</option>
+                        <option value="c">Type C</option>
+                    </select>
                 </div>
             </div>
             <div class="row mt-2">

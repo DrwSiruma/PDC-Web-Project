@@ -28,9 +28,23 @@ $outlet = mysqli_fetch_assoc($outlet_qry);
                 </div>
             </div>
             <div class="row mt-2">
+                <div class="col-md-6">
+                    <label for="branch_code">Branch Code :</label>
+                    <input type="text" class="form-control" id="branch_code" name="branch_code" value="<?php echo htmlspecialchars($outlet['branch_code']); ?>" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="outlet_code">Outlet Code :</label>
+                    <input type="text" class="form-control" id="outlet_code" name="outlet_code" value="<?php echo htmlspecialchars($outlet['outlet_code']); ?>" required>
+                </div>
+            </div>
+            <div class="row mt-2">
                 <div class="col-md-12">
-                    <label for="short_name">Short Name :</label>
-                    <input type="text" class="form-control" id="short_name" name="short_name" value="<?php echo htmlspecialchars($outlet['short_name']); ?>" required>
+                    <label for="shop_type">Shop Type :</label>
+                    <select class="form-control" id="shop_type" name="shop_type" required>
+                        <option value="a" <?php if ($outlet['shop_type'] == 'a') echo 'selected'; ?>>Type A</option>
+                        <option value="b" <?php if ($outlet['shop_type'] == 'b') echo 'selected'; ?>>Type B</option>
+                        <option value="c" <?php if ($outlet['shop_type'] == 'c') echo 'selected'; ?>>Type C</option>
+                    </select>
                 </div>
             </div>
             <div class="row mt-2">

@@ -21,7 +21,6 @@
                                     <tr>
                                         <th>Image</th>
                                         <th>Store</th>
-                                        <th>Store Code</th>
                                         <th>Address</th>
                                         <th>Status</th>
                                         <!-- <th>Created</th> -->
@@ -37,7 +36,6 @@
                                         <tr>
                                             <td><img src="<?php echo $rows["image_path"]; ?>" style="width: 60px; height: auto;" /></td>
                                             <td><?php echo $rows["store_name"]; ?></td>
-                                            <td><?php echo $rows["short_name"]; ?></td>
                                             <td><?php echo $rows["address"]; ?></td>
                                             <td>
                                                 <span class="badge <?php echo $rows["status"] == 'Active' ? 'bg-success' : 'bg-secondary'; ?>">

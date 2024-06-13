@@ -17,7 +17,9 @@ function log_activity($conn, $user_id, $activity, $type) {
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $store_name = trim($_POST['store_name']);
-    $short_name = trim($_POST['short_name']);
+    $branch_code = trim($_POST['branch_code']);
+    $outlet_code = trim($_POST['outlet_code']);
+    $shop_type = trim($_POST['shop_type']);
     $address = trim($_POST['address']);
     $status = trim($_POST['status']);
 
@@ -56,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    if (empty($image) || empty($store_name) || empty($short_name) || empty($address) || empty($status)) {
+    if (empty($image) || empty($store_name) || empty($branch_code) || empty($outlet_code) || empty($shop_type) || empty($address) || empty($status)) {
         $_SESSION['outlet-error'] = "All fields are required.";
         header("Location: admin.add.outlet.php");
         exit();
@@ -70,9 +72,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new outlet into the database
-    $sql = "INSERT INTO tbl_outlet (store_name, short_name, address, status, image_path, image_name, created, updated) VALUES (?, ?, ?, ?, ?, ?, NOW(), NOW())";
+    $sql = "INSERT INTO tbl_outlet (store_name, branch_code, outlet_code, shop_type, address, status, image_path, image_name, created, updated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssss", $store_name, $short_name, $address, $status, $target_file, $image);
+    $stmt->bind_param("ssssssss", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $target_file, $image);
 
     if ($stmt->execute()) {
         $new_outlet_id = $stmt->insert_id;
