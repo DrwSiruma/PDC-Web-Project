@@ -561,6 +561,26 @@ section {
     width: 100%;
     height: auto;
 }
+.outlet_details .info-wrapper {
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+}
+.outlet_details .info-wrapper .info-header {
+    font-weight: 700;
+    line-height: 1.25;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+}
+.outlet_details .info-wrapper .info-header .info-content {
+    font-size: .75rem;
+}
 
 /*--------------------------------------------------------------
 # Join-Main
