@@ -139,7 +139,7 @@
                             <img src="../uploads/outlets/<?php echo $outlet_row['image_name']; ?>" class="card-img-top" alt="">
                             <div class="card-body text-center">
                                 <h5 class="card-title text-orange"><?php echo $outlet_row['store_name']; ?></h5>
-                                <a href="outlet.details.php?id=<?php echo $outlet_row['id']; ?>" class="btn btn-sm btn-orange mt-2">Store details <i class="fas fa-external-link-alt"></i></a>
+                                <a href="outlet.details.php?id=<?php echo $outlet_row['id']; ?>" class="btn btn-sm btn-orange mt-2" style="font-size: .75rem;">Store details <i class="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>

@@ -135,3 +135,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+// Product Table
+$(document).ready(function () {
+    var table = $('#product_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});

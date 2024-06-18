@@ -38,7 +38,7 @@ $outlet_row=mysqli_fetch_array($outlet_qry);
                             <div class="info-header">Our Menu Categories</div>
                             <div class="row">
                                 <div class="col-md-3 mb-2">
-                                    <a href="#" target="_blank">
+                                    <a href="menu.donuts.php?id=<?php echo $outlet_id; ?>" target="_blank">
                                         <div class="card shadow-sm">
                                             <img src="../assets/img/menu/donuts.jpg" class="card-img-top" alt="">
                                             <div class="card-body text-center">
