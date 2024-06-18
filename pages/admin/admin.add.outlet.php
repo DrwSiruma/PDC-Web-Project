@@ -19,16 +19,37 @@
                     <input type="text" class="form-control" id="store_name" name="store_name" required>
                 </div>
             </div>
-            <div class="row mt-2">
-                <div class="col-md-12">
-                    <label for="branch_code">Branch Code :</label>
-                    <input type="text" class="form-control" id="branch_code" name="branch_code" required>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12 mt-2">
+                            <label for="branch_code">Branch Code :</label>
+                            <input type="text" class="form-control" id="branch_code" name="branch_code" required>
+                        </div>
+                        <div class="col-md-12 mt-2">
+                            <label for="outlet_code">Outlet Code :</label>
+                            <input type="text" class="form-control" id="outlet_code" name="outlet_code" required>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-md-12">
-                    <label for="outlet_code">Outlet Code :</label>
-                    <input type="text" class="form-control" id="outlet_code" name="outlet_code" required>
+                <div class="col-md-6 mt-2">
+                    <label for="service_options">Service Options :</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="dine_in" name="service_options[]" value="Dine-In">
+                        <label class="form-check-label" for="dine_in">Dine-In</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="takeout" name="service_options[]" value="Takeout">
+                        <label class="form-check-label" for="takeout">Takeout</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="drive_thru" name="service_options[]" value="Drive-Thru">
+                        <label class="form-check-label" for="drive_thru">Drive-Thru</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="delivery" name="service_options[]" value="Delivery">
+                        <label class="form-check-label" for="delivery">Delivery</label>
+                    </div>
                 </div>
             </div>
             <div class="row mt-2">

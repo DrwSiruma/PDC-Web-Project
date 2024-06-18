@@ -22,6 +22,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $shop_type = trim($_POST['shop_type']);
     $address = trim($_POST['address']);
     $status = trim($_POST['status']);
+    $service_options = isset($_POST['service_options']) ? $_POST['service_options'] : [];
+    $service_options_serialized = serialize($service_options); // Serialize the array
 
     // Image upload handling
     $target_dir = "../../uploads/outlets/";
@@ -72,9 +74,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new outlet into the database
-    $sql = "INSERT INTO tbl_outlet (store_name, branch_code, outlet_code, shop_type, address, status, image_path, image_name, created, updated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
+    $sql = "INSERT INTO tbl_outlet (store_name, branch_code, outlet_code, shop_type, address, status, service_options, image_path, image_name, created, updated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssssss", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $target_file, $image);
+    $stmt->bind_param("sssssssss", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $service_options_serialized, $target_file, $image);
 
     if ($stmt->execute()) {
         $new_outlet_id = $stmt->insert_id;

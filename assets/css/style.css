@@ -573,13 +573,22 @@ section {
     text-decoration: none;
 }
 .outlet_details .info-wrapper .info-header {
-    font-weight: 700;
+    font-size: .90rem;
+    font-weight: 800;
     line-height: 1.25;
     text-transform: uppercase;
     margin-bottom: .5rem;
 }
 .outlet_details .info-wrapper .info-header .info-content {
     font-size: .75rem;
+}
+.menu-title {
+    color: #FF671F;
+    font-weight: 700;
+    font-size: .75rem;
+}
+.menu-title:hover {
+    color: #f73b07;
 }
 
 /*--------------------------------------------------------------

@@ -27,14 +27,36 @@ $outlet = mysqli_fetch_assoc($outlet_qry);
                     <input type="text" class="form-control" id="store_name" name="store_name" value="<?php echo htmlspecialchars($outlet['store_name']); ?>" required>
                 </div>
             </div>
-            <div class="row mt-2">
+            <div class="row">
                 <div class="col-md-6">
-                    <label for="branch_code">Branch Code :</label>
-                    <input type="text" class="form-control" id="branch_code" name="branch_code" value="<?php echo htmlspecialchars($outlet['branch_code']); ?>" required>
+                    <div class="row">
+                        <div class="col-md-12 mt-2">
+                            <label for="branch_code">Branch Code :</label>
+                            <input type="text" class="form-control" id="branch_code" name="branch_code" value="<?php echo htmlspecialchars($outlet['branch_code']); ?>" required>
+                        </div>
+                    
+                        <div class="col-md-12 mt-2">
+                            <label for="outlet_code">Outlet Code :</label>
+                            <input type="text" class="form-control" id="outlet_code" name="outlet_code" value="<?php echo htmlspecialchars($outlet['outlet_code']); ?>" required>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <label for="outlet_code">Outlet Code :</label>
-                    <input type="text" class="form-control" id="outlet_code" name="outlet_code" value="<?php echo htmlspecialchars($outlet['outlet_code']); ?>" required>
+                <div class="col-md-6 mt-2">
+                    <label for="service_options">Service Options :</label>
+                    <?php
+                    $service_options = unserialize($outlet['service_options']);
+                    if ($service_options === false) {
+                        $service_options = [];
+                    }
+                    $options = ["Dine-In", "Takeout", "Drive-Thru", "Delivery"];
+                    foreach ($options as $option) {
+                        $checked = in_array($option, $service_options) ? 'checked' : '';
+                        echo '<div class="form-check">';
+                        echo '<input class="form-check-input" type="checkbox" id="'.strtolower(str_replace(' ', '_', $option)).'" name="service_options[]" value="'.$option.'" '.$checked.'>';
+                        echo '<label class="form-check-label" for="'.strtolower(str_replace(' ', '_', $option)).'">'.$option.'</label>';
+                        echo '</div>';
+                    }
+                    ?>
                 </div>
             </div>
             <div class="row mt-2">
