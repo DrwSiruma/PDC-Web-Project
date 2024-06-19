@@ -138,7 +138,34 @@ $(document).ready(function () {
 
 // Product Table
 $(document).ready(function () {
-    var table = $('#product_table').DataTable({
+    var table = $('#donut_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});
+$(document).ready(function () {
+    var table = $('#beverage_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});
+$(document).ready(function () {
+    var table = $('#bakery_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: false,
+    lengthChange: true,
+    });
+});
+$(document).ready(function () {
+    var table = $('#savory_table').DataTable({
     searching: true,
     paging: true,
     info: true,

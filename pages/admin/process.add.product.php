@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    if (empty($image) || empty($product_name) || empty($branch_code) || empty($product_code) || empty($shop_type) || empty($address) || empty($status)) {
+    if (empty($image) || empty($product_name) || empty($category) || empty($status)) {
         $_SESSION['product-error'] = "All fields are required.";
         header("Location: admin.add.product.php");
         exit();
@@ -69,17 +69,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new product into the database
-    $sql = "INSERT INTO tbl_product (store_name, branch_code, product_code, shop_type, address, status, service_options, image_path, image_name, created, updated) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, NOW(), NOW())";
+    $sql = "INSERT INTO tbl_product (name, image_path, image_name, category, status, created) VALUES (?, ?, ?, ?, ?, NOW())";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssssssss", $store_name, $branch_code, $product_code, $shop_type, $address, $status, $service_options_serialized, $target_file, $image);
+    $stmt->bind_param("sssss", $product_name, $target_file, $image, $category, $status);
 
     if ($stmt->execute()) {
         $new_product_id = $stmt->insert_id;
 
         $admin_id = $_SESSION['id'];
-        log_activity($conn, $admin_id, "Added new product: $store_name, id: #$new_product_id", "product");
+        log_activity($conn, $admin_id, "Added new product: $product_name, id: #$new_product_id", "Product");
 
-        $_SESSION['product-success'] = "product added successfully.";
+        $_SESSION['product-success'] = "Product added successfully.";
     } else {
         $_SESSION['product-error'] = "Failed to add product. Please try again.";
     }

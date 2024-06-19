@@ -13,3 +13,19 @@ function toggleBranchSelection() {
 
 // Call the function on page load to check the initial state
 toggleBranchSelection();
+
+// JavaScript to handle tab display
+document.querySelectorAll('.nav-link').forEach((tab) => {
+    tab.addEventListener('click', (event) => {
+        // Hide all tab panes
+        document.querySelectorAll('.tab-pane').forEach((pane) => {
+            pane.classList.add('d-none');
+            pane.classList.remove('show', 'active');
+        });
+
+        // Show the selected tab pane
+        const target = document.querySelector(event.target.dataset.bsTarget);
+        target.classList.remove('d-none');
+        target.classList.add('show', 'active');
+    });
+});

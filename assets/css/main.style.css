@@ -260,3 +260,14 @@ a[data-toggle="collapse"] {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #FF671F !important;
+}
+.nav-link {
+    color: #FF671F;
+}
+.nav-link:hover {
+    color: #af3700;
+}
