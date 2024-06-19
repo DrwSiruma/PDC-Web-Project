@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 18, 2024 at 10:48 AM
+-- Generation Time: Jun 19, 2024 at 11:22 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -162,7 +162,36 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (99, '1', 'User logged in', 'Login', '2024-06-18 09:05:10.300309'),
 (100, '1', 'Added new outlet: Manila Times, id: #9', 'Outlet', '2024-06-18 09:54:18.753608'),
 (101, '1', 'User logged out', 'Logout', '2024-06-18 14:44:13.196663'),
-(102, '1', 'User logged in', 'Login', '2024-06-18 14:44:27.455104');
+(102, '1', 'User logged in', 'Login', '2024-06-18 14:44:27.455104'),
+(103, '1', 'User logged in', 'Login', '2024-06-19 09:06:41.526469'),
+(104, '1', 'Added new product: Boston Kreme, id: #1', 'Product', '2024-06-19 09:13:55.234359'),
+(105, '1', 'Added new product: Bavarian Filled, id: #2', 'Product', '2024-06-19 09:17:41.470280'),
+(106, '1', 'Added new product: Sugar Filled, id: #3', 'Product', '2024-06-19 09:20:34.081805'),
+(107, '1', 'Added new product: Strawberry Filled, id: #4', 'Product', '2024-06-19 10:02:45.134877'),
+(108, '1', 'Added new product: Choco BTN, id: #5', 'Product', '2024-06-19 11:16:44.298915'),
+(109, '1', 'User logged in', 'Login', '2024-06-19 12:28:04.687514'),
+(110, '1', 'Added new product: Hot Choco, id: #6', 'Product', '2024-06-19 15:25:12.053628'),
+(111, '1', 'Added new product: Brewed Coffee, id: #7', 'Product', '2024-06-19 15:25:42.810594'),
+(112, '1', 'Added new product: CafÃ© Americano, id: #8', 'Product', '2024-06-19 15:26:25.049551'),
+(113, '1', 'Added new product: Iced Coffee, id: #9', 'Product', '2024-06-19 15:26:43.307965'),
+(114, '1', 'Added new product: Iced Choco Java, id: #10', 'Product', '2024-06-19 15:27:09.419141'),
+(115, '1', 'Added new product: Iced Latte, id: #11', 'Product', '2024-06-19 15:27:40.550593'),
+(116, '1', 'Added new product: Icy Coolers, id: #12', 'Product', '2024-06-19 15:27:52.818433'),
+(117, '1', 'Added new product: Iced Brewed Tea, id: #13', 'Product', '2024-06-19 15:28:08.241496'),
+(118, '1', 'Added new product: Tuna, id: #14', 'Product', '2024-06-19 15:32:08.980098'),
+(119, '1', 'Added new product: Spanish Sausage, id: #15', 'Product', '2024-06-19 15:32:23.240269'),
+(120, '1', 'Added new product: Ham and Cheese, id: #16', 'Product', '2024-06-19 15:32:51.625570'),
+(121, '1', 'Added new product: Cheese, id: #17', 'Product', '2024-06-19 15:33:03.457819'),
+(122, '1', 'Added new product: Bacon Cheesy Mushroom, id: #18', 'Product', '2024-06-19 15:33:20.191086'),
+(123, '1', 'Added new product: Mushroom Madness, id: #19', 'Product', '2024-06-19 15:36:17.263472'),
+(124, '1', 'Added new product: Hungarian Sausage, id: #20', 'Product', '2024-06-19 15:36:38.887002'),
+(125, '1', 'Added new product: Egg and Cheese, id: #21', 'Product', '2024-06-19 15:36:59.644808'),
+(126, '1', 'Added new product: Chicken Clubhouse, id: #22', 'Product', '2024-06-19 15:37:23.280519'),
+(127, '1', 'Added new product: Cheesy Tuna, id: #23', 'Product', '2024-06-19 15:37:47.034484'),
+(128, '1', 'Added new product: Cheese Madness, id: #24', 'Product', '2024-06-19 15:38:16.834211'),
+(129, '1', 'User logged out', 'Logout', '2024-06-19 17:20:27.218596'),
+(130, '6', 'User logged in', 'Login', '2024-06-19 17:20:33.138598'),
+(131, '6', 'User logged out', 'Logout', '2024-06-19 17:20:51.175123');
 
 -- --------------------------------------------------------
 
@@ -319,7 +348,7 @@ CREATE TABLE `tbl_outlet` (
 --
 
 INSERT INTO `tbl_outlet` (`id`, `store_name`, `branch_code`, `outlet_code`, `shop_type`, `address`, `status`, `service_options`, `updated`, `created`, `image_path`, `image_name`) VALUES
-(1, 'Alabang Town Center', '057', 'PDC001', 'b', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:06:36.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
+(1, 'Alabang Town Center', '057', 'PDC001', 'b', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-19 09:46:24.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
 (2, 'Festival Mall', '00072', 'PDC033', 'b', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:06:53.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
 (3, 'Moonwalk', '018', 'PDC008', 'b', '432 Real ST, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:06.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
 (4, 'Verdant', '053', 'PDC017', 'a', 'UNIT/DOOR NO.48 SANTIAGUEL BLDG. PAMPLONA DOS NCR, FOURTH DISTRICT CITY OF LAS PINAS', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:12.000000', '2024-06-03 14:54:32.000000', '../../uploads/outlets/verdant.png', 'verdant.png'),
@@ -331,17 +360,62 @@ INSERT INTO `tbl_outlet` (`id`, `store_name`, `branch_code`, `outlet_code`, `sho
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_outlet_menu`
+--
+
+CREATE TABLE `tbl_outlet_menu` (
+  `id` int(100) NOT NULL,
+  `product_id` int(255) NOT NULL,
+  `outlet_id` int(255) NOT NULL,
+  `status` enum('Posted','Unposted') NOT NULL,
+  `post_date` datetime(6) NOT NULL DEFAULT current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_product`
 --
 
 CREATE TABLE `tbl_product` (
   `id` int(100) NOT NULL,
   `name` varchar(100) NOT NULL,
+  `image_path` varchar(1000) NOT NULL,
   `image_name` varchar(2000) NOT NULL,
   `category` enum('Donut','Beverage','Savory','Bakery') NOT NULL,
   `status` enum('Active','Inactive') NOT NULL,
   `created` datetime(6) NOT NULL DEFAULT current_timestamp(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_product`
+--
+
+INSERT INTO `tbl_product` (`id`, `name`, `image_path`, `image_name`, `category`, `status`, `created`) VALUES
+(1, 'Boston Kreme', '../../uploads/product/boston-kreme.png', 'boston-kreme.png', 'Donut', 'Active', '2024-06-19 09:13:55.000000'),
+(2, 'Bavarian Filled', '../../uploads/product/bavarian-filled.png', 'bavarian-filled.png', 'Donut', 'Active', '2024-06-19 09:17:41.000000'),
+(3, 'Sugar Filled', '../../uploads/product/sugar-raised.png', 'sugar-raised.png', 'Donut', 'Active', '2024-06-19 09:20:34.000000'),
+(4, 'Strawberry Filled', '../../uploads/product/strawberry-filled.png', 'strawberry-filled.png', 'Donut', 'Active', '2024-06-19 10:02:45.000000'),
+(5, 'Choco BTN', '../../uploads/product/choco-btn.png', 'choco-btn.png', 'Donut', 'Active', '2024-06-19 11:16:44.000000'),
+(6, 'Hot Choco', '../../uploads/product/hot-choco.png', 'hot-choco.png', 'Beverage', 'Active', '2024-06-19 15:25:12.000000'),
+(7, 'Brewed Coffee', '../../uploads/product/brewed-coffee.png', 'brewed-coffee.png', 'Beverage', 'Active', '2024-06-19 15:25:42.000000'),
+(8, 'CafÃ© Americano', '../../uploads/product/cafe-americano.png', 'cafe-americano.png', 'Beverage', 'Active', '2024-06-19 15:26:25.000000'),
+(9, 'Iced Coffee', '../../uploads/product/iced-coffee.png', 'iced-coffee.png', 'Beverage', 'Active', '2024-06-19 15:26:43.000000'),
+(10, 'Iced Choco Java', '../../uploads/product/iced-choco-java.png', 'iced-choco-java.png', 'Beverage', 'Active', '2024-06-19 15:27:09.000000'),
+(11, 'Iced Latte', '../../uploads/product/iced-latte.png', 'iced-latte.png', 'Beverage', 'Active', '2024-06-19 15:27:40.000000'),
+(12, 'Icy Coolers', '../../uploads/product/icy-coolers.png', 'icy-coolers.png', 'Beverage', 'Active', '2024-06-19 15:27:52.000000'),
+(13, 'Iced Brewed Tea', '../../uploads/product/iced-brewed-tea.png', 'iced-brewed-tea.png', 'Beverage', 'Active', '2024-06-19 15:28:08.000000'),
+(14, 'Tuna', '../../uploads/product/tuna.png', 'tuna.png', 'Bakery', 'Active', '2024-06-19 15:32:08.000000'),
+(15, 'Spanish Sausage', '../../uploads/product/spanish-sausage.png', 'spanish-sausage.png', 'Bakery', 'Active', '2024-06-19 15:32:23.000000'),
+(16, 'Ham and Cheese', '../../uploads/product/ham-and-cheese.png', 'ham-and-cheese.png', 'Bakery', 'Active', '2024-06-19 15:32:51.000000'),
+(17, 'Cheese', '../../uploads/product/cheese.png', 'cheese.png', 'Bakery', 'Active', '2024-06-19 15:33:03.000000'),
+(18, 'Bacon Cheesy Mushroom', '../../uploads/product/bacon-cheesy-mushroom.png', 'bacon-cheesy-mushroom.png', 'Bakery', 'Active', '2024-06-19 15:33:20.000000'),
+(19, 'Mushroom Madness', '../../uploads/product/mushroom-madness.png', 'mushroom-madness.png', 'Savory', 'Active', '2024-06-19 15:36:17.000000'),
+(20, 'Hungarian Sausage', '../../uploads/product/hungarian-sausage.png', 'hungarian-sausage.png', 'Savory', 'Active', '2024-06-19 15:36:38.000000'),
+(21, 'Egg and Cheese', '../../uploads/product/egg-and-cheese.png', 'egg-and-cheese.png', 'Savory', 'Active', '2024-06-19 15:36:59.000000'),
+(22, 'Chicken Clubhouse', '../../uploads/product/chicken-clubhouse.png', 'chicken-clubhouse.png', 'Savory', 'Active', '2024-06-19 15:37:23.000000'),
+(23, 'Cheesy Tuna', '../../uploads/product/cheesy-tuna.png', 'cheesy-tuna.png', 'Savory', 'Active', '2024-06-19 15:37:47.000000'),
+(24, 'Cheese Madness', '../../uploads/product/cheese-madness.png', 'cheese-madness.png', 'Savory', 'Active', '2024-06-19 15:38:16.000000');
 
 -- --------------------------------------------------------
 
@@ -483,6 +557,12 @@ ALTER TABLE `tbl_outlet`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_outlet_menu`
+--
+ALTER TABLE `tbl_outlet_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
@@ -521,7 +601,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -560,10 +640,16 @@ ALTER TABLE `tbl_outlet`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `tbl_outlet_menu`
+--
+ALTER TABLE `tbl_outlet_menu`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `tbl_promo`
