@@ -5,8 +5,14 @@ if (isset($_SESSION['role'])) {
     if ($_SESSION['role'] == 'admin') {
         header("Location: ../admin/admin.dashboard.php");
         exit();
-    } elseif ($_SESSION['role'] == 'support') {
-        header("Location: ../support/support.dashboard.php");
+    } elseif ($_SESSION['role'] == 'marketing') {
+        header("Location: ../marketing/marketing.promo.php");
+        exit();
+    } elseif ($_SESSION['role'] == 'hr') {
+        header("Location: ../hr/hr.dashboard.php");
+        exit();
+    } elseif ($_SESSION['role'] == 'dev') {
+        header("Location: ../dev/dev.dashboard.php");
         exit();
     }
 }

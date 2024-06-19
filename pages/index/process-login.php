@@ -43,8 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                     if ($user['role'] === 'admin') {
                         header("Location: ../admin/admin.dashboard.php");
-                    } elseif ($user['role'] === 'support') {
-                        header("Location: ../support/support.dashboard.php");
+                    } elseif ($user['role'] === 'marketing') {
+                        header("Location: ../marketing/marketing.promo.php");
                     } elseif ($user['role'] === 'dev') {
                         header("Location: ../dev/dev.dashboard.php");
                     } elseif ($user['role'] === 'hr') {
