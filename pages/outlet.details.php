@@ -48,7 +48,7 @@ $outlet_row=mysqli_fetch_array($outlet_qry);
                                     </a>
                                 </div>
                                 <div class="col-md-3 mb-2">
-                                    <a href="#" target="_blank">
+                                    <a href="menu.beverages.php?id=<?php echo $outlet_id; ?>" target="_blank">
                                         <div class="card shadow-sm">
                                             <img src="../assets/img/menu/beverages.jpg" class="card-img-top" alt="">
                                             <div class="card-body text-center">
@@ -58,7 +58,7 @@ $outlet_row=mysqli_fetch_array($outlet_qry);
                                     </a>
                                 </div>
                                 <div class="col-md-3 mb-2">
-                                    <a href="#" target="_blank">
+                                    <a href="menu.savory.php?id=<?php echo $outlet_id; ?>" target="_blank">
                                         <div class="card shadow-sm">
                                             <img src="../assets/img/menu/savory.jpg" class="card-img-top" alt="">
                                             <div class="card-body text-center">
@@ -68,7 +68,7 @@ $outlet_row=mysqli_fetch_array($outlet_qry);
                                     </a>
                                 </div>
                                 <div class="col-md-3 mb-2">
-                                    <a href="#" target="_blank">
+                                    <a href="menu.bakery.php?id=<?php echo $outlet_id; ?>" target="_blank">
                                         <div class="card shadow-sm">
                                             <img src="../assets/img/menu/bundles.jpg" class="card-img-top" alt="">
                                             <div class="card-body text-center">
