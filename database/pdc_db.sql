@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 19, 2024 at 11:22 AM
+-- Generation Time: Jun 20, 2024 at 11:52 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -191,7 +191,34 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (128, '1', 'Added new product: Cheese Madness, id: #24', 'Product', '2024-06-19 15:38:16.834211'),
 (129, '1', 'User logged out', 'Logout', '2024-06-19 17:20:27.218596'),
 (130, '6', 'User logged in', 'Login', '2024-06-19 17:20:33.138598'),
-(131, '6', 'User logged out', 'Logout', '2024-06-19 17:20:51.175123');
+(131, '6', 'User logged out', 'Logout', '2024-06-19 17:20:51.175123'),
+(132, '1', 'User logged in', 'Login', '2024-06-19 17:34:23.877157'),
+(133, '1', 'User logged out', 'Logout', '2024-06-19 17:34:29.484559'),
+(134, '7', 'User logged in', 'Login', '2024-06-19 17:34:40.187164'),
+(135, '7', 'User logged in', 'Login', '2024-06-19 17:37:00.562950'),
+(136, '7', 'User logged out', 'Logout', '2024-06-19 17:37:07.956630'),
+(137, '7', 'User logged in', 'Login', '2024-06-19 17:37:13.589748'),
+(138, '7', 'User logged out', 'Logout', '2024-06-19 17:38:05.733591'),
+(139, '1', 'User logged in', 'Login', '2024-06-19 17:38:16.228124'),
+(140, '1', 'User logged out', 'Logout', '2024-06-19 17:38:20.231932'),
+(141, '7', 'User logged in', 'Login', '2024-06-19 17:39:41.876964'),
+(142, '1', 'User logged in', 'Login', '2024-06-20 08:33:19.190824'),
+(143, '1', 'User logged out', 'Logout', '2024-06-20 08:33:25.622412'),
+(144, '7', 'User logged in', 'Login', '2024-06-20 08:33:33.505079'),
+(145, '7', 'Updated promo page with ID 18', 'Content', '2024-06-20 09:06:32.454265'),
+(146, '7', 'Updated promo page with ID 18', 'Content', '2024-06-20 09:07:02.581802'),
+(147, '7', 'Updated promo page with ID 18', 'Content', '2024-06-20 09:07:26.662610'),
+(148, '7', 'Updated promo page with ID 18', 'Content', '2024-06-20 09:07:30.044079'),
+(149, '7', 'Updated promo page with ID 18', 'Content', '2024-06-20 09:07:34.036252'),
+(150, '7', 'Added new image: bundles.jpg title: Sample in promo', 'Content', '2024-06-20 09:14:56.482116'),
+(151, '7', 'User logged out', 'Logout', '2024-06-20 09:41:10.573652'),
+(152, '1', 'User logged in', 'Login', '2024-06-20 09:41:29.296219'),
+(153, '1', 'User logged out', 'Logout', '2024-06-20 09:41:43.769452'),
+(154, '7', 'User logged in', 'Login', '2024-06-20 09:41:52.568607'),
+(155, '7', 'User logged out', 'Logout', '2024-06-20 16:27:34.817188'),
+(156, '1', 'User logged in', 'Login', '2024-06-20 16:27:41.637842'),
+(157, '1', 'User logged out', 'Logout', '2024-06-20 16:30:10.503340'),
+(158, '7', 'User logged in', 'Login', '2024-06-20 16:30:18.533774');
 
 -- --------------------------------------------------------
 
@@ -349,7 +376,7 @@ CREATE TABLE `tbl_outlet` (
 
 INSERT INTO `tbl_outlet` (`id`, `store_name`, `branch_code`, `outlet_code`, `shop_type`, `address`, `status`, `service_options`, `updated`, `created`, `image_path`, `image_name`) VALUES
 (1, 'Alabang Town Center', '057', 'PDC001', 'b', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-19 09:46:24.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
-(2, 'Festival Mall', '00072', 'PDC033', 'b', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:06:53.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
+(2, 'Festival Mall', '00072', 'PDC033', 'b', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Closed', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-20 09:41:38.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
 (3, 'Moonwalk', '018', 'PDC008', 'b', '432 Real ST, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:06.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
 (4, 'Verdant', '053', 'PDC017', 'a', 'UNIT/DOOR NO.48 SANTIAGUEL BLDG. PAMPLONA DOS NCR, FOURTH DISTRICT CITY OF LAS PINAS', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:12.000000', '2024-06-03 14:54:32.000000', '../../uploads/outlets/verdant.png', 'verdant.png'),
 (5, 'Northgate', '060', 'PDC009', 'b', 'Space No. 204 Fastbytes Northgate Alabang Muntinlupa City', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:20.000000', '2024-06-04 09:49:21.000000', '../../uploads/outlets/northgate.png', 'northgate.png'),
@@ -443,9 +470,9 @@ CREATE TABLE `tbl_promo` (
 --
 
 INSERT INTO `tbl_promo` (`id`, `image_name`, `file_path`, `title`, `description`, `promo_from`, `promo_to`, `status`, `created`, `uploaded_by`, `updated`, `modified_by`) VALUES
-(18, 'BEARY IN LOVE.png', '../../uploads/promo/BEARY IN LOVE.png', 'BEARY IN LOVE', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-02-12', '2024-02-15', 'Posted', '2024-06-07 11:13:21.000000', '2', '2024-06-07 13:00:28.000000', '2'),
+(18, 'BEARY IN LOVE.png', '../../uploads/promo/BEARY IN LOVE.png', 'BEARY IN LOVE', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-02-12', '2024-02-15', 'Posted', '2024-06-07 11:13:21.000000', '2', '2024-06-20 09:07:34.000000', '7'),
 (19, 'EASTER MUNCHKIN DEAL.png', '../../uploads/promo/EASTER MUNCHKIN DEAL.png', 'EASTER MUNCHKIN DEAL', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-03-31', '2024-03-31', 'Posted', '2024-06-07 11:31:13.000000', '2', '2024-06-07 11:31:13.000000', '2'),
-(20, 'SUMMER DELIGHT PROMO.png', '../../uploads/promo/SUMMER DELIGHT PROMO.png', 'SUMMER DELIGHT PROMO', 'heck out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-04-26', '2024-05-31', 'Posted', '2024-06-07 11:32:04.000000', '2', '2024-06-07 11:57:04.000000', '2');
+(20, 'SUMMER DELIGHT PROMO.png', '../../uploads/promo/SUMMER DELIGHT PROMO.png', 'SUMMER DELIGHT PROMO', 'heck out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-04-26', '2024-05-31', 'Posted', '2024-06-07 11:32:04.000000', '2', '2024-06-20 08:52:18.000000', '7');
 
 -- --------------------------------------------------------
 
@@ -601,7 +628,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -655,7 +682,7 @@ ALTER TABLE `tbl_product`
 -- AUTO_INCREMENT for table `tbl_promo`
 --
 ALTER TABLE `tbl_promo`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_promo_hero`
