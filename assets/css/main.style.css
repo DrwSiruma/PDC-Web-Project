@@ -271,3 +271,24 @@ a[data-toggle="collapse"] {
 .nav-link:hover {
     color: #af3700;
 }
+
+/* Product CSS */
+.product-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+}
+.product-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+.product-card input[type="checkbox"]:checked + .product-image {
+    /* border: 2px solid green; */
+    background: #DA1884;
+}
+.product-image {
+    display: block;
+    margin: 0 auto 10px;
+}
