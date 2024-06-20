@@ -15,7 +15,7 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
-$about_page = ['marketing.careers.php', 'marketing.edit.career.php'];
+$promo_page = ['marketing.promo.php', 'marketing.edit.promo.php', 'marketing.add.promo.php'];
 ?>
 
 <!DOCTYPE html>
@@ -56,14 +56,14 @@ $about_page = ['marketing.careers.php', 'marketing.edit.career.php'];
                     </div>
                 </div>
                 <ul class="list-unstyled components mb-5">
-                    <li class="<?php echo ($current_page == 'marketing.promo.php') ? 'active' : ''; ?>">
+                    <li class="<?php echo (in_array($current_page, $promo_page)) ? 'active' : ''; ?>">
                         <a href="marketing.promo.php"><span class="fas fa-home mr-3"></span>&nbsp;Promo Management</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'hr.careers.php') ? 'active' : ''; ?>">
-                        <a href="hr.careers.php"><span class="fas fa-briefcase mr-3"></span>&nbsp;Careers</a>
+                    <li class="<?php echo ($current_page == 'marketing.feedback.php') ? 'active' : ''; ?>">
+                        <a href="marketing.feedback.php"><span class="fas fa-comments mr-3"></span>&nbsp;Feedback</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'hr.add.career.php') ? 'active' : ''; ?>">
-                        <a href="hr.add.career.php"><span class="fas fa-briefcase-medical mr-3"></span>&nbsp;Add New Career</a>
+                    <li class="<?php echo ($current_page == 'marketing.outlet.menu.php') ? 'active' : ''; ?>">
+                        <a href="marketing.outlet.menu.php"><span class="fas fa-file mr-3"></span>&nbsp;Outlet Menu</a>
                     </li>
                     <li>
                         <a href="../../includes/logout.php"><span class="fas fa-sign-out-alt mr-3"></span>&nbsp;Sign Out</a>

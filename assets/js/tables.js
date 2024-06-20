@@ -142,7 +142,7 @@ $(document).ready(function () {
     searching: true,
     paging: true,
     info: true,
-    ordering: false,
+    ordering: true,
     lengthChange: true,
     });
 });
@@ -151,7 +151,7 @@ $(document).ready(function () {
     searching: true,
     paging: true,
     info: true,
-    ordering: false,
+    ordering: true,
     lengthChange: true,
     });
 });
@@ -160,7 +160,7 @@ $(document).ready(function () {
     searching: true,
     paging: true,
     info: true,
-    ordering: false,
+    ordering: true,
     lengthChange: true,
     });
 });
@@ -169,7 +169,18 @@ $(document).ready(function () {
     searching: true,
     paging: true,
     info: true,
-    ordering: false,
+    ordering: true,
+    lengthChange: true,
+    });
+});
+
+// Promo Marketing Table
+$(document).ready(function () {
+    var table = $('#mpromo_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: true,
     lengthChange: true,
     });
 });
