@@ -291,4 +291,5 @@ a[data-toggle="collapse"] {
 .product-image {
     display: block;
     margin: 0 auto 10px;
+    cursor: pointer;
 }
