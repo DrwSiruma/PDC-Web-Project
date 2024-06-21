@@ -39,6 +39,13 @@ while ($row = mysqli_fetch_assoc($outlet_qry)) {
         <hr />
 
         <div class="container">
+            <?php if (!empty($_SESSION['menu-error'])) : ?>
+                <div class="alert alert-danger"><?php echo $_SESSION['menu-error']; unset($_SESSION['menu-error']); ?></div>
+            <?php endif; ?>
+            <?php if (!empty($_SESSION['menu-success'])) : ?>
+                <div class="alert alert-success"><?php echo $_SESSION['menu-success']; unset($_SESSION['menu-success']); ?></div>
+            <?php endif; ?>
+
             <ul class="nav nav-pills nav-justified mb-3" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="pills-donut-tab" data-bs-toggle="pill" data-bs-target="#pills-donut" type="button" role="tab" aria-controls="pills-donut" aria-selected="true">Donut</button>

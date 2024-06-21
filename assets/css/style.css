@@ -40,6 +40,14 @@ a:hover {
     color: #DA1884
 }
 
+.link-orange {
+    color: #FF671F;
+    text-decoration: none;
+}
+.link-orange:hover {
+    color: #af3700;
+}
+
   /* h1, h2, h3, h4, h5, h6 {
     font-family: "Raleway", sans-serif;
   } */
@@ -590,6 +598,28 @@ section {
 }
 .menu-title:hover {
     color: #f73b07;
+}
+
+/* Product CSS */
+.product-card {
+    /* border: 1px solid #e0e0e0;
+    border-radius: 5px; */
+    padding: 20px;
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+.product-card:hover {
+    background: #e0e0e0;
+}
+.product-image {
+    display: block;
+    margin: 0 auto 10px;
+}
+.product-name {
+    font-weight: 700;
+    font-family: 'Dunkin';
+    color: #FF671F;
 }
 
 /*--------------------------------------------------------------

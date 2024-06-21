@@ -9,15 +9,15 @@ $id = $_GET['id'];
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="outlet.details.php?id=<?php echo $id; ?>" class="link-orange">Outlet</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Donuts</li>
+                    <li class="breadcrumb-item active" aria-current="page">Savory</li>
                 </ol>
             </nav>
             <div class="section-title">
-                <h2>Donuts</h2>
+                <h2>Savory</h2>
             </div>
             <div class="row">
                 <?php
-                    $product_qry = mysqli_query($conn, "SELECT tom.id AS outlet_menu_id, tom.product_id, tom.outlet_id, tbo.id AS outlet_id, tbo.store_name, tp.id AS product_id, tp.name AS product_name, tp.category AS product_category, tp.image_name FROM tbl_outlet tbo LEFT JOIN tbl_outlet_menu tom ON tbo.id = tom.outlet_id LEFT JOIN tbl_product tp ON tom.product_id = tp.id WHERE tp.category = 'Donut' AND tom.outlet_id = $id;");
+                    $product_qry = mysqli_query($conn, "SELECT tom.id AS outlet_menu_id, tom.product_id, tom.outlet_id, tbo.id AS outlet_id, tbo.store_name, tp.id AS product_id, tp.name AS product_name, tp.category AS product_category, tp.image_name FROM tbl_outlet tbo LEFT JOIN tbl_outlet_menu tom ON tbo.id = tom.outlet_id LEFT JOIN tbl_product tp ON tom.product_id = tp.id WHERE tp.category = 'Savory' AND tom.outlet_id = $id;");
 
                     while($product_row = mysqli_fetch_array($product_qry)) {
                 ?>
