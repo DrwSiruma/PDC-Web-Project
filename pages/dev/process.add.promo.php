@@ -10,7 +10,6 @@ function log_activity($conn, $user_id, $activity, $type) {
         $stmt->execute();
         $stmt->close();
     } else {
-        // Handle the error appropriately in a real application
         error_log("Failed to prepare statement for logging activity: " . $conn->error);
     }
 }
@@ -30,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $target_file = $target_dir . basename($image);
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 
-    // Check if image file is a actual image or fake image
+    // Check if image file is an actual image or fake image
     $check = getimagesize($_FILES['image']['tmp_name']);
     if ($check === false) {
         $_SESSION['promo-error'] = "File is not an image.";

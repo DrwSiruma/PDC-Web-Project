@@ -83,7 +83,7 @@
                                 <div class="row justify-content-center">
                                     <div class="col-auto">
                                         <h2 class="p-2"><?php echo $promo_row['title']; ?></h2>
-                                        <div class="promo-text"><?php echo $promo_row['description']; ?></div>
+                                        <div class="promo-text"><?php echo nl2br($promo_row['description']); ?></div>
                                         <div class="promo-runs">Promo runs until&nbsp;<?php echo format_promo_date($promo_row["promo_from"], $promo_row["promo_to"]); ?></div>
                                     </div>
                                 </div>

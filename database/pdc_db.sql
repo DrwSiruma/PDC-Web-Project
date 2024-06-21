@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2024 at 11:52 AM
+-- Generation Time: Jun 21, 2024 at 11:42 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -218,7 +218,15 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (155, '7', 'User logged out', 'Logout', '2024-06-20 16:27:34.817188'),
 (156, '1', 'User logged in', 'Login', '2024-06-20 16:27:41.637842'),
 (157, '1', 'User logged out', 'Logout', '2024-06-20 16:30:10.503340'),
-(158, '7', 'User logged in', 'Login', '2024-06-20 16:30:18.533774');
+(158, '7', 'User logged in', 'Login', '2024-06-20 16:30:18.533774'),
+(159, '7', 'User logged in', 'Login', '2024-06-21 09:21:08.010068'),
+(160, '7', 'Updated promo page with ID 20', 'Content', '2024-06-21 16:15:24.724322'),
+(161, '7', 'Updated promo page with ID 20', 'Content', '2024-06-21 16:36:18.051214'),
+(162, '7', 'User logged out', 'Logout', '2024-06-21 16:39:54.568637'),
+(163, '2', 'User logged in', 'Login', '2024-06-21 16:40:04.470932'),
+(164, '2', 'Updated promo page with ID 19', 'Content', '2024-06-21 16:40:36.849360'),
+(165, '2', 'User logged out', 'Logout', '2024-06-21 16:41:07.284798'),
+(166, '2', 'User logged in', 'Login', '2024-06-21 16:52:00.828242');
 
 -- --------------------------------------------------------
 
@@ -320,7 +328,7 @@ INSERT INTO `tbl_home_hero` (`id`, `image_name`, `file_path`, `title`, `status`,
 (8, 'slide5.jpg', '../../uploads/home/slide5.jpg', 'Hero Image 2', 'Published', '2024-06-05 09:05:12.000000', '2', '2024-06-05 18:08:09.000000', '2'),
 (9, 'slide4.jpg', '../../uploads/home/slide4.jpg', 'Hero Image 1', 'Published', '2024-06-05 11:55:03.000000', '2', '2024-06-05 18:08:08.000000', '2'),
 (10, 'slide3.jpg', '../../uploads/home/slide3.jpg', 'Hero Image 3', 'Published', '2024-06-05 14:11:47.000000', '2', '2024-06-06 11:22:28.000000', '2'),
-(11, 'slide6.jpg', '../../uploads/home/slide6.jpg', 'Hero Image 4', 'Published', '2024-06-05 14:13:31.000000', '2', '2024-06-05 18:07:56.000000', '2'),
+(11, 'slide6.jpg', '../../uploads/home/slide6.jpg', 'Hero Image 4', 'Unpublish', '2024-06-05 14:13:31.000000', '2', '2024-06-21 16:52:08.000000', '2'),
 (12, 'slide2.jpg', '../../uploads/home/slide2.jpg', 'Hero Image 5', 'Unpublish', '2024-06-05 15:57:16.000000', '2', '2024-06-05 17:13:21.000000', '2');
 
 -- --------------------------------------------------------
@@ -398,6 +406,155 @@ CREATE TABLE `tbl_outlet_menu` (
   `post_date` datetime(6) NOT NULL DEFAULT current_timestamp(6)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
+--
+-- Dumping data for table `tbl_outlet_menu`
+--
+
+INSERT INTO `tbl_outlet_menu` (`id`, `product_id`, `outlet_id`, `status`, `post_date`) VALUES
+(1, 1, 1, 'Posted', '2024-06-21 11:17:10.000000'),
+(2, 4, 1, 'Posted', '2024-06-21 11:17:10.000000'),
+(3, 7, 1, 'Posted', '2024-06-21 11:17:10.000000'),
+(4, 8, 1, 'Posted', '2024-06-21 11:17:10.000000'),
+(5, 14, 1, 'Posted', '2024-06-21 11:17:10.000000'),
+(6, 15, 1, 'Posted', '2024-06-21 11:17:10.000000'),
+(7, 16, 1, 'Posted', '2024-06-21 11:17:10.000000'),
+(8, 21, 1, 'Posted', '2024-06-21 11:17:10.000000'),
+(10, 2, 4, 'Posted', '2024-06-21 11:17:42.000000'),
+(11, 5, 4, 'Posted', '2024-06-21 11:17:42.000000'),
+(12, 1, 4, 'Posted', '2024-06-21 11:41:49.000000'),
+(13, 3, 4, 'Posted', '2024-06-21 11:41:49.000000'),
+(14, 4, 4, 'Posted', '2024-06-21 11:41:49.000000'),
+(15, 6, 4, 'Posted', '2024-06-21 11:42:25.000000'),
+(16, 7, 4, 'Posted', '2024-06-21 11:42:25.000000'),
+(17, 8, 4, 'Posted', '2024-06-21 11:42:25.000000'),
+(18, 9, 4, 'Posted', '2024-06-21 11:42:25.000000'),
+(19, 10, 4, 'Posted', '2024-06-21 11:42:25.000000'),
+(20, 11, 4, 'Posted', '2024-06-21 11:42:25.000000'),
+(21, 16, 4, 'Posted', '2024-06-21 11:42:36.000000'),
+(22, 17, 4, 'Posted', '2024-06-21 11:42:36.000000'),
+(27, 1, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(28, 2, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(29, 4, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(30, 5, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(31, 6, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(32, 7, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(33, 8, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(34, 9, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(35, 10, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(36, 11, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(37, 13, 3, 'Posted', '2024-06-21 11:43:03.000000'),
+(38, 14, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(39, 15, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(40, 16, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(41, 17, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(42, 19, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(43, 21, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(44, 22, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(45, 23, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(46, 24, 3, 'Posted', '2024-06-21 11:43:21.000000'),
+(47, 1, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(48, 2, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(49, 3, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(50, 4, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(51, 5, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(52, 6, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(53, 7, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(54, 8, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(55, 9, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(56, 10, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(57, 11, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(58, 12, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(59, 13, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(60, 14, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(61, 15, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(62, 16, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(63, 17, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(64, 18, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(65, 19, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(66, 20, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(67, 21, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(68, 22, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(69, 23, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(70, 24, 5, 'Posted', '2024-06-21 11:43:52.000000'),
+(71, 1, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(72, 2, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(73, 3, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(74, 4, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(75, 5, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(76, 6, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(77, 7, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(78, 8, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(79, 9, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(80, 10, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(81, 11, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(82, 13, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(83, 14, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(84, 15, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(85, 16, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(86, 17, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(87, 18, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(88, 21, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(89, 23, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(90, 24, 7, 'Posted', '2024-06-21 11:44:29.000000'),
+(91, 1, 8, 'Posted', '2024-06-21 11:44:38.000000'),
+(92, 2, 8, 'Posted', '2024-06-21 11:44:38.000000'),
+(93, 3, 8, 'Posted', '2024-06-21 11:44:38.000000'),
+(94, 4, 8, 'Posted', '2024-06-21 11:44:38.000000'),
+(95, 5, 8, 'Posted', '2024-06-21 11:44:38.000000'),
+(96, 6, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(97, 7, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(98, 8, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(99, 9, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(100, 10, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(101, 11, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(102, 14, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(103, 15, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(104, 16, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(105, 17, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(106, 18, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(107, 19, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(108, 20, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(109, 21, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(110, 22, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(111, 23, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(112, 24, 8, 'Posted', '2024-06-21 11:44:54.000000'),
+(113, 1, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(114, 2, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(115, 3, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(116, 4, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(117, 5, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(118, 6, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(119, 7, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(120, 8, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(121, 9, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(122, 10, 9, 'Posted', '2024-06-21 11:45:10.000000'),
+(123, 14, 9, 'Posted', '2024-06-21 11:45:15.000000'),
+(124, 15, 9, 'Posted', '2024-06-21 11:45:15.000000'),
+(125, 16, 9, 'Posted', '2024-06-21 11:45:15.000000'),
+(126, 17, 9, 'Posted', '2024-06-21 11:45:15.000000'),
+(127, 19, 9, 'Posted', '2024-06-21 11:48:00.000000'),
+(128, 20, 9, 'Posted', '2024-06-21 11:48:00.000000'),
+(129, 21, 9, 'Posted', '2024-06-21 11:48:00.000000'),
+(130, 22, 9, 'Posted', '2024-06-21 11:48:00.000000'),
+(131, 23, 9, 'Posted', '2024-06-21 11:48:00.000000'),
+(132, 24, 9, 'Posted', '2024-06-21 11:48:00.000000'),
+(133, 2, 1, 'Posted', '2024-06-21 11:49:52.000000'),
+(135, 5, 1, 'Posted', '2024-06-21 11:49:52.000000'),
+(137, 3, 1, 'Posted', '2024-06-21 11:53:20.000000'),
+(138, 19, 1, 'Posted', '2024-06-21 11:54:09.000000'),
+(139, 20, 1, 'Posted', '2024-06-21 11:54:09.000000'),
+(140, 22, 1, 'Posted', '2024-06-21 11:54:09.000000'),
+(141, 23, 1, 'Posted', '2024-06-21 11:54:09.000000'),
+(142, 24, 1, 'Posted', '2024-06-21 11:54:09.000000'),
+(143, 6, 1, 'Posted', '2024-06-21 11:54:23.000000'),
+(144, 9, 1, 'Posted', '2024-06-21 11:54:23.000000'),
+(145, 10, 1, 'Posted', '2024-06-21 11:54:23.000000'),
+(146, 11, 1, 'Posted', '2024-06-21 11:54:23.000000'),
+(147, 12, 1, 'Posted', '2024-06-21 11:54:23.000000'),
+(148, 13, 1, 'Posted', '2024-06-21 11:54:23.000000'),
+(149, 17, 1, 'Posted', '2024-06-21 11:54:23.000000'),
+(150, 18, 1, 'Posted', '2024-06-21 11:54:23.000000');
+
 -- --------------------------------------------------------
 
 --
@@ -470,9 +627,9 @@ CREATE TABLE `tbl_promo` (
 --
 
 INSERT INTO `tbl_promo` (`id`, `image_name`, `file_path`, `title`, `description`, `promo_from`, `promo_to`, `status`, `created`, `uploaded_by`, `updated`, `modified_by`) VALUES
-(18, 'BEARY IN LOVE.png', '../../uploads/promo/BEARY IN LOVE.png', 'BEARY IN LOVE', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-02-12', '2024-02-15', 'Posted', '2024-06-07 11:13:21.000000', '2', '2024-06-20 09:07:34.000000', '7'),
-(19, 'EASTER MUNCHKIN DEAL.png', '../../uploads/promo/EASTER MUNCHKIN DEAL.png', 'EASTER MUNCHKIN DEAL', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-03-31', '2024-03-31', 'Posted', '2024-06-07 11:31:13.000000', '2', '2024-06-07 11:31:13.000000', '2'),
-(20, 'SUMMER DELIGHT PROMO.png', '../../uploads/promo/SUMMER DELIGHT PROMO.png', 'SUMMER DELIGHT PROMO', 'heck out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-04-26', '2024-05-31', 'Posted', '2024-06-07 11:32:04.000000', '2', '2024-06-20 08:52:18.000000', '7');
+(18, 'BEARY IN LOVE.png', '../../uploads/promo/BEARY IN LOVE.png', 'BEARY IN LOVE', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-02-12', '2024-02-15', 'Posted', '2024-06-07 11:13:21.000000', '2', '2024-06-21 11:58:45.000000', '7'),
+(19, 'EASTER MUNCHKIN DEAL.png', '../../uploads/promo/EASTER MUNCHKIN DEAL.png', 'EASTER MUNCHKIN DEAL', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone.\r\nVisit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-03-31', '2024-03-31', 'Posted', '2024-06-07 11:31:13.000000', '2', '2024-06-21 16:40:36.000000', '2'),
+(20, 'SUMMER DELIGHT PROMO.png', '../../uploads/promo/SUMMER DELIGHT PROMO.png', 'SUMMER DELIGHT PROMO', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. \nVisit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-04-26', '2024-05-31', 'Posted', '2024-06-07 11:32:04.000000', '2', '2024-06-21 16:36:18.000000', '7');
 
 -- --------------------------------------------------------
 
@@ -628,7 +785,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -670,7 +827,7 @@ ALTER TABLE `tbl_outlet`
 -- AUTO_INCREMENT for table `tbl_outlet_menu`
 --
 ALTER TABLE `tbl_outlet_menu`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
 
 --
 -- AUTO_INCREMENT for table `tbl_product`
