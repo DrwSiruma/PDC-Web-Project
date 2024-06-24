@@ -12,29 +12,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $message = trim($_POST['message']);
 
     if (empty($name) || empty($company) || empty($email) || empty($address) || empty($contact) || empty($message)) {
-        $_SESSION['message-error'] = "All fields are required.";
+        $_SESSION['feedback-error'] = "All fields are required.";
+        header("Location: contact.php");
+        exit();
+    } else {
+        // Insert feedback into the database
+        $sql = "INSERT INTO tbl_feedback (f_name, company, email, address, contact, message, status, post_date) VALUES (?, ?, ?, ?, ?, ?, 'Unread', NOW(6))";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssssss", $name, $company, $email, $address, $contact, $message);
+
+        if ($stmt->execute()) {
+            $_SESSION['feedback-success'] = "Message submitted successfully.";
+        } else {
+            $_SESSION['feedback-error'] = "Failed to submit message. Please try again.";
+        }
+
+        $stmt->close();
+        $conn->close();
+
         header("Location: contact.php");
         exit();
     }
 
-    // Insert feedback into the database
-    $sql = "INSERT INTO tbl_feedback (f_name, company, email, address, contact, message, status, post_date) VALUES (?, ?, ?, ?, ?, ?, 'Unread', NOW(6))";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssssss", $name, $company, $email, $address, $contact, $message);
-
-    if ($stmt->execute()) {
-        $_SESSION['message-success'] = "Message submitted successfully.";
-    } else {
-        $_SESSION['message-error'] = "Failed to submit message. Please try again.";
-    }
-
-    $stmt->close();
-    $conn->close();
-
-    header("Location: contact.php");
-    exit();
 } else {
-    $_SESSION['message-error'] = "Invalid request.";
+    $_SESSION['feedback-error'] = "Invalid request.";
     header("Location: contact.php");
     exit();
 }

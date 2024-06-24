@@ -1,4 +1,7 @@
-<?php include('header.php'); ?>
+<?php
+include('header.php');
+session_start()
+?>
     <!-- ======= Send Email Section ======= -->
     <section id="send-email" class="send-email">
         <div class="container">
@@ -23,14 +26,14 @@
             <div class="col-md-7">
                 <div class="ps-5 pe-5">
                     <div class="contact-card">
-                    <?php if (isset($_SESSION['message-error'])) : ?>
-                        <div class="alert alert-danger"><?php echo $_SESSION['message-error']; unset($_SESSION['message-error']); ?></div>
-                    <?php endif; ?>
-                    <?php if (isset($_SESSION['message-success'])) : ?>
-                        <div class="alert alert-success"><?php echo $_SESSION['message-success']; unset($_SESSION['message-success']); ?></div>
-                    <?php endif; ?>
                         <h2>Contact Us</h2>
                         <p>Please fill up this form and provide correct details together with your concerns.</p>
+                        <?php if (isset($_SESSION['feedback-error'])) : ?>
+                            <div class="alert alert-danger"><?php echo $_SESSION['feedback-error']; unset($_SESSION['feedback-error']); ?></div>
+                        <?php endif; ?>
+                        <?php if (isset($_SESSION['feedback-success'])) : ?>
+                            <div class="alert alert-success"><?php echo $_SESSION['feedback-success']; unset($_SESSION['message-success']); ?></div>
+                        <?php endif; ?>
                         <form action="feedback_process.php" method="post">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
