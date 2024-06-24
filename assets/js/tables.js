@@ -184,3 +184,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+// Feedback Table
+$(document).ready(function () {
+    var table = $('#feedback_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: true,
+    lengthChange: true,
+    });
+});

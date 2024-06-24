@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2024 at 04:12 AM
+-- Generation Time: Jun 24, 2024 at 11:55 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -232,7 +232,13 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (169, '7', 'User logged out', 'Logout', '2024-06-24 09:49:24.157637'),
 (170, '6', 'User logged in', 'Login', '2024-06-24 09:49:29.830071'),
 (171, '6', 'User logged out', 'Logout', '2024-06-24 09:49:45.584621'),
-(172, '7', 'User logged in', 'Login', '2024-06-24 09:49:52.443743');
+(172, '7', 'User logged in', 'Login', '2024-06-24 09:49:52.443743'),
+(173, '7', 'User logged out', 'Logout', '2024-06-24 14:36:56.262585'),
+(174, '7', 'User logged in', 'Login', '2024-06-24 14:37:07.556928'),
+(175, '7', 'User logged out', 'Logout', '2024-06-24 14:37:38.177866'),
+(176, '6', 'User logged in', 'Login', '2024-06-24 14:37:44.799845'),
+(177, '6', 'User logged out', 'Logout', '2024-06-24 14:44:21.523264'),
+(178, '7', 'User logged in', 'Login', '2024-06-24 14:44:28.516063');
 
 -- --------------------------------------------------------
 
@@ -822,7 +828,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=179;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
