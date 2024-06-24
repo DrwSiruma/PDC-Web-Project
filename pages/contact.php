@@ -23,32 +23,38 @@
             <div class="col-md-7">
                 <div class="ps-5 pe-5">
                     <div class="contact-card">
+                    <?php if (isset($_SESSION['message-error'])) : ?>
+                        <div class="alert alert-danger"><?php echo $_SESSION['message-error']; unset($_SESSION['message-error']); ?></div>
+                    <?php endif; ?>
+                    <?php if (isset($_SESSION['message-success'])) : ?>
+                        <div class="alert alert-success"><?php echo $_SESSION['message-success']; unset($_SESSION['message-success']); ?></div>
+                    <?php endif; ?>
                         <h2>Contact Us</h2>
                         <p>Please fill up this form and provide correct details together with your concerns.</p>
-                        <form>
+                        <form action="feedback_process.php" method="post">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="">
                             </div>
                             <div class="mb-3">
                                 <label for="company" class="form-label">Company Name</label>
-                                <input type="text" class="form-control" id="company" placeholder="">
+                                <input type="text" class="form-control" id="company" name="company" placeholder="">
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="">
                             </div>
                             <div class="mb-3">
                                 <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" placeholder="">
+                                <input type="text" class="form-control" id="address" name="address" placeholder="">
                             </div>
                             <div class="mb-3">
                                 <label for="contact" class="form-label">Contact</label>
-                                <input type="text" class="form-control" id="contact" placeholder="">
+                                <input type="text" class="form-control" id="contact" name="contact" placeholder="">
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder=""></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="4" placeholder=""></textarea>
                             </div>
                             <button type="submit" class="btn-submit">Submit</button>
                         </form>

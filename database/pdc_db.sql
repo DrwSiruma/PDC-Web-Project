@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2024 at 11:42 AM
+-- Generation Time: Jun 24, 2024 at 04:12 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -226,7 +226,13 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (163, '2', 'User logged in', 'Login', '2024-06-21 16:40:04.470932'),
 (164, '2', 'Updated promo page with ID 19', 'Content', '2024-06-21 16:40:36.849360'),
 (165, '2', 'User logged out', 'Logout', '2024-06-21 16:41:07.284798'),
-(166, '2', 'User logged in', 'Login', '2024-06-21 16:52:00.828242');
+(166, '2', 'User logged in', 'Login', '2024-06-21 16:52:00.828242'),
+(167, '2', 'User logged out', 'Logout', '2024-06-21 17:51:45.058843'),
+(168, '7', 'User logged in', 'Login', '2024-06-24 08:31:48.283139'),
+(169, '7', 'User logged out', 'Logout', '2024-06-24 09:49:24.157637'),
+(170, '6', 'User logged in', 'Login', '2024-06-24 09:49:29.830071'),
+(171, '6', 'User logged out', 'Logout', '2024-06-24 09:49:45.584621'),
+(172, '7', 'User logged in', 'Login', '2024-06-24 09:49:52.443743');
 
 -- --------------------------------------------------------
 
@@ -301,6 +307,31 @@ INSERT INTO `tbl_careers_wylwwu` (`id`, `image_name`, `file_path`, `title`, `des
 (15, 'empowering-leadership.jpg', '../../uploads/careers/empowering-leadership.jpg', 'Empowering Leadership', 'At Panda Development Corporation, our leadership empowers you to take initiative and make impactful decisions. We foster a culture of trust and collaboration, ensuring every team member feels valued and supported in their role.', 'Published', '2024-06-06 14:02:47.000000', '2'),
 (16, 'visionary-teams.jpg', '../../uploads/careers/visionary-teams.jpg', 'Visionary Teams', 'Join our visionary teams at Panda Development Corporation, where innovative thinking and teamwork drive our success. You\'ll work alongside passionate professionals dedicated to delivering excellence and achieving common goals.', 'Published', '2024-06-06 15:39:28.000000', '2'),
 (17, 'pathways-to-growth.jpg', '../../uploads/careers/pathways-to-growth.jpg', 'Pathways to Growth', 'We believe in your potential and provide clear pathways to growth within Panda Development Corporation. With ongoing training, mentorship, and career advancement opportunities, you can build a fulfilling and dynamic career with us.', 'Published', '2024-06-06 15:39:08.000000', '2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_feedback`
+--
+
+CREATE TABLE `tbl_feedback` (
+  `id` int(100) NOT NULL,
+  `f_name` varchar(1000) NOT NULL,
+  `company` varchar(1000) NOT NULL,
+  `email` varchar(1000) NOT NULL,
+  `address` varchar(1000) NOT NULL,
+  `contact` varchar(1000) NOT NULL,
+  `message` longtext NOT NULL,
+  `status` enum('Unread','Read') NOT NULL,
+  `post_date` datetime(6) NOT NULL DEFAULT current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_feedback`
+--
+
+INSERT INTO `tbl_feedback` (`id`, `f_name`, `company`, `email`, `address`, `contact`, `message`, `status`, `post_date`) VALUES
+(1, 'Andrew Siruma', 'Panda Development Corp.', 'andrew@sample.com', 'Bacoor Cavite', '09121231234', 'Testing', 'Unread', '2024-06-24 09:58:13.398620');
 
 -- --------------------------------------------------------
 
@@ -629,7 +660,7 @@ CREATE TABLE `tbl_promo` (
 INSERT INTO `tbl_promo` (`id`, `image_name`, `file_path`, `title`, `description`, `promo_from`, `promo_to`, `status`, `created`, `uploaded_by`, `updated`, `modified_by`) VALUES
 (18, 'BEARY IN LOVE.png', '../../uploads/promo/BEARY IN LOVE.png', 'BEARY IN LOVE', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-02-12', '2024-02-15', 'Posted', '2024-06-07 11:13:21.000000', '2', '2024-06-21 11:58:45.000000', '7'),
 (19, 'EASTER MUNCHKIN DEAL.png', '../../uploads/promo/EASTER MUNCHKIN DEAL.png', 'EASTER MUNCHKIN DEAL', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone.\r\nVisit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-03-31', '2024-03-31', 'Posted', '2024-06-07 11:31:13.000000', '2', '2024-06-21 16:40:36.000000', '2'),
-(20, 'SUMMER DELIGHT PROMO.png', '../../uploads/promo/SUMMER DELIGHT PROMO.png', 'SUMMER DELIGHT PROMO', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. \nVisit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-04-26', '2024-05-31', 'Posted', '2024-06-07 11:32:04.000000', '2', '2024-06-21 16:36:18.000000', '7');
+(20, 'SUMMER DELIGHT PROMO.png', '../../uploads/promo/SUMMER DELIGHT PROMO.png', 'SUMMER DELIGHT PROMO', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. \nVisit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-04-26', '2024-05-31', 'Posted', '2024-06-07 11:32:04.000000', '2', '2024-06-24 09:50:08.000000', '7');
 
 -- --------------------------------------------------------
 
@@ -723,6 +754,12 @@ ALTER TABLE `tbl_careers_wylwwu`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_feedback`
+--
+ALTER TABLE `tbl_feedback`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_home_hero`
 --
 ALTER TABLE `tbl_home_hero`
@@ -785,7 +822,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=167;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -804,6 +841,12 @@ ALTER TABLE `tbl_careers_hero`
 --
 ALTER TABLE `tbl_careers_wylwwu`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT for table `tbl_feedback`
+--
+ALTER TABLE `tbl_feedback`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_home_hero`
