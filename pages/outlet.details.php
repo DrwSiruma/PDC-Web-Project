@@ -30,10 +30,10 @@ $outlet_row=mysqli_fetch_array($outlet_qry);
                                 ?>
                             </p>
                         </div>
-                        <div class="info-wrapper">
+                        <!-- <div class="info-wrapper">
                             <div class="info-header">Store Type</div>
-                            <p class="info-content m-0" style="text-transform: uppercase;"><span class="badge bg-primary"><?php echo $outlet_row['shop_type']; ?></span></p>
-                        </div>
+                            <p class="info-content m-0" style="text-transform: uppercase;"><span class="badge bg-primary"><?php //echo $outlet_row['shop_type']; ?></span></p>
+                        </div> -->
                         <div class="info-wrapper">
                             <div class="info-header">Our Menu Categories</div>
                             <div class="row">

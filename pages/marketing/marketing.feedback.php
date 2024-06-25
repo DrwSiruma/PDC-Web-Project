@@ -6,11 +6,11 @@
 
         <div class="card bg-dark mb-3">
             <div class="card-body">
-                <?php if (!empty($_SESSION['promo-error'])) : ?>
-                    <div class="alert alert-danger"><?php echo $_SESSION['promo-error']; unset($_SESSION['promo-error']); ?></div>
+                <?php if (!empty($_SESSION['feedback-error'])) : ?>
+                    <div class="alert alert-danger"><?php echo $_SESSION['feedback-error']; unset($_SESSION['feedback-error']); ?></div>
                 <?php endif; ?>
-                <?php if (!empty($_SESSION['promo-success'])) : ?>
-                    <div class="alert alert-success"><?php echo $_SESSION['promo-success']; unset($_SESSION['promo-success']); ?></div>
+                <?php if (!empty($_SESSION['feedback-success'])) : ?>
+                    <div class="alert alert-success"><?php echo $_SESSION['feedback-success']; unset($_SESSION['feedback-success']); ?></div>
                 <?php endif; ?>
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped table-dark table-sm w-100" id="feedback_table">
@@ -26,41 +26,22 @@
                         </thead>
                         <tbody>
                             <?php
-                                $promo_qry = mysqli_query($conn, "
-                                    SELECT 
-                                    h.*, 
-                                    u1.id as uploaded_by_userid, 
-                                    u1.username as uploaded_by_username,
-                                    u2.id as modified_by_userid, 
-                                    u2.username as modified_by_username
-                                    FROM tbl_promo h
-                                    LEFT JOIN tbl_user u1 ON h.uploaded_by = u1.id
-                                    LEFT JOIN tbl_user u2 ON h.modified_by = u2.id
-                                    ORDER BY h.created DESC;
+                                $feedback_qry = mysqli_query($conn, "SELECT * FROM `tbl_feedback` ORDER BY post_date DESC;
                                 ");
-                                while($promo_row=mysqli_fetch_array($promo_qry)){ 
+                                while($feedback_row=mysqli_fetch_array($feedback_qry)){ 
                             ?>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
-                                    <td class="wrap"></td>
+                                    <td><?php echo $feedback_row["f_name"]; ?></td>
+                                    <td><?php echo $feedback_row["email"]; ?></td>
+                                    <td class="wrap"><?php echo $feedback_row["message"]; ?></td>
                                     <td>
-                                        <span class="badge <?php echo $promo_row["status"] == 'Posted' ? 'bg-success' : 'bg-secondary'; ?>">
-                                            <?php echo ucfirst($promo_row["status"]); ?>
+                                        <span class="badge <?php echo $feedback_row["status"] == 'Unread' ? 'bg-info' : 'bg-secondary'; ?>">
+                                            <?php echo ucfirst($feedback_row["status"]); ?>
                                         </span>
                                     </td>
-                                    <td></td>
+                                    <td><?php echo $feedback_row["post_date"]; ?></td>
                                     <td>
-                                        <a class="btn btn-sm btn-outline-light" href="xmarketing.edit.promo.php?id=<?php echo $promo_row['id']; ?>" title="Edit"><i class="fas fa-pen"></i></a>
-                                        <?php if ($promo_row['status'] == 'Posted') { ?>
-                                            <a class="btn btn-sm btn-outline-light" href="xprocess.status.promo.php?id=<?php echo $promo_row['id']; ?>&status=Unposted" title="Unposted">
-                                                <i class="fas fa-times"></i>
-                                            </a>
-                                        <?php } else { ?>
-                                            <a class="btn btn-sm btn-outline-light" href="xprocess.status.promo.php?id=<?php echo $promo_row['id']; ?>&status=Posted" title="post">
-                                                <i class="fas fa-check"></i>
-                                            </a>
-                                        <?php } ?>
+                                        <a class="btn btn-sm btn-outline-light" href="marketing.view.feedback.php?id=<?php echo $feedback_row['id']; ?>" title="View"><i class="fas fa-eye"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>
