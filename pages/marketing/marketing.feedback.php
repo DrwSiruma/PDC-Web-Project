@@ -41,7 +41,15 @@
                                     </td>
                                     <td><?php echo $feedback_row["post_date"]; ?></td>
                                     <td>
-                                        <a class="btn btn-sm btn-outline-light" href="marketing.view.feedback.php?id=<?php echo $feedback_row['id']; ?>" title="View"><i class="fas fa-eye"></i></a>
+                                        <?php if ($feedback_row['status'] == 'Unread') { ?>
+                                            <a class="btn btn-sm btn-outline-light" href="marketing.view.feedback.php?id=<?php echo $feedback_row['id']; ?>&status=Read" title="View">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                        <?php } else { ?>
+                                            <a class="btn btn-sm btn-outline-light" href="marketing.view.feedback.php?id=<?php echo $feedback_row['id']; ?>&status=Read" title="View">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                        <?php } ?>
                                     </td>
                                 </tr>
                             <?php } ?>
