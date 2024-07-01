@@ -16,6 +16,7 @@ unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
 $promo_page = ['marketing.promo.php', 'marketing.edit.promo.php', 'marketing.add.promo.php'];
+$feedback_page = ['marketing.feedback.php', 'marketing.view.feedback.php'];
 $outlet_page = ['marketing.outlet.menu.php', 'marketing.add.menu.php'];
 ?>
 
@@ -60,7 +61,7 @@ $outlet_page = ['marketing.outlet.menu.php', 'marketing.add.menu.php'];
                     <li class="<?php echo (in_array($current_page, $promo_page)) ? 'active' : ''; ?>">
                         <a href="marketing.promo.php"><span class="fas fa-home mr-3"></span>&nbsp;Promo Management</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'marketing.feedback.php') ? 'active' : ''; ?>">
+                    <li class="<?php echo (in_array($current_page, $feedback_page)) ? 'active' : ''; ?>">
                         <a href="marketing.feedback.php"><span class="fas fa-comments mr-3"></span>&nbsp;Feedback</a>
                     </li>
                     <li class="<?php echo (in_array($current_page, $outlet_page)) ? 'active' : ''; ?>">
