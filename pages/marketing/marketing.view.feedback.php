@@ -28,7 +28,11 @@ if (isset($_GET['id']) && isset($_GET['status'])) {
 }
 
 $feedback_qry = mysqli_query($conn, "SELECT * FROM `tbl_feedback` WHERE id = $id;");
-$feedback_row=mysqli_fetch_array($feedback_qry)
+$feedback_row=mysqli_fetch_array($feedback_qry);
+
+$dateString = $feedback_row['post_date'];
+$date = new DateTime($dateString);
+$formattedDate = $date->format('F d, Y g:i A');
 ?>
     <div id="content" class="p-4 p-md-5 pt-5">
         <h2 class="mb-4 text-orange">Feedback</h2>
@@ -39,12 +43,17 @@ $feedback_row=mysqli_fetch_array($feedback_qry)
                 <div class="card-body">
                     <div class="row">
                         <div class="col-md-5">
-                            <div class="d-flex flex-column align-items-center p-3 py-5">
-                                <h4 class="text-right mb-3"><i class="fas fa-envelope"></i>&nbsp;Information:</h4>
-                                <span class="font-weight-bold">From: <span class="text-orange"><?php echo $feedback_row['f_name']; ?></span></span>
-                                <span class="font-weight-bold">Company: <span class="text-orange"><?php echo $feedback_row['company']; ?></span></span>
-                                <span class="font-weight-bold">E-mail: <span class="text-orange"><?php echo $feedback_row['email']; ?></span></span>
-                                <span class="font-weight-bold">Contact #: <span class="text-orange"><?php echo $feedback_row['contact']; ?></span></span>
+                            <div class="p-3 py-5">
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <h4 class="text-right"><i class="fas fa-info"></i>&nbsp;Information:</h4>
+                                </div>
+                                <div class="row mt-2">
+                                    <span class="font-weight-bold">Date: <span class="text-orange"><?php echo $formattedDate; ?></span></span>
+                                    <span class="font-weight-bold">From: <span class="text-orange"><?php echo $feedback_row['f_name']; ?></span></span>
+                                    <span class="font-weight-bold">Company: <span class="text-orange"><?php echo $feedback_row['company']; ?></span></span>
+                                    <span class="font-weight-bold">E-mail: <span class="text-orange"><?php echo $feedback_row['email']; ?></span></span>
+                                    <span class="font-weight-bold">Contact #: <span class="text-orange"><?php echo $feedback_row['contact']; ?></span></span>
+                                </div>
                             </div>
                         </div>
 
