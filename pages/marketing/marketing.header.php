@@ -18,6 +18,9 @@ $current_page = basename($_SERVER['PHP_SELF']);
 $promo_page = ['marketing.promo.php', 'marketing.edit.promo.php', 'marketing.add.promo.php'];
 $feedback_page = ['marketing.feedback.php', 'marketing.view.feedback.php'];
 $outlet_page = ['marketing.outlet.menu.php', 'marketing.add.menu.php'];
+
+$fback_qry = mysqli_query($conn, "SELECT COUNT(status) AS count FROM tbl_feedback WHERE status='Unread'");
+$feedback_count = mysqli_fetch_assoc($fback_qry);
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +65,15 @@ $outlet_page = ['marketing.outlet.menu.php', 'marketing.add.menu.php'];
                         <a href="marketing.promo.php"><span class="fas fa-home mr-3"></span>&nbsp;Promo Management</a>
                     </li>
                     <li class="<?php echo (in_array($current_page, $feedback_page)) ? 'active' : ''; ?>">
-                        <a href="marketing.feedback.php"><span class="fas fa-comments mr-3"></span>&nbsp;Feedback&nbsp;<span class="badge bg-danger">5</span></a>
+                        <a href="marketing.feedback.php"><span class="fas fa-comments mr-3"></span>&nbsp;Feedback&nbsp;
+                            <?php
+                                if($feedback_count['count'] == 0){
+                                    echo '';
+                                } else{
+                                    echo '<span class="badge bg-danger">'.$feedback_count['count'].'</span>';
+                                }
+                            ?>
+                        </a>
                     </li>
                     <li class="<?php echo (in_array($current_page, $outlet_page)) ? 'active' : ''; ?>">
                         <a href="marketing.outlet.menu.php"><span class="fas fa-file mr-3"></span>&nbsp;Outlet Menu</a>
