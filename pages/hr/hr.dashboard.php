@@ -21,6 +21,7 @@
                             <tr>
                                 <th>Id</th>
                                 <th>Name</th>
+                                <th>Position</th>
                                 <th>Status</th>
                                 <th>Date</th>
                                 <th>Action</th>
@@ -28,12 +29,13 @@
                         </thead>
                         <tbody>
                             <?php
-                                $applicant_qry = mysqli_query($conn, "SELECT * FROM tbl_applicants");
+                                $applicant_qry = mysqli_query($conn, "SELECT a.*, o.name FROM tbl_applicants a JOIN tbl_opportunities o ON a.position = o.id ORDER BY a.date_applied ASC");
                                 while($applicant_row=mysqli_fetch_array($applicant_qry)){ 
                             ?>
                                 <tr>
                                     <td><?php echo $applicant_row["id"]; ?></td>
                                     <td><?php echo $applicant_row["fullname"]; ?></td>
+                                    <td><?php echo $applicant_row["name"]; ?></td>
                                     <td>
                                         <span class="badge <?php echo $applicant_row["status"] == 'Pending' ? 'bg-warning' : 'bg-info'; ?>">
                                             <?php echo ucfirst($applicant_row["status"]); ?>
@@ -41,7 +43,7 @@
                                     </td>
                                     <td><?php echo $applicant_row["date_applied"]; ?></td>
                                     <td>
-                                        <a class="btn btn-sm btn-outline-light" href="process.status.applicant.php?id=<?php echo $applicant_row['id']; ?>&status=Viewed" title="View"><i class="fas fa-eye"></i></a>
+                                        <a class="btn btn-sm btn-outline-light" href="process.view.applicant.php?id=<?php echo $applicant_row['id']; ?>&status=Viewed" title="View"><i class="fas fa-eye"></i></a>
                                     </td>
                                 </tr>
                             <?php } ?>
