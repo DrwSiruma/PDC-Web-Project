@@ -15,7 +15,8 @@ $success = isset($_SESSION['success']) ? $_SESSION['success'] : '';
 unset($_SESSION['success']);
 // Get the current script name
 $current_page = basename($_SERVER['PHP_SELF']);
-$about_page = ['hr.careers.php', 'hr.edit.career.php'];
+$dashboard_page = ['hr.dashboard.php', 'process.view.applicant.php'];
+$career_page = ['hr.careers.php', 'hr.edit.career.php'];
 ?>
 
 <!DOCTYPE html>
@@ -56,10 +57,10 @@ $about_page = ['hr.careers.php', 'hr.edit.career.php'];
                     </div>
                 </div>
                 <ul class="list-unstyled components mb-5">
-                    <li class="<?php echo ($current_page == 'hr.dashboard.php') ? 'active' : ''; ?>">
+                    <li class="<?php echo (in_array($current_page, $dashboard_page)) ? 'active' : ''; ?>">
                         <a href="hr.dashboard.php"><span class="fas fa-home mr-3"></span>&nbsp;Dashboard</a>
                     </li>
-                    <li class="<?php echo ($current_page == 'hr.careers.php') ? 'active' : ''; ?>">
+                    <li class="<?php echo (in_array($current_page, $career_page)) ? 'active' : ''; ?>">
                         <a href="hr.careers.php"><span class="fas fa-briefcase mr-3"></span>&nbsp;Careers</a>
                     </li>
                     <li class="<?php echo ($current_page == 'hr.add.career.php') ? 'active' : ''; ?>">

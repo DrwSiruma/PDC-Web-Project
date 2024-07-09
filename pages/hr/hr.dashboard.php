@@ -29,7 +29,7 @@
                         </thead>
                         <tbody>
                             <?php
-                                $applicant_qry = mysqli_query($conn, "SELECT a.*, o.name FROM tbl_applicants a JOIN tbl_opportunities o ON a.position = o.id ORDER BY a.date_applied ASC");
+                                $applicant_qry = mysqli_query($conn, "SELECT a.*, o.name FROM tbl_applicants a JOIN tbl_opportunities o ON a.position = o.id ORDER BY a.date_applied DESC");
                                 while($applicant_row=mysqli_fetch_array($applicant_qry)){ 
                             ?>
                                 <tr>

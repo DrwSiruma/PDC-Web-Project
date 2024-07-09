@@ -133,6 +133,10 @@ $(document).ready(function () {
     info: true,
     ordering: true,
     lengthChange: true,
+    columnDefs: [
+        { targets: 4, orderDataType: 'datetime' }
+    ],
+    order: [[4, 'desc']]
     });
 });
 
