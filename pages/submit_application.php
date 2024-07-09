@@ -46,9 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new application into the database
-    $sql = "INSERT INTO tbl_applicants (fullname, email, contact, cover, status, doc, date_applied) VALUES (?, ?, ?, ?, 'Pending', ?, NOW(6))";
+    $sql = "INSERT INTO tbl_applicants (fullname, email, contact, position, cover, status, doc, date_applied) VALUES (?, ?, ?, ?, ?, 'Pending', ?, NOW(6))";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sssss", $name, $email, $phone, $cover_letter, $new_filename);
+    $stmt->bind_param("ssssss", $name, $email, $phone, $position, $cover_letter, $new_filename);
 
     if ($stmt->execute()) {
         $_SESSION['application-success'] = "Application submitted successfully.";
