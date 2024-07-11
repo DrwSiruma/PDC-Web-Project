@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2024 at 11:55 AM
+-- Generation Time: Jul 11, 2024 at 03:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -238,7 +238,42 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (175, '7', 'User logged out', 'Logout', '2024-06-24 14:37:38.177866'),
 (176, '6', 'User logged in', 'Login', '2024-06-24 14:37:44.799845'),
 (177, '6', 'User logged out', 'Logout', '2024-06-24 14:44:21.523264'),
-(178, '7', 'User logged in', 'Login', '2024-06-24 14:44:28.516063');
+(178, '7', 'User logged in', 'Login', '2024-06-24 14:44:28.516063'),
+(179, '7', 'User logged in', 'Login', '2024-06-25 09:35:02.343626'),
+(180, '6', 'User logged in', 'Login', '2024-07-01 10:06:18.203699'),
+(181, '6', 'User logged out', 'Logout', '2024-07-01 10:08:01.660874'),
+(182, '7', 'User logged in', 'Login', '2024-07-01 10:08:09.651590'),
+(183, '6', 'User logged in', 'Login', '2024-07-04 10:02:09.538508'),
+(184, '6', 'User logged out', 'Logout', '2024-07-04 10:06:26.437590'),
+(185, '7', 'User logged in', 'Login', '2024-07-04 10:06:32.567145'),
+(186, '7', 'User logged in', 'Login', '2024-07-05 08:54:39.859572'),
+(187, '7', 'User logged in', 'Login', '2024-07-08 11:30:09.615801'),
+(188, '7', 'User logged out', 'Logout', '2024-07-08 11:31:10.562263'),
+(189, '6', 'User logged in', 'Login', '2024-07-08 11:31:15.776093'),
+(190, '6', 'User logged in', 'Login', '2024-07-09 09:10:25.007590'),
+(191, '6', 'User logged out', 'Logout', '2024-07-09 13:15:01.718686'),
+(192, '7', 'User logged in', 'Login', '2024-07-09 13:41:48.176503'),
+(193, '7', 'User logged out', 'Logout', '2024-07-09 13:44:41.416922'),
+(194, '6', 'User logged in', 'Login', '2024-07-09 13:44:47.389370'),
+(195, '6', 'Updated career ID 1', 'Career', '2024-07-09 13:46:05.691674'),
+(196, '6', 'User logged out', 'Logout', '2024-07-09 13:46:21.204079'),
+(197, '2', 'User logged in', 'Login', '2024-07-09 13:46:29.145192'),
+(198, '2', 'User logged out', 'Logout', '2024-07-09 13:48:52.934509'),
+(199, '1', 'User logged in', 'Login', '2024-07-09 13:49:07.152784'),
+(200, '1', 'User logged out', 'Logout', '2024-07-09 15:30:43.267766'),
+(201, '6', 'User logged in', 'Login', '2024-07-09 16:44:37.171060'),
+(202, '6', 'Updated career ID 1', 'Career', '2024-07-09 16:46:22.563886'),
+(203, '6', 'User logged out', 'Logout', '2024-07-09 16:49:08.031361'),
+(204, '7', 'User logged in', 'Login', '2024-07-09 16:49:14.784335'),
+(205, '7', 'User logged out', 'Logout', '2024-07-09 16:51:25.012659'),
+(206, '6', 'User logged in', 'Login', '2024-07-09 16:51:31.226838'),
+(207, '6', 'User logged out', 'Logout', '2024-07-09 16:52:30.357129'),
+(208, '7', 'User logged in', 'Login', '2024-07-09 16:52:38.929219'),
+(209, '7', 'User logged out', 'Logout', '2024-07-09 18:21:04.335608'),
+(210, '7', 'User logged in', 'Login', '2024-07-10 10:37:46.946187'),
+(211, '7', 'User logged out', 'Logout', '2024-07-10 10:37:54.661969'),
+(212, '6', 'User logged in', 'Login', '2024-07-10 10:38:01.170198'),
+(213, '6', 'Updated career ID 1', 'Career', '2024-07-10 10:38:13.949278');
 
 -- --------------------------------------------------------
 
@@ -251,6 +286,7 @@ CREATE TABLE `tbl_applicants` (
   `fullname` varchar(1000) NOT NULL,
   `email` varchar(100) NOT NULL,
   `contact` varchar(100) NOT NULL,
+  `position` varchar(1000) NOT NULL,
   `cover` longtext NOT NULL,
   `status` varchar(100) NOT NULL,
   `date_applied` datetime(6) NOT NULL DEFAULT current_timestamp(6),
@@ -261,9 +297,11 @@ CREATE TABLE `tbl_applicants` (
 -- Dumping data for table `tbl_applicants`
 --
 
-INSERT INTO `tbl_applicants` (`id`, `fullname`, `email`, `contact`, `cover`, `status`, `date_applied`, `doc`) VALUES
-(1, 'Andrew Siruma', 'andrew@sample.com', '09121231234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pending', '2024-06-11 13:55:56.174650', 'ComputerScienceResumedocx.pdf'),
-(2, 'Andrew Siruma', 'andrew@sample.com', '09121231234', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pending', '2024-06-11 14:15:39.070726', '6667eb8b1123b_ComputerScienceResumedocx.pdf');
+INSERT INTO `tbl_applicants` (`id`, `fullname`, `email`, `contact`, `position`, `cover`, `status`, `date_applied`, `doc`) VALUES
+(1, 'Andrew Siruma', 'andrew@sample.com', '09121231234', '1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Pending', '2024-06-11 13:55:56.174650', 'ComputerScienceResumedocx.pdf'),
+(2, 'Andrew Siruma', 'andrew@sample.com', '09121231234', '2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Viewed', '2024-06-11 14:15:39.070726', '6667eb8b1123b_ComputerScienceResumedocx.pdf'),
+(3, 'John Doe', 'johndoe@gmail.com', '09121231234', '1', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'Viewed', '2024-07-09 09:15:41.119154', '668c8f3d1cdaa_ComputerScienceResumedocx.pdf'),
+(4, 'Juan Dela Cruz', 'jdcruz@sample.com', '09121231234', '1', 'This is a sample cover letter.......................', 'Viewed', '2024-07-09 16:36:11.205748', '668cf67b31f48_ComputerScienceResumedocx.pdf');
 
 -- --------------------------------------------------------
 
@@ -337,7 +375,24 @@ CREATE TABLE `tbl_feedback` (
 --
 
 INSERT INTO `tbl_feedback` (`id`, `f_name`, `company`, `email`, `address`, `contact`, `message`, `status`, `post_date`) VALUES
-(1, 'Andrew Siruma', 'Panda Development Corp.', 'andrew@sample.com', 'Bacoor Cavite', '09121231234', 'Testing', 'Unread', '2024-06-24 09:58:13.398620');
+(1, 'Andrew Siruma', 'Panda Development Corp.', 'andrew@sample.com', 'Bacoor Cavite', '09121231234', 'Testing', 'Read', '2024-06-24 09:58:13.398620'),
+(3, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test2', 'Unread', '2024-07-05 10:25:29.570380'),
+(4, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test3', 'Unread', '2024-07-05 11:36:37.742845'),
+(5, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test4', 'Unread', '2024-07-05 11:37:31.453841'),
+(6, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test5', 'Unread', '2024-07-05 11:37:59.288006'),
+(7, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test6', 'Unread', '2024-07-05 11:39:37.575895'),
+(8, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test7', 'Unread', '2024-07-05 13:44:07.925140'),
+(9, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test8', 'Unread', '2024-07-05 13:50:31.565900'),
+(10, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test9', 'Unread', '2024-07-05 13:51:35.788962'),
+(11, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test10', 'Unread', '2024-07-05 13:55:48.024399'),
+(12, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test11', 'Unread', '2024-07-05 14:43:44.008087'),
+(13, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test12', 'Unread', '2024-07-05 15:07:42.166619'),
+(14, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test13', 'Read', '2024-07-05 15:15:27.545256'),
+(15, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test14', 'Read', '2024-07-05 15:16:47.025915'),
+(16, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test15', 'Read', '2024-07-05 15:23:13.300508'),
+(17, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Test16', 'Read', '2024-07-05 16:38:58.336849'),
+(22, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Testtttt', 'Unread', '2024-07-09 16:55:47.339873'),
+(23, 'Andrew Siruma', 'Panda Development Corp.', 'andrewsiruma02@gmail.com', 'Bacoor Cavite', '09121231234', 'Testtttt', 'Unread', '2024-07-09 16:55:55.513398');
 
 -- --------------------------------------------------------
 
@@ -389,7 +444,7 @@ CREATE TABLE `tbl_opportunities` (
 --
 
 INSERT INTO `tbl_opportunities` (`id`, `name`, `description`, `type1`, `type2`, `status`, `created`) VALUES
-(1, 'IT Specialist', 'We\'re looking for an experienced IT Specialist to join our team.', 'On site', 'Full-time', 'Posted', '2024-06-10 10:35:52.000000'),
+(1, 'IT Specialist', 'We\'re looking for an experienced IT Specialist to join our team.', 'On Site', 'Full-time', 'Posted', '2024-06-10 10:35:52.000000'),
 (2, 'Store Manager', 'We\'re looking for a Store Manager to join our team.', 'On site', 'Full-time', 'Posted', '2024-06-10 10:37:00.000000'),
 (3, 'Service Crew - Dunkin\'', 'We\'re looking for a Service Crew to join our team.', 'On Site', 'Full-time', 'Posted', '2024-06-10 10:42:28.000000'),
 (4, 'Marketing Staff', 'We\'re looking for a Marketing Staff to join our team.', 'On site', 'Full-time', 'Posted', '2024-06-10 10:44:40.000000');
@@ -666,7 +721,7 @@ CREATE TABLE `tbl_promo` (
 INSERT INTO `tbl_promo` (`id`, `image_name`, `file_path`, `title`, `description`, `promo_from`, `promo_to`, `status`, `created`, `uploaded_by`, `updated`, `modified_by`) VALUES
 (18, 'BEARY IN LOVE.png', '../../uploads/promo/BEARY IN LOVE.png', 'BEARY IN LOVE', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. Visit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-02-12', '2024-02-15', 'Posted', '2024-06-07 11:13:21.000000', '2', '2024-06-21 11:58:45.000000', '7'),
 (19, 'EASTER MUNCHKIN DEAL.png', '../../uploads/promo/EASTER MUNCHKIN DEAL.png', 'EASTER MUNCHKIN DEAL', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone.\r\nVisit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-03-31', '2024-03-31', 'Posted', '2024-06-07 11:31:13.000000', '2', '2024-06-21 16:40:36.000000', '2'),
-(20, 'SUMMER DELIGHT PROMO.png', '../../uploads/promo/SUMMER DELIGHT PROMO.png', 'SUMMER DELIGHT PROMO', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. \nVisit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-04-26', '2024-05-31', 'Posted', '2024-06-07 11:32:04.000000', '2', '2024-06-24 09:50:08.000000', '7');
+(20, 'SUMMER DELIGHT PROMO.png', '../../uploads/promo/SUMMER DELIGHT PROMO.png', 'SUMMER DELIGHT PROMO', 'Check out our exciting local promotions at our Dunkinâ€™ outlets! Enjoy exclusive deals on your favorite Dunkinâ€™ doughnuts and beverages at our locations in Muntinlupa, ParaÃ±aque, Las PiÃ±as, and Quezon province. Whether you\'re craving a classic glazed doughnut or a refreshing iced coffee, our promotions offer something for everyone. \nVisit our stores or our website to stay updated on the latest offers and indulge in delicious savings. Don\'t miss outâ€”treat yourself today!', '2024-04-26', '2024-05-31', 'Posted', '2024-06-07 11:32:04.000000', '2', '2024-07-10 10:37:49.000000', '7');
 
 -- --------------------------------------------------------
 
@@ -828,13 +883,13 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=179;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
 --
 ALTER TABLE `tbl_applicants`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_careers_hero`
@@ -852,7 +907,7 @@ ALTER TABLE `tbl_careers_wylwwu`
 -- AUTO_INCREMENT for table `tbl_feedback`
 --
 ALTER TABLE `tbl_feedback`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `tbl_home_hero`
