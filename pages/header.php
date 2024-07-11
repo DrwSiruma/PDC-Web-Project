@@ -3,6 +3,8 @@
     // Get the current script name
     $current_page = basename($_SERVER['PHP_SELF']);
     $career_page = ['careers.php', 'application-form.php'];
+    $combinebrand_page = ['home.php', 'careers.php', 'application-form.php', 'promos.php'];
+    $pdc_page = ['about.php', 'contact.php'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,7 +36,7 @@
         <section id="topbar" class="d-flex align-items-center">
             <div class="container d-flex justify-content-center justify-content-md-between">
                 <div class="contact-info d-flex align-items-center">
-                    <i class="bi bi-hourglass-split"></i> Office Hours :&nbsp;<b>Mon - Fri, 9:00 am - 6:00 pm</b>
+                    <i class="bi bi-hourglass-split"></i> Office Hours :&nbsp;<b class="text-pink">Mon - Fri, 9:00 am - 6:00 pm</b>
                 </div>
                 <div class="social-links d-none d-md-block">
                     
@@ -49,7 +51,10 @@
         <!-- ======= Navigation ======= -->
         <header class="header">
             <div class="container d-flex align-items-center">
-                <a href="home.php" class="logo me-auto"><img src="../assets/img/PDC-Logo.png" alt="logo" class="img-fluid"></a>
+                <a href="home.php" class="logo me-auto">
+                <?php echo (in_array($current_page, $combinebrand_page)) ? '<img src="../assets/img/PDCXDD_logo.png" alt="logo" class="img-fluid">' : ''; ?>
+                <?php echo (in_array($current_page, $pdc_page)) ? '<img src="../assets/img/PDC-Logo.png" alt="logo" class="img-fluid">' : ''; ?>
+                </a>
                 
                 <nav id="navbar" class="navbar"><ul>
                     <li><a class="nav-link <?php echo ($current_page == 'home.php') ? 'active' : ''; ?>" href="home.php">Home</a></li>

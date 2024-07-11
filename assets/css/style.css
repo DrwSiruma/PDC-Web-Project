@@ -110,7 +110,9 @@ section {
 }
 #topbar b {
     font-weight: 500;
-    color: #000000;
+    color: #fff;
+    /* -webkit-text-stroke: 0.2px #fff; 
+    text-stroke: 0.2px #fff;  */
 }
 #topbar .contact-info a {
     line-height: 0;
