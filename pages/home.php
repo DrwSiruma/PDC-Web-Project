@@ -128,22 +128,21 @@
             </div>
             <div class="outlet-slider swiper">
                 <div class="swiper-wrapper align-items-center">
+                    <?php
+                        $outlet_qry = mysqli_query($conn, "SELECT * FROM tbl_outlet WHERE `status` = 'Active' ORDER BY store_name ASC;");
 
-                <?php
-                    $outlet_qry = mysqli_query($conn, "SELECT * FROM tbl_outlet WHERE `status` = 'Active' ORDER BY store_name ASC;");
-
-                    while($outlet_row = mysqli_fetch_array($outlet_qry)) { 
-                ?>
-                    <div class="swiper-slide">
-                        <div class="card shadow-sm">
-                            <img src="../uploads/outlets/<?php echo $outlet_row['image_name']; ?>" class="card-img-top" alt="">
-                            <div class="card-body text-center">
-                                <h5 class="card-title text-orange"><?php echo $outlet_row['store_name']; ?></h5>
-                                <a href="outlet.details.php?id=<?php echo $outlet_row['id']; ?>" class="btn btn-sm btn-orange mt-2" style="font-size: .75rem;">Store details <i class="fas fa-external-link-alt"></i></a>
+                        while($outlet_row = mysqli_fetch_array($outlet_qry)) { 
+                    ?>
+                        <div class="swiper-slide">
+                            <div class="card shadow-sm">
+                                <img src="../uploads/outlets/<?php echo $outlet_row['image_name']; ?>" class="card-img-top" alt="">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title text-orange"><?php echo $outlet_row['store_name']; ?></h5>
+                                    <a href="outlet.details.php?id=<?php echo $outlet_row['id']; ?>" class="btn btn-sm btn-orange mt-2" style="font-size: .75rem;">Store details <i class="fas fa-external-link-alt"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>
+                    <?php } ?>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
