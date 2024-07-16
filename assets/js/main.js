@@ -120,5 +120,22 @@ window.addEventListener('scroll', () => {
     }
   });
 
+  var initSwiper = function() {
+
+    var swiper = new Swiper(".main-swiper", {
+      speed: 500,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  
+  }
+
+  // document ready
+  $(document).ready(function() {
+    initSwiper();
+  });
+
 
 })()
