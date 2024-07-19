@@ -40,7 +40,7 @@
     </section>
 
     <!-- ======= Hero ======= -->
-    <section id="hero" class="hero">
+    <section id="hero" class="hero" id="hero">
         <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
             <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -55,7 +55,7 @@
             ?>
 
                 <!-- Slide -->
-                <div class="carousel-item <?php echo $firstItem ? 'active' : '' ?>" style="background-image: url(../uploads/home/<?php echo $rows['image_name'] ?>)">
+                <div class="carousel-item <?php echo $firstItem ? 'active' : '' ?>" style="">
                 </div>
 
             <?php
@@ -114,7 +114,7 @@
                         </div>
 
                         <div class="col-md-5">
-                            <div id="carouselSlides" class="carousel slide h-100" data-bs-ride="carousel">
+                            <div id="carouselSlides" class="carousel slide h-100 promo-carousel" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <?php
                                         $promo_qry = mysqli_query($conn, "SELECT * FROM tbl_promo WHERE `status` = 'Posted' ORDER BY created ASC;");
