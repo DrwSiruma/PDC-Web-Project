@@ -35,12 +35,13 @@
                     </div>
                     
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
 
     <!-- ======= Hero ======= -->
-    <section id="hero" class="hero" id="hero">
+    <!-- <section id="hero" class="hero" id="hero">
         <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
 
             <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
@@ -53,8 +54,7 @@
 
                 while($rows = mysqli_fetch_array($hero_qry)) { 
             ?>
-
-                <!-- Slide -->
+            
                 <div class="carousel-item <?php echo $firstItem ? 'active' : '' ?>" style="">
                 </div>
 
@@ -74,7 +74,7 @@
             </a>
 
         </div>
-    </section>
+    </section> -->
     <!-- ======= End Hero ======= -->
 
     <!-- ======= Cta Section ======= -->

@@ -120,22 +120,18 @@ window.addEventListener('scroll', () => {
     }
   });
 
-  var initSwiper = function() {
-
-    var swiper = new Swiper(".main-swiper", {
-      speed: 500,
+  new Swiper(".main-swiper", {
+      speed: 400,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+      },
       pagination: {
         el: ".swiper-pagination",
+        type: 'bullets',
         clickable: true,
       },
-    });
-  
-  }
-
-  // document ready
-  $(document).ready(function() {
-    initSwiper();
   });
-
 
 })()
