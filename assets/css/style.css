@@ -282,7 +282,25 @@ section {
 /*--------------------------------------------------------------
 # Banner Section
 --------------------------------------------------------------*/
-
+#banner .banner-title {
+    color: #FF671F;
+    font-family: 'Dunkin';
+    text-transform: uppercase;
+    font-size: 55px;
+}
+#banner .swiper-pagination {
+    position: relative;
+}
+#banner .swiper-pagination .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background-color: #F9F3EC;
+    opacity: 1;
+    border: 1px solid #FF671F;
+}
+#banner .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #FF671F;
+}
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
