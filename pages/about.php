@@ -18,7 +18,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h2 class="text-orange">Company Profile</h2>
+                    <h2 class="text-orange">Who are we?</h2>
                     <p>
                         Panda Development Corporation was founded on August 03, 1978 with the initial purpose of venturing into real estate business. Later, on June 04, 1994, it expanded its scope to include restaurants, cafes and fastfood centers.
                         <br /><br />

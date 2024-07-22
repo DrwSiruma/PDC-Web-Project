@@ -1,6 +1,6 @@
 <?php include('header.php'); ?>
 
-    <section id="banner" style="background: #F9F3EC;">
+    <section id="banner" style="background: #F9F3EC; padding: 0px;">
         <div class="container">
             <div class="swiper main-swiper">
                 <div class="swiper-wrapper">
@@ -76,7 +76,7 @@
 
             <div class="row">
             <div class="col-lg-9 text-center text-lg-start">
-                <h3>Who are we?</h3>
+                <h3>What is PDC?</h3>
                 <p>Panda Development Corporation, founded on August 3, 1978, initially focused on real estate before expanding into the restaurant and fast-food sectors on June 4, 1994. Currently, it specializes in manufacturing and retailing doughnuts as a Dunkin’ franchisee in Muntinlupa, Parañaque, Las Piñas, and Quezon province. The company's main office is at Building 2-A, Philcrest Compound, Km. 23, West Service Road, Bo. Cupang, Muntinlupa City, with a satellite office at Maharlika Highway, Brgy. Isabang, Tayabas City.</p>
             </div>
             <div class="col-lg-3 cta-btn-container text-center">
@@ -156,7 +156,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>See Our Outlets</h2>
-                <p style="font-weight: bold;">View all <a href="#" class="text-orange">Future Dunkin' Outlets</a></p>
+                <!-- <p style="font-weight: bold;">View all <a href="#" class="text-orange">Future Dunkin' Outlets</a></p> -->
             </div>
             <div class="outlet-slider swiper">
                 <div class="swiper-wrapper align-items-center">
