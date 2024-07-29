@@ -4,71 +4,31 @@
         <div class="container">
             <div class="swiper main-swiper">
                 <div class="swiper-wrapper">
+                    <?php
+                        $hero_qry = mysqli_query($conn, "SELECT * FROM tbl_home_hero WHERE `status` = 'Published' ORDER BY created DESC;");
+                        while($rows = mysqli_fetch_array($hero_qry)) {
+                    ?>
 
                     <div class="swiper-slide py-5">
                         <div class="row banner-content align-items-center">
                             <div class="img-wrapper col-md-5">
-                                <img src="../assets/img/menu/delights_bundle.png" class="img-fluid">
+                                <img src="../uploads/home/<?php echo $rows['image_name']; ?>" class="img-fluid">
                             </div>
                             <div class="content-wrapper col-md-7 p-5 mb-5">
-                                <h2 class="banner-title display-1 fw-normal">Dunkin’ Delight Bundles: Savor the Savings!</h2>
+                                <h2 class="banner-title display-1 fw-normal"><?php echo $rows['title']; ?></h2>
                             </div>
                         </div>
                     </div>
 
-                    <div class="swiper-slide py-5">
-                        <div class="row banner-content align-items-center">
-                            <div class="img-wrapper col-md-5">
-                                <img src="../assets/img/menu/munchkins_bucket.png" class="img-fluid">
-                            </div>
-                            <div class="content-wrapper col-md-7 p-5 mb-5">
-                                <h2 class="banner-title display-1 fw-normal">Munchkin Mania: Grab Your Bucket of Joy!</h2>
-                            </div>
-                        </div>
-                    </div>
+                    <?php
+                        }
+                    ?>
                     
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
-
-    <!-- ======= Hero ======= -->
-    <!-- <section id="hero" class="hero" id="hero">
-        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
-            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-
-            <div class="carousel-inner" role="listbox">
-
-            <?php
-                $hero_qry = mysqli_query($conn, "SELECT * FROM tbl_home_hero WHERE `status` = 'Published' ORDER BY created DESC;");
-                $firstItem = true; // Flag to check the first item
-
-                while($rows = mysqli_fetch_array($hero_qry)) { 
-            ?>
-            
-                <div class="carousel-item <?php echo $firstItem ? 'active' : '' ?>" style="">
-                </div>
-
-            <?php
-                    $firstItem = false; // Set the flag to false after the first iteration
-                }
-            ?>
-
-            </div>
-
-            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-            </a>
-
-            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-            </a>
-
-        </div>
-    </section> -->
-    <!-- ======= End Hero ======= -->
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -87,6 +47,31 @@
         </div>
     </section>
     <!-- ======= End Cta Section ======= -->
+
+    <!-- ======= News Section ======= -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest News</h2>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="text-container">
+                        <h4>Jollibee Group Chief Financial and Risk Officer: ‘We’re Gearing Up for Sustainable Growth in the Next Five Years’</h4>
+                        <p>July 24, 2024</p>
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image-container">
+                        <img src="https://via.placeholder.com/500x300" alt="News Image 1">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= End Outlets Section ======= -->
 
     <!-- ======= Promo Section ======= -->
     <section id="promo-main" class="promo-main">
