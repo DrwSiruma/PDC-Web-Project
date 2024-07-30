@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2024 at 03:33 AM
+-- Generation Time: Jul 30, 2024 at 11:44 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -273,7 +273,13 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (210, '7', 'User logged in', 'Login', '2024-07-10 10:37:46.946187'),
 (211, '7', 'User logged out', 'Logout', '2024-07-10 10:37:54.661969'),
 (212, '6', 'User logged in', 'Login', '2024-07-10 10:38:01.170198'),
-(213, '6', 'Updated career ID 1', 'Career', '2024-07-10 10:38:13.949278');
+(213, '6', 'Updated career ID 1', 'Career', '2024-07-10 10:38:13.949278'),
+(214, '1', 'User logged in', 'Login', '2024-07-29 09:06:05.525250'),
+(215, '1', 'User logged out', 'Logout', '2024-07-29 09:06:18.841721'),
+(216, '2', 'User logged in', 'Login', '2024-07-29 09:06:26.721915'),
+(217, '2', 'Added new image: delights_bundle.png titled: Dunkinâ€™ Delight Bundles: Savor the Savings! in home hero section', 'Content', '2024-07-29 09:07:15.241214'),
+(218, '2', 'Added new image: munchkins_bucket.png titled: Munchkin Mania: Grab Your Bucket of Joy! in home hero section', 'Content', '2024-07-29 09:08:30.042858'),
+(219, '1', 'User logged in', 'Login', '2024-07-30 13:15:22.397783');
 
 -- --------------------------------------------------------
 
@@ -417,11 +423,8 @@ CREATE TABLE `tbl_home_hero` (
 --
 
 INSERT INTO `tbl_home_hero` (`id`, `image_name`, `file_path`, `title`, `status`, `created`, `uploaded_by`, `updated`, `modified_by`) VALUES
-(8, 'slide5.jpg', '../../uploads/home/slide5.jpg', 'Hero Image 2', 'Published', '2024-06-05 09:05:12.000000', '2', '2024-06-05 18:08:09.000000', '2'),
-(9, 'slide4.jpg', '../../uploads/home/slide4.jpg', 'Hero Image 1', 'Published', '2024-06-05 11:55:03.000000', '2', '2024-06-05 18:08:08.000000', '2'),
-(10, 'slide3.jpg', '../../uploads/home/slide3.jpg', 'Hero Image 3', 'Published', '2024-06-05 14:11:47.000000', '2', '2024-06-06 11:22:28.000000', '2'),
-(11, 'slide6.jpg', '../../uploads/home/slide6.jpg', 'Hero Image 4', 'Unpublish', '2024-06-05 14:13:31.000000', '2', '2024-06-21 16:52:08.000000', '2'),
-(12, 'slide2.jpg', '../../uploads/home/slide2.jpg', 'Hero Image 5', 'Unpublish', '2024-06-05 15:57:16.000000', '2', '2024-06-05 17:13:21.000000', '2');
+(13, 'delights_bundle.png', '../../uploads/home/delights_bundle.png', 'Dunkinâ€™ Delight Bundles: Savor the Savings!', 'Published', '2024-07-29 09:07:15.000000', '2', '2024-07-29 09:07:15.000000', '2'),
+(14, 'munchkins_bucket.png', '../../uploads/home/munchkins_bucket.png', 'Munchkin Mania: Grab Your Bucket of Joy!', 'Published', '2024-07-29 09:08:30.000000', '2', '2024-07-29 09:08:30.000000', '2');
 
 -- --------------------------------------------------------
 
@@ -883,7 +886,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -913,7 +916,7 @@ ALTER TABLE `tbl_feedback`
 -- AUTO_INCREMENT for table `tbl_home_hero`
 --
 ALTER TABLE `tbl_home_hero`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_opportunities`

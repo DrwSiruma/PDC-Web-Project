@@ -58,14 +58,28 @@
             <div class="row mb-3">
                 <div class="col-md-6">
                     <div class="text-container">
-                        <h4>Jollibee Group Chief Financial and Risk Officer: ‘We’re Gearing Up for Sustainable Growth in the Next Five Years’</h4>
+                        <h4>Exciting News: Dunkin’ is Coming to Azure! Grand Opening with Exclusive Deals and Delicious Treats!</h4>
                         <p>July 24, 2024</p>
                         <a href="#">READ MORE</a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="image-container">
-                        <img src="https://via.placeholder.com/500x300" alt="News Image 1">
+                        <img src="../assets/img/outlets/azure.png" alt="News Image 1">
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="text-container">
+                        <h4>Exciting News: Dunkin’ Store Under Construction and Coming Soon to Valley 1 with Grand Opening Surprises!</h4>
+                        <p>July 24, 2024</p>
+                        <a href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image-container">
+                        <img src="../assets/img/outlets/valley1.png" alt="News Image 1">
                     </div>
                 </div>
             </div>
