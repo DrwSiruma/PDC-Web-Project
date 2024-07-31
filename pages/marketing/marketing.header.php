@@ -18,6 +18,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 $promo_page = ['marketing.promo.php', 'marketing.edit.promo.php', 'marketing.add.promo.php'];
 $feedback_page = ['marketing.feedback.php', 'marketing.view.feedback.php'];
 $outlet_page = ['marketing.outlet.menu.php', 'marketing.add.menu.php'];
+$news_page = ['marketing.news.php', 'marketing.add.news.php'];
 
 $fback_qry = mysqli_query($conn, "SELECT COUNT(status) AS count FROM tbl_feedback WHERE status='Unread'");
 $feedback_count = mysqli_fetch_assoc($fback_qry);
@@ -74,6 +75,9 @@ $feedback_count = mysqli_fetch_assoc($fback_qry);
                                 }
                             ?>
                         </a>
+                    </li>
+                    <li class="<?php echo (in_array($current_page, $news_page)) ? 'active' : ''; ?>">
+                        <a href="marketing.news.php"><span class="fas fa-newspaper mr-3"></span>&nbsp;Latest News</a>
                     </li>
                     <li class="<?php echo (in_array($current_page, $outlet_page)) ? 'active' : ''; ?>">
                         <a href="marketing.outlet.menu.php"><span class="fas fa-file mr-3"></span>&nbsp;Outlet Menu</a>

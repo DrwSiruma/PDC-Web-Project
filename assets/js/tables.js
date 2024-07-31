@@ -199,3 +199,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+// News Table
+$(document).ready(function () {
+    var table = $('#news_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: true,
+    lengthChange: true,
+    });
+});

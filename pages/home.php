@@ -55,31 +55,23 @@
                 <h2>Latest News</h2>
             </div>
 
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <div class="text-container">
-                        <h4>Exciting News: Dunkin’ is Coming to Azure! Grand Opening with Exclusive Deals and Delicious Treats!</h4>
-                        <p>July 24, 2024</p>
-                        <a href="#">READ MORE</a>
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow-sm">
+                        <img src="../assets/img/outlets/azure.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <p class="card-text mb-1 text-secondary">July 24, 2024</p>
+                            <h5 class="card-title mb-0 text-center text-orange">Exciting News: Dunkin’ is Coming to Azure! Grand Opening with Exclusive Deals and Delicious Treats!</h5>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="../assets/img/outlets/azure.png" alt="News Image 1">
-                    </div>
-                </div>
-            </div>
-            <div class="row mb-3">
-                <div class="col-md-6">
-                    <div class="text-container">
-                        <h4>Exciting News: Dunkin’ Store Under Construction and Coming Soon to Valley 1 with Grand Opening Surprises!</h4>
-                        <p>July 24, 2024</p>
-                        <a href="#">READ MORE</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="image-container">
-                        <img src="../assets/img/outlets/valley1.png" alt="News Image 1">
+                <div class="col-md-4 mb-3">
+                    <div class="card shadow-sm">
+                        <img src="../assets/img/outlets/valley1.png" class="card-img-top" alt="news image">
+                        <div class="card-body">
+                            <p class="card-text mb-1 text-secondary">July 24, 2024</p>
+                            <h5 class="card-title mb-0 text-center text-orange">Exciting News: Dunkin’ Store Under Construction and Coming Soon to Valley 1 with Grand Opening Surprises!</h5>
+                        </div>
                     </div>
                 </div>
             </div>
