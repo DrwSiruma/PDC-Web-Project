@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 30, 2024 at 11:44 AM
+-- Generation Time: Aug 01, 2024 at 12:02 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -279,7 +279,14 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (216, '2', 'User logged in', 'Login', '2024-07-29 09:06:26.721915'),
 (217, '2', 'Added new image: delights_bundle.png titled: Dunkinâ€™ Delight Bundles: Savor the Savings! in home hero section', 'Content', '2024-07-29 09:07:15.241214'),
 (218, '2', 'Added new image: munchkins_bucket.png titled: Munchkin Mania: Grab Your Bucket of Joy! in home hero section', 'Content', '2024-07-29 09:08:30.042858'),
-(219, '1', 'User logged in', 'Login', '2024-07-30 13:15:22.397783');
+(219, '1', 'User logged in', 'Login', '2024-07-30 13:15:22.397783'),
+(220, '7', 'User logged in', 'Login', '2024-07-31 09:22:34.189973'),
+(221, '7', 'User logged in', 'Login', '2024-07-31 14:32:14.926959'),
+(222, '7', 'User logged out', 'Logout', '2024-07-31 15:23:49.320332'),
+(223, '7', 'User logged in', 'Login', '2024-07-31 15:23:58.119487'),
+(224, '7', 'User logged in', 'Login', '2024-08-01 15:40:06.529951'),
+(225, '7', 'Added new image: azure.png file', 'Content', '2024-08-01 16:00:12.106426'),
+(226, '7', 'Added new image: valley1.png file', 'Content', '2024-08-01 16:09:03.393793');
 
 -- --------------------------------------------------------
 
@@ -425,6 +432,28 @@ CREATE TABLE `tbl_home_hero` (
 INSERT INTO `tbl_home_hero` (`id`, `image_name`, `file_path`, `title`, `status`, `created`, `uploaded_by`, `updated`, `modified_by`) VALUES
 (13, 'delights_bundle.png', '../../uploads/home/delights_bundle.png', 'Dunkinâ€™ Delight Bundles: Savor the Savings!', 'Published', '2024-07-29 09:07:15.000000', '2', '2024-07-29 09:07:15.000000', '2'),
 (14, 'munchkins_bucket.png', '../../uploads/home/munchkins_bucket.png', 'Munchkin Mania: Grab Your Bucket of Joy!', 'Published', '2024-07-29 09:08:30.000000', '2', '2024-07-29 09:08:30.000000', '2');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_news`
+--
+
+CREATE TABLE `tbl_news` (
+  `id` int(100) NOT NULL,
+  `img_name` varchar(1000) NOT NULL,
+  `headline` varchar(1000) NOT NULL,
+  `status` enum('Posted','Unposted') NOT NULL,
+  `date_posted` datetime(6) NOT NULL DEFAULT current_timestamp(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+
+--
+-- Dumping data for table `tbl_news`
+--
+
+INSERT INTO `tbl_news` (`id`, `img_name`, `headline`, `status`, `date_posted`) VALUES
+(1, 'azure.png', 'Exciting News: Dunkinâ€™ is Coming to Azure! Grand Opening with Exclusive Deals and Delicious Treats!', 'Posted', '2024-08-01 16:00:12.000000'),
+(2, 'valley1.png', 'Exciting News: Dunkinâ€™ Store Under Construction and Coming Soon to Valley 1 with Grand Opening Surprises!', 'Posted', '2024-08-01 16:09:03.000000');
 
 -- --------------------------------------------------------
 
@@ -830,6 +859,12 @@ ALTER TABLE `tbl_home_hero`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_news`
+--
+ALTER TABLE `tbl_news`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_opportunities`
 --
 ALTER TABLE `tbl_opportunities`
@@ -886,7 +921,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -917,6 +952,12 @@ ALTER TABLE `tbl_feedback`
 --
 ALTER TABLE `tbl_home_hero`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `tbl_news`
+--
+ALTER TABLE `tbl_news`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_opportunities`

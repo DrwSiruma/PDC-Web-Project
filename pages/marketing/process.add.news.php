@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new news into the database
-    $sql = "INSERT INTO tbl_news (image_name, file_path, title, description, news_from, news_to, status, created, uploaded_by, updated, modified_by) VALUES (?, ?, ?, ?, ?, ?, ?, NOW(), ?, NOW(), ?)";
+    $sql = "INSERT INTO tbl_news (img_name, headline, status, date_posted) VALUES (?, ?, ?, NOW())";
     $stmt = $conn->prepare($sql);
     if ($stmt === false) {
         error_log("Failed to prepare statement for inserting data: " . $conn->error);
@@ -78,10 +78,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    $stmt->bind_param("sssssssss", $image, $target_file, $headline, $description, $news_from, $news_to, $status, $id, $id);
+    $stmt->bind_param("sss", $image, $headline, $status);
 
     if ($stmt->execute()) {
-        log_activity($conn, $id, "Added new image: ".basename($image)." title: $title in news", "Content");
+        log_activity($conn, $id, "Added new image: ".basename($image)." file", "Content");
         
         $_SESSION['news-success'] = "Image added successfully.";
     } else {

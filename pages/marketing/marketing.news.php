@@ -34,7 +34,7 @@
                                 while($news_row=mysqli_fetch_array($news_qry)) {
                             ?>
                                 <tr>
-                                    <td><img src="../../uploads/outlets/<?php echo $news_row["img_name"]; ?>" style="width: 60px; height: auto;" /></td>
+                                    <td><img src="../../uploads/news/<?php echo $news_row["img_name"]; ?>" style="width: 60px; height: auto;" /></td>
                                     <td><?php echo $news_row["headline"]; ?></td>
                                     <td><?php echo $news_row["date_posted"]; ?></td>
                                     <td>
