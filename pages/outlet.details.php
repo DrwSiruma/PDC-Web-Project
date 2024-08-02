@@ -51,7 +51,7 @@ $outlet_row=mysqli_fetch_array($outlet_qry);
                                                 }
                                             }
                                         } else {
-                                            echo "No payment options selected";
+                                            echo "<div class='alert alert-warning text-center' role='alert'>No payment options selected.</div>";
                                         }
                                     ?>
                                 </div>
