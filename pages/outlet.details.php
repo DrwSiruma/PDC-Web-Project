@@ -30,10 +30,33 @@ $outlet_row=mysqli_fetch_array($outlet_qry);
                                 ?>
                             </p>
                         </div>
-                        <!-- <div class="info-wrapper">
-                            <div class="info-header">Store Type</div>
-                            <p class="info-content m-0" style="text-transform: uppercase;"><span class="badge bg-primary"><?php //echo $outlet_row['shop_type']; ?></span></p>
-                        </div> -->
+                        <div class="info-wrapper">
+                            <div class="info-header">We Accept:</div>
+                            <div class="info-content m-0">
+                                <div class="row">
+                                    <?php
+                                        $payment_options = unserialize($outlet_row['payment_type']);
+                                        if (is_array($payment_options) && !empty($payment_options)) {
+                                            foreach ($payment_options as $payment) {
+                                                if($payment === "01") {
+                                                    echo "<div class='col-2 mb-1'><img src='../assets/img/payment/gcash_logo.png' class='img-fluid' /></div>";
+                                                } elseif($payment === "02") {
+                                                    echo "<div class='col-2 mb-1'><img src='../assets/img/payment/paymaya_logo.png' class='img-fluid' /></div>";
+                                                } elseif($payment === "03") {
+                                                    echo "<div class='col-2 mb-1'><img src='../assets/img/payment/mc_logo.png' class='img-fluid' /></div>";
+                                                } elseif($payment === "04") {
+                                                    echo "<div class='col-2 mb-1'><img src='../assets/img/payment/visa_logo.png' class='img-fluid' /></div>";
+                                                } elseif($payment === "05") {
+                                                    echo "<div class='col-2 mb-1'><img src='../assets/img/payment/qrph_logo.png' class='img-fluid' /></div>";
+                                                }
+                                            }
+                                        } else {
+                                            echo "No payment options selected";
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
                         <div class="info-wrapper">
                             <div class="info-header">Our Menu Categories</div>
                             <div class="row">

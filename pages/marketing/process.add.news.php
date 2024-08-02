@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // Insert new news into the database
-    $sql = "INSERT INTO tbl_news (img_name, headline, status, date_posted) VALUES (?, ?, ?, NOW())";
+    $sql = "INSERT INTO tbl_news (img_name, file_path, headline, status, date_posted) VALUES (?, ?, ?, ?, NOW())";
     $stmt = $conn->prepare($sql);
     if ($stmt === false) {
         error_log("Failed to prepare statement for inserting data: " . $conn->error);
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit();
     }
 
-    $stmt->bind_param("sss", $image, $headline, $status);
+    $stmt->bind_param("ssss", $image, $target_file, $headline, $status);
 
     if ($stmt->execute()) {
         log_activity($conn, $id, "Added new image: ".basename($image)." file", "Content");

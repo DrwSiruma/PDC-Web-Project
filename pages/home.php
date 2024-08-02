@@ -56,24 +56,40 @@
             </div>
 
             <div class="row">
-                <div class="col-md-4 mb-3">
-                    <div class="card shadow-sm">
-                        <img src="../assets/img/outlets/azure.png" class="card-img-top" alt="news image">
-                        <div class="card-body">
-                            <p class="card-text mb-1 text-secondary">July 24, 2024</p>
-                            <h5 class="card-title mb-0 text-center text-orange">Exciting News: Dunkin’ is Coming to Azure! Grand Opening with Exclusive Deals and Delicious Treats!</h5>
+            <?php
+                $news_qry = mysqli_query($conn, "SELECT * FROM tbl_news WHERE `status` = 'Posted' ORDER BY date_posted DESC;");
+                if (mysqli_num_rows($news_qry) > 0) {
+                    while($news_res = mysqli_fetch_array($news_qry)) {
+            ?>
+
+                        <div class="col-md-4 mb-3">
+                            <div class="card shadow-sm">
+                                <img src="../uploads/news/<?php echo $news_res['img_name']; ?>" class="card-img-top" alt="news image">
+                                <div class="card-body">
+                                    <p class="card-text mb-1 text-secondary">
+                                        <?php
+                                            $original_date = $news_res['date_posted'];
+                                            $formatted_date = date("F d, Y", strtotime($original_date));
+                                            echo $formatted_date;
+                                        ?>
+                                    </p>
+                                    <h5 class="card-title mb-0 text-center text-orange"><?php echo $news_res['headline']; ?></h5>
+                                </div>
+                            </div>
+                        </div>
+
+            <?php
+                    }
+                } else {
+            ?>
+                    <div class="col-12">
+                        <div class="alert alert-warning text-center" role="alert">
+                            No news is available right now.
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <div class="card shadow-sm">
-                        <img src="../assets/img/outlets/valley1.png" class="card-img-top" alt="news image">
-                        <div class="card-body">
-                            <p class="card-text mb-1 text-secondary">July 24, 2024</p>
-                            <h5 class="card-title mb-0 text-center text-orange">Exciting News: Dunkin’ Store Under Construction and Coming Soon to Valley 1 with Grand Opening Surprises!</h5>
-                        </div>
-                    </div>
-                </div>
+            <?php
+                }
+            ?>
             </div>
         </div>
     </section>
@@ -176,15 +192,18 @@
     <!-- ======= Join-main Section ======= -->
     <section id="join-main" class="join-main">
         <div class="container">
-
+            
             <div class="row">
-            <div class="col-lg-9 text-center text-lg-start">
-                <h3>Want to join our team?</h3>
-                <p> Are you passionate about delicious doughnuts and exceptional customer service? Join our team at Panda Development Corporation's Dunkin’ outlets! We're looking for enthusiastic, dedicated individuals to be part of our growing family in Muntinlupa, Parañaque, Las Piñas, and Quezon province. Enjoy a dynamic work environment, opportunities for growth, and the chance to bring smiles to our customers every day. Visit our website to explore current job openings and apply today. Become a part of the Dunkin’ experience with Panda Development Corporation!</p>
-            </div>
-            <div class="col-lg-3 join-btn-container text-center">
-                <a href="careers.php" class="join-btn align-middle">Apply Here</a>
-            </div>
+                <div class="col-lg-3 join-btn-container text-center">
+                    <img src="../assets/img/team/we_are_hiring.png" style="width: 100%;" class="img-liquid">
+                </div>
+                <div class="col-lg-9 text-center text-lg-start">
+                    <h1>WE ARE HIRING!!!</h1>
+                    <h3>Step into your future – exciting opportunities ahead!</h3>
+                    <div class="join-btn-container text-center">
+                        <a href="careers.php" class="join-btn align-middle">Apply Here</a>
+                    </div>
+                </div>
             </div>
 
         </div>

@@ -18,7 +18,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 $promo_page = ['marketing.promo.php', 'marketing.edit.promo.php', 'marketing.add.promo.php'];
 $feedback_page = ['marketing.feedback.php', 'marketing.view.feedback.php'];
 $outlet_page = ['marketing.outlet.menu.php', 'marketing.add.menu.php'];
-$news_page = ['marketing.news.php', 'marketing.add.news.php'];
+$news_page = ['marketing.news.php', 'marketing.add.news.php', 'marketing.edit.news.php'];
 
 $fback_qry = mysqli_query($conn, "SELECT COUNT(status) AS count FROM tbl_feedback WHERE status='Unread'");
 $feedback_count = mysqli_fetch_assoc($fback_qry);

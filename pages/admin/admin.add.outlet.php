@@ -32,7 +32,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mt-2">
+                <div class="col-md-3 mt-2">
                     <label for="service_options">Service Options :</label>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="dine_in" name="service_options[]" value="Dine-In">
@@ -49,6 +49,29 @@
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" id="delivery" name="service_options[]" value="Delivery">
                         <label class="form-check-label" for="delivery">Delivery</label>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-2">
+                    <label for="payment_options">Payment Options :</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gcash" name="payment_options[]" value="01">
+                        <label class="form-check-label" for="gcash">GCash</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="paymaya" name="payment_options[]" value="02">
+                        <label class="form-check-label" for="paymaya">PayMaya</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="mastercard" name="payment_options[]" value="03">
+                        <label class="form-check-label" for="mastercard">Mastercard</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="visa" name="payment_options[]" value="04">
+                        <label class="form-check-label" for="visa">Visa</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="qrph" name="payment_options[]" value="05">
+                        <label class="form-check-label" for="qrph">QRPh</label>
                     </div>
                 </div>
             </div>

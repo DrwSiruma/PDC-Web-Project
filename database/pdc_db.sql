@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2024 at 12:02 PM
+-- Generation Time: Aug 02, 2024 at 11:54 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -286,7 +286,16 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (223, '7', 'User logged in', 'Login', '2024-07-31 15:23:58.119487'),
 (224, '7', 'User logged in', 'Login', '2024-08-01 15:40:06.529951'),
 (225, '7', 'Added new image: azure.png file', 'Content', '2024-08-01 16:00:12.106426'),
-(226, '7', 'Added new image: valley1.png file', 'Content', '2024-08-01 16:09:03.393793');
+(226, '7', 'Added new image: valley1.png file', 'Content', '2024-08-01 16:09:03.393793'),
+(227, '7', 'User logged in', 'Login', '2024-08-02 09:09:14.766095'),
+(228, '7', 'Added new image: valley1.png file', 'Content', '2024-08-02 09:45:43.256501'),
+(229, '7', 'Updated new page with ID 3', 'Content', '2024-08-02 11:03:13.371262'),
+(230, '7', 'Updated new page with ID 3', 'Content', '2024-08-02 11:03:29.654187'),
+(231, '7', 'Added new image: evacom.png file', 'Content', '2024-08-02 14:11:32.267356'),
+(232, '7', 'User logged in', 'Login', '2024-08-02 17:02:23.531102'),
+(233, '7', 'User logged out', 'Logout', '2024-08-02 17:04:43.601611'),
+(234, '1', 'User logged in', 'Login', '2024-08-02 17:04:55.603518'),
+(235, '1', 'Added new outlet: DoÃ±a Isabel, id: #10', 'Outlet', '2024-08-02 17:43:11.585791');
 
 -- --------------------------------------------------------
 
@@ -442,6 +451,7 @@ INSERT INTO `tbl_home_hero` (`id`, `image_name`, `file_path`, `title`, `status`,
 CREATE TABLE `tbl_news` (
   `id` int(100) NOT NULL,
   `img_name` varchar(1000) NOT NULL,
+  `file_path` varchar(1000) NOT NULL,
   `headline` varchar(1000) NOT NULL,
   `status` enum('Posted','Unposted') NOT NULL,
   `date_posted` datetime(6) NOT NULL DEFAULT current_timestamp(6)
@@ -451,9 +461,10 @@ CREATE TABLE `tbl_news` (
 -- Dumping data for table `tbl_news`
 --
 
-INSERT INTO `tbl_news` (`id`, `img_name`, `headline`, `status`, `date_posted`) VALUES
-(1, 'azure.png', 'Exciting News: Dunkinâ€™ is Coming to Azure! Grand Opening with Exclusive Deals and Delicious Treats!', 'Posted', '2024-08-01 16:00:12.000000'),
-(2, 'valley1.png', 'Exciting News: Dunkinâ€™ Store Under Construction and Coming Soon to Valley 1 with Grand Opening Surprises!', 'Posted', '2024-08-01 16:09:03.000000');
+INSERT INTO `tbl_news` (`id`, `img_name`, `file_path`, `headline`, `status`, `date_posted`) VALUES
+(1, 'azure.png', '../../uploads/news/azure.png', 'Exciting News: Dunkinâ€™ is Coming to Azure! Grand Opening with Exclusive Deals and Delicious Treats!', 'Posted', '2024-08-01 16:00:12.000000'),
+(3, 'valley1.png', '../../uploads/news/valley1.png', 'Exciting News: Dunkinâ€™ Store Under Construction and Coming Soon to Valley 1 with Grand Opening Surprises!', 'Posted', '2024-08-02 09:45:43.000000'),
+(4, 'evacom.png', '../../uploads/news/evacom.png', 'Exciting Update: Dunkinâ€™ Outlet in Evacom Undergoing Renovation for an Enhanced Experience!', 'Posted', '2024-08-02 14:11:32.000000');
 
 -- --------------------------------------------------------
 
@@ -496,6 +507,7 @@ CREATE TABLE `tbl_outlet` (
   `address` varchar(1000) DEFAULT NULL,
   `status` enum('Active','Closed') NOT NULL,
   `service_options` text NOT NULL,
+  `payment_type` text NOT NULL,
   `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
   `created` datetime(6) NOT NULL DEFAULT current_timestamp(6),
   `image_path` varchar(255) DEFAULT NULL,
@@ -506,15 +518,16 @@ CREATE TABLE `tbl_outlet` (
 -- Dumping data for table `tbl_outlet`
 --
 
-INSERT INTO `tbl_outlet` (`id`, `store_name`, `branch_code`, `outlet_code`, `shop_type`, `address`, `status`, `service_options`, `updated`, `created`, `image_path`, `image_name`) VALUES
-(1, 'Alabang Town Center', '057', 'PDC001', 'b', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-19 09:46:24.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
-(2, 'Festival Mall', '00072', 'PDC033', 'b', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Closed', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-20 09:41:38.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
-(3, 'Moonwalk', '018', 'PDC008', 'b', '432 Real ST, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:06.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
-(4, 'Verdant', '053', 'PDC017', 'a', 'UNIT/DOOR NO.48 SANTIAGUEL BLDG. PAMPLONA DOS NCR, FOURTH DISTRICT CITY OF LAS PINAS', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:12.000000', '2024-06-03 14:54:32.000000', '../../uploads/outlets/verdant.png', 'verdant.png'),
-(5, 'Northgate', '060', 'PDC009', 'b', 'Space No. 204 Fastbytes Northgate Alabang Muntinlupa City', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:20.000000', '2024-06-04 09:49:21.000000', '../../uploads/outlets/northgate.png', 'northgate.png'),
-(7, 'Southville', '062', 'PDC014', 'b', 'Lot 1-A-A The Edge Building CAA Road (J. Aguilar Avenue) Pulang Lupa 2 1st District, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:27.000000', '2024-06-07 15:37:33.000000', '../../uploads/outlets/southville.png', 'southville.png'),
-(8, 'DoÃ±a Manuela', '00066', 'PDC028', 'b', 'Unit A Food ST. Alabang Zapote RD. Pamplona Tres, City of Las PiÃ±as', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:33.000000', '2024-06-13 10:00:13.000000', '../../uploads/outlets/dona_manuela.png', 'dona_manuela.png'),
-(9, 'Manila Times', '00037', 'PDC006', 'b', 'Real Cor Times Avenue Pamplona Tres, Las PiÃ±as City', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '2024-06-18 11:07:41.000000', '2024-06-18 09:54:18.000000', '../../uploads/outlets/manila_times.png', 'manila_times.png');
+INSERT INTO `tbl_outlet` (`id`, `store_name`, `branch_code`, `outlet_code`, `shop_type`, `address`, `status`, `service_options`, `payment_type`, `updated`, `created`, `image_path`, `image_name`) VALUES
+(1, 'Alabang Town Center', '057', 'PDC001', 'b', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-19 09:46:24.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
+(2, 'Festival Mall', '00072', 'PDC033', 'b', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Closed', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-20 09:41:38.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
+(3, 'Moonwalk', '018', 'PDC008', 'b', '432 Real ST, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:06.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
+(4, 'Verdant', '053', 'PDC017', 'a', 'UNIT/DOOR NO.48 SANTIAGUEL BLDG. PAMPLONA DOS NCR, FOURTH DISTRICT CITY OF LAS PINAS', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:12.000000', '2024-06-03 14:54:32.000000', '../../uploads/outlets/verdant.png', 'verdant.png'),
+(5, 'Northgate', '060', 'PDC009', 'b', 'Space No. 204 Fastbytes Northgate Alabang Muntinlupa City', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:20.000000', '2024-06-04 09:49:21.000000', '../../uploads/outlets/northgate.png', 'northgate.png'),
+(7, 'Southville', '062', 'PDC014', 'b', 'Lot 1-A-A The Edge Building CAA Road (J. Aguilar Avenue) Pulang Lupa 2 1st District, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:27.000000', '2024-06-07 15:37:33.000000', '../../uploads/outlets/southville.png', 'southville.png'),
+(8, 'DoÃ±a Manuela', '00066', 'PDC028', 'b', 'Unit A Food ST. Alabang Zapote RD. Pamplona Tres, City of Las PiÃ±as', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:33.000000', '2024-06-13 10:00:13.000000', '../../uploads/outlets/dona_manuela.png', 'dona_manuela.png'),
+(9, 'Manila Times', '00037', 'PDC006', 'b', 'Real Cor Times Avenue Pamplona Tres, Las PiÃ±as City', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:41.000000', '2024-06-18 09:54:18.000000', '../../uploads/outlets/manila_times.png', 'manila_times.png'),
+(10, 'DoÃ±a Isabel', '00071', 'PDC031', 'b', '232 DOÃ‘A ISABEL BLDG. NATIONAL HIGHWAY BAYANAN CITY OF MUNTINLUPA NCR, FOURTH DISTRICT', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', 'a:2:{i:0;s:2:\"01\";i:1;s:2:\"02\";}', '2024-08-02 17:43:11.000000', '2024-08-02 17:43:11.000000', '../../uploads/outlets/dona_isabel.png', 'dona_isabel.png');
 
 -- --------------------------------------------------------
 
@@ -921,7 +934,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=227;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -957,7 +970,7 @@ ALTER TABLE `tbl_home_hero`
 -- AUTO_INCREMENT for table `tbl_news`
 --
 ALTER TABLE `tbl_news`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_opportunities`
@@ -969,7 +982,7 @@ ALTER TABLE `tbl_opportunities`
 -- AUTO_INCREMENT for table `tbl_outlet`
 --
 ALTER TABLE `tbl_outlet`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tbl_outlet_menu`
