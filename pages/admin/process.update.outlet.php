@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $address = trim($_POST['address']);
     $status = trim($_POST['status']);
     $service_options = isset($_POST['service_options']) ? serialize($_POST['service_options']) : serialize([]);
+    $payment_options = isset($_POST['payment_options']) ? serialize($_POST['payment_options']) : serialize([]);
     $target_dir = "../../uploads/outlets/";
     $image = $_FILES['image']['name'];
     $image_path = '';
@@ -65,13 +66,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // Update the outlet in the database
     if (!empty($image_path)) {
-        $sql = "UPDATE tbl_outlet SET store_name=?, branch_code=?, outlet_code=?, shop_type=?, address=?, status=?, service_options=?, image_path=?, image_name=?, updated=NOW() WHERE id=?";
+        $sql = "UPDATE tbl_outlet SET store_name=?, branch_code=?, outlet_code=?, shop_type=?, address=?, status=?, service_options=?, payment_type=?, image_path=?, image_name=?, updated=NOW() WHERE id=?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssssssi", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $service_options, $image_path, $image_name, $id);
+        $stmt->bind_param("ssssssssssi", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $service_options, $payment_options, $image_path, $image_name, $id);
     } else {
-        $sql = "UPDATE tbl_outlet SET store_name=?, branch_code=?, outlet_code=?, shop_type=?, address=?, status=?, service_options=?, updated=NOW() WHERE id=?";
+        $sql = "UPDATE tbl_outlet SET store_name=?, branch_code=?, outlet_code=?, shop_type=?, address=?, status=?, service_options=?, payment_type=?, updated=NOW() WHERE id=?";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sssssssi", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $service_options, $id);
+        $stmt->bind_param("ssssssssi", $store_name, $branch_code, $outlet_code, $shop_type, $address, $status, $service_options, $payment_options, $id);
     }
 
     if ($stmt->execute()) {

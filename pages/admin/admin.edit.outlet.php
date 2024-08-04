@@ -41,7 +41,7 @@ $outlet = mysqli_fetch_assoc($outlet_qry);
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 mt-2">
+                <div class="col-md-3 mt-2">
                     <label for="service_options">Service Options :</label>
                     <?php
                     $service_options = unserialize($outlet['service_options']);
@@ -54,6 +54,35 @@ $outlet = mysqli_fetch_assoc($outlet_qry);
                         echo '<div class="form-check">';
                         echo '<input class="form-check-input" type="checkbox" id="'.strtolower(str_replace(' ', '_', $option)).'" name="service_options[]" value="'.$option.'" '.$checked.'>';
                         echo '<label class="form-check-label" for="'.strtolower(str_replace(' ', '_', $option)).'">'.$option.'</label>';
+                        echo '</div>';
+                    }
+                    ?>
+                </div>
+                <div class="col-md-3 mt-2">
+                    <label for="payment_options">Payment Options :</label>
+                    <?php
+                    $payment_options = unserialize($outlet['payment_type']);
+                    if ($payment_options === false) {
+                        $payment_options = [];
+                    }
+                    $options2 = ["01", "02", "03", "04", "05"];
+                    $payment_label = "";
+                    foreach ($options2 as $option2) {
+                        if ($option2 === "01"){
+                            $payment_label = "GCash";
+                        } elseif ($option2 === "02"){
+                            $payment_label = "PayMaya";
+                        } elseif ($option2 === "03"){
+                            $payment_label = "Mastercard";
+                        } elseif ($option2 === "04"){
+                            $payment_label = "Visa";
+                        } elseif ($option2 === "05"){
+                            $payment_label = "QR Ph";
+                        }
+                        $checked = in_array($option2, $payment_options) ? 'checked' : '';
+                        echo '<div class="form-check">';
+                        echo '<input class="form-check-input" type="checkbox" id="'.strtolower(str_replace(' ', '_', $option2)).'" name="payment_options[]" value="'.$option2.'" '.$checked.'>';
+                        echo '<label class="form-check-label" for="'.strtolower(str_replace(' ', '_', $option2)).'">'.$payment_label.'</label>';
                         echo '</div>';
                     }
                     ?>

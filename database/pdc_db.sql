@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 02, 2024 at 11:54 AM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- Generation Time: Aug 04, 2024 at 07:25 PM
+-- Server version: 10.1.39-MariaDB
+-- PHP Version: 7.1.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -33,9 +34,9 @@ CREATE TABLE `tbl_about_hero` (
   `file_path` varchar(1000) NOT NULL,
   `title` varchar(1000) NOT NULL,
   `status` enum('Published','Unpublish') NOT NULL,
-  `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `modified_by` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_about_hero`
@@ -55,8 +56,8 @@ CREATE TABLE `tbl_activity` (
   `user_id` varchar(100) NOT NULL,
   `activity` varchar(2000) NOT NULL,
   `type` varchar(100) NOT NULL,
-  `date_posted` datetime(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `date_posted` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_activity`
@@ -295,7 +296,18 @@ INSERT INTO `tbl_activity` (`id`, `user_id`, `activity`, `type`, `date_posted`) 
 (232, '7', 'User logged in', 'Login', '2024-08-02 17:02:23.531102'),
 (233, '7', 'User logged out', 'Logout', '2024-08-02 17:04:43.601611'),
 (234, '1', 'User logged in', 'Login', '2024-08-02 17:04:55.603518'),
-(235, '1', 'Added new outlet: DoÃ±a Isabel, id: #10', 'Outlet', '2024-08-02 17:43:11.585791');
+(235, '1', 'Added new outlet: DoÃ±a Isabel, id: #10', 'Outlet', '2024-08-02 17:43:11.585791'),
+(236, '7', 'User logged in', 'Login', '2024-08-03 00:22:16.542488'),
+(237, '7', 'User logged out', 'Logout', '2024-08-03 00:23:41.754607'),
+(238, '1', 'User logged in', 'Login', '2024-08-03 00:24:22.866998'),
+(239, '1', 'Added new product category: Donuts, id: #1', 'Category', '2024-08-04 21:46:59.412085'),
+(240, '1', 'Added new product category: Cold Beverages, id: #2', 'Category', '2024-08-05 00:58:42.541025'),
+(241, '1', 'Added new product category: Hot Beverages, id: #3', 'Category', '2024-08-05 00:59:14.932477'),
+(242, '1', 'Added new product category: Bundles, id: #4', 'Category', '2024-08-05 00:59:31.449805'),
+(243, '1', 'Added new product category: Breakfast, id: #5', 'Category', '2024-08-05 00:59:57.340387'),
+(244, '1', 'Added new product category: Savory & Bakery, id: #6', 'Category', '2024-08-05 01:00:18.797452'),
+(245, '1', 'User logged out', 'Logout', '2024-08-05 01:22:46.212832'),
+(246, '7', 'User logged in', 'Login', '2024-08-05 01:22:58.392701');
 
 -- --------------------------------------------------------
 
@@ -311,9 +323,9 @@ CREATE TABLE `tbl_applicants` (
   `position` varchar(1000) NOT NULL,
   `cover` longtext NOT NULL,
   `status` varchar(100) NOT NULL,
-  `date_applied` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `date_applied` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `doc` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_applicants`
@@ -337,9 +349,9 @@ CREATE TABLE `tbl_careers_hero` (
   `file_path` varchar(1000) NOT NULL,
   `title` varchar(1000) NOT NULL,
   `status` enum('Published','Unpublish') NOT NULL,
-  `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `modified_by` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_careers_hero`
@@ -361,9 +373,9 @@ CREATE TABLE `tbl_careers_wylwwu` (
   `title` varchar(1000) NOT NULL,
   `description` longtext NOT NULL,
   `status` enum('Published','Unpublish') NOT NULL,
-  `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `modified_by` varchar(5000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_careers_wylwwu`
@@ -389,8 +401,8 @@ CREATE TABLE `tbl_feedback` (
   `contact` varchar(1000) NOT NULL,
   `message` longtext NOT NULL,
   `status` enum('Unread','Read') NOT NULL,
-  `post_date` datetime(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `post_date` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_feedback`
@@ -428,11 +440,11 @@ CREATE TABLE `tbl_home_hero` (
   `file_path` varchar(1000) NOT NULL,
   `title` varchar(1000) NOT NULL,
   `status` enum('Published','Unpublish') NOT NULL,
-  `created` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `created` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `uploaded_by` varchar(1000) NOT NULL,
-  `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `modified_by` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_home_hero`
@@ -454,8 +466,8 @@ CREATE TABLE `tbl_news` (
   `file_path` varchar(1000) NOT NULL,
   `headline` varchar(1000) NOT NULL,
   `status` enum('Posted','Unposted') NOT NULL,
-  `date_posted` datetime(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `date_posted` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_news`
@@ -479,8 +491,8 @@ CREATE TABLE `tbl_opportunities` (
   `type1` varchar(100) NOT NULL DEFAULT 'On Site',
   `type2` varchar(100) NOT NULL DEFAULT 'Full-time',
   `status` enum('Posted','Unposted') NOT NULL,
-  `created` datetime(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `created` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_opportunities`
@@ -508,26 +520,26 @@ CREATE TABLE `tbl_outlet` (
   `status` enum('Active','Closed') NOT NULL,
   `service_options` text NOT NULL,
   `payment_type` text NOT NULL,
-  `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
-  `created` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+  `created` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `image_path` varchar(255) DEFAULT NULL,
   `image_name` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_outlet`
 --
 
 INSERT INTO `tbl_outlet` (`id`, `store_name`, `branch_code`, `outlet_code`, `shop_type`, `address`, `status`, `service_options`, `payment_type`, `updated`, `created`, `image_path`, `image_name`) VALUES
-(1, 'Alabang Town Center', '057', 'PDC001', 'b', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-19 09:46:24.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
+(1, 'Alabang Town Center', '057', 'PDC001', 'b', 'Alabang Town Center - Ground Level, Alabang Town Center, Alabang-Zapote Road, Alabang, Muntinlupa, Metro Manila', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', 'a:2:{i:0;s:2:\"01\";i:1;s:2:\"02\";}', '2024-08-04 09:42:52.000000', '2024-06-02 22:45:21.000000', '../../uploads/outlets/atc.png', 'atc.png'),
 (2, 'Festival Mall', '00072', 'PDC033', 'b', 'Lower Ground Level, Festival Supermall, Corporate Ave. corner Civic Drive, Filinvest Corporate City, Alabang,Muntinlupa, Metro Manila', 'Closed', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-20 09:41:38.000000', '2024-06-02 22:52:39.000000', '../../uploads/outlets/dunkin_store_clipart.png', 'dunkin_store_clipart.png'),
-(3, 'Moonwalk', '018', 'PDC008', 'b', '432 Real ST, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:06.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
+(3, 'Moonwalk', '018', 'PDC008', 'b', '432 Real ST, Alabangâ€“Zapote Rd, Talon 1, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', 'a:2:{i:0;s:2:\"01\";i:1;s:2:\"02\";}', '2024-08-04 09:43:06.000000', '2024-06-03 10:14:12.000000', '../../uploads/outlets/moonwalk.png', 'moonwalk.png'),
 (4, 'Verdant', '053', 'PDC017', 'a', 'UNIT/DOOR NO.48 SANTIAGUEL BLDG. PAMPLONA DOS NCR, FOURTH DISTRICT CITY OF LAS PINAS', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:12.000000', '2024-06-03 14:54:32.000000', '../../uploads/outlets/verdant.png', 'verdant.png'),
 (5, 'Northgate', '060', 'PDC009', 'b', 'Space No. 204 Fastbytes Northgate Alabang Muntinlupa City', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:20.000000', '2024-06-04 09:49:21.000000', '../../uploads/outlets/northgate.png', 'northgate.png'),
 (7, 'Southville', '062', 'PDC014', 'b', 'Lot 1-A-A The Edge Building CAA Road (J. Aguilar Avenue) Pulang Lupa 2 1st District, Las PiÃ±as, Metro Manila.', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:27.000000', '2024-06-07 15:37:33.000000', '../../uploads/outlets/southville.png', 'southville.png'),
 (8, 'DoÃ±a Manuela', '00066', 'PDC028', 'b', 'Unit A Food ST. Alabang Zapote RD. Pamplona Tres, City of Las PiÃ±as', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:33.000000', '2024-06-13 10:00:13.000000', '../../uploads/outlets/dona_manuela.png', 'dona_manuela.png'),
 (9, 'Manila Times', '00037', 'PDC006', 'b', 'Real Cor Times Avenue Pamplona Tres, Las PiÃ±as City', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', '', '2024-06-18 11:07:41.000000', '2024-06-18 09:54:18.000000', '../../uploads/outlets/manila_times.png', 'manila_times.png'),
-(10, 'DoÃ±a Isabel', '00071', 'PDC031', 'b', '232 DOÃ‘A ISABEL BLDG. NATIONAL HIGHWAY BAYANAN CITY OF MUNTINLUPA NCR, FOURTH DISTRICT', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', 'a:2:{i:0;s:2:\"01\";i:1;s:2:\"02\";}', '2024-08-02 17:43:11.000000', '2024-08-02 17:43:11.000000', '../../uploads/outlets/dona_isabel.png', 'dona_isabel.png');
+(10, 'DoÃ±a Isabel', '00071', 'PDC031', 'b', '232 DOÃ‘A ISABEL BLDG. NATIONAL HIGHWAY BAYANAN CITY OF MUNTINLUPA NCR, FOURTH DISTRICT', 'Active', 'a:2:{i:0;s:7:\"Dine-In\";i:1;s:7:\"Takeout\";}', 'a:2:{i:0;s:2:\"01\";i:1;s:2:\"02\";}', '2024-08-04 09:42:35.000000', '2024-08-02 17:43:11.000000', '../../uploads/outlets/dona_isabel.png', 'dona_isabel.png');
 
 -- --------------------------------------------------------
 
@@ -540,8 +552,8 @@ CREATE TABLE `tbl_outlet_menu` (
   `product_id` int(255) NOT NULL,
   `outlet_id` int(255) NOT NULL,
   `status` enum('Posted','Unposted') NOT NULL,
-  `post_date` datetime(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `post_date` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_outlet_menu`
@@ -705,8 +717,8 @@ CREATE TABLE `tbl_product` (
   `image_name` varchar(2000) NOT NULL,
   `category` enum('Donut','Beverage','Savory','Bakery') NOT NULL,
   `status` enum('Active','Inactive') NOT NULL,
-  `created` datetime(6) NOT NULL DEFAULT current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `created` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_product`
@@ -741,6 +753,33 @@ INSERT INTO `tbl_product` (`id`, `name`, `image_path`, `image_name`, `category`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_product_category`
+--
+
+CREATE TABLE `tbl_product_category` (
+  `id` int(100) NOT NULL,
+  `img_name` varchar(2000) NOT NULL,
+  `file_path` varchar(2000) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `status` enum('Posted','Unposted') NOT NULL,
+  `post_date` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_product_category`
+--
+
+INSERT INTO `tbl_product_category` (`id`, `img_name`, `file_path`, `name`, `status`, `post_date`) VALUES
+(1, 'donuts.jpg', '../../uploads/product_category/donuts.jpg', 'Donuts', 'Posted', '2024-08-04 21:46:59.000000'),
+(2, 'cold_bevarages.jpg', '../../uploads/product_category/cold_bevarages.jpg', 'Cold Beverages', 'Posted', '2024-08-05 00:58:40.000000'),
+(3, 'hot_beverages.jpg', '../../uploads/product_category/hot_beverages.jpg', 'Hot Beverages', 'Posted', '2024-08-05 00:59:14.000000'),
+(4, 'bundles.jpg', '../../uploads/product_category/bundles.jpg', 'Bundles', 'Posted', '2024-08-05 00:59:31.000000'),
+(5, 'breakfast.jpg', '../../uploads/product_category/breakfast.jpg', 'Breakfast', 'Posted', '2024-08-05 00:59:57.000000'),
+(6, 'savory_bakery.jpg', '../../uploads/product_category/savory_bakery.jpg', 'Savory & Bakery', 'Posted', '2024-08-05 01:00:18.000000');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_promo`
 --
 
@@ -753,11 +792,11 @@ CREATE TABLE `tbl_promo` (
   `promo_from` date NOT NULL,
   `promo_to` date NOT NULL,
   `status` enum('Posted','Unposted') NOT NULL,
-  `created` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `created` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `uploaded_by` varchar(100) NOT NULL,
-  `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `modified_by` varchar(5000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_promo`
@@ -780,11 +819,11 @@ CREATE TABLE `tbl_promo_hero` (
   `file_path` varchar(1000) NOT NULL,
   `title` varchar(1000) NOT NULL,
   `status` enum('Published','Unpublish') NOT NULL,
-  `created` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `created` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `uploaded_by` varchar(1000) NOT NULL,
-  `updated` datetime(6) NOT NULL DEFAULT current_timestamp(6),
+  `updated` datetime(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
   `modified_by` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_promo_hero`
@@ -808,9 +847,9 @@ CREATE TABLE `tbl_user` (
   `role` enum('admin','support','dev','marketing','hr','outlet') NOT NULL,
   `branch` varchar(100) DEFAULT NULL,
   `status` enum('Active','Inactive') NOT NULL DEFAULT 'Active',
-  `created` datetime(6) DEFAULT current_timestamp(6),
-  `updated` datetime(6) DEFAULT current_timestamp(6) ON UPDATE current_timestamp(6)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+  `created` datetime(6) DEFAULT CURRENT_TIMESTAMP(6),
+  `updated` datetime(6) DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_user`
@@ -902,6 +941,12 @@ ALTER TABLE `tbl_product`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_product_category`
+--
+ALTER TABLE `tbl_product_category`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_promo`
 --
 ALTER TABLE `tbl_promo`
@@ -934,7 +979,7 @@ ALTER TABLE `tbl_about_hero`
 -- AUTO_INCREMENT for table `tbl_activity`
 --
 ALTER TABLE `tbl_activity`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=236;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=247;
 
 --
 -- AUTO_INCREMENT for table `tbl_applicants`
@@ -997,10 +1042,16 @@ ALTER TABLE `tbl_product`
   MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
+-- AUTO_INCREMENT for table `tbl_product_category`
+--
+ALTER TABLE `tbl_product_category`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `tbl_promo`
 --
 ALTER TABLE `tbl_promo`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `tbl_promo_hero`

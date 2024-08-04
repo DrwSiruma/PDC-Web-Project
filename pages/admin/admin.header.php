@@ -18,6 +18,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
 $accounts_page = ['admin.accounts.php', 'admin.user.php'];
 $outlet_page = ['admin.outlet.php', 'admin.add.outlet.php', 'admin.edit.outlet.php'];
 $product_page = ['admin.products.php', 'admin.add.product.php', 'admin.edit.product.php'];
+$pcategory_page = ['admin.product.category.php', 'admin.add.pcategory.php', 'admin.edit.pcategory.php'];
 
 // echo "Welcome, Admin " . $_SESSION['username'];
 include('../../includes/upload_size.php');
@@ -74,9 +75,12 @@ include('../../includes/upload_size.php');
                     <li class="<?php echo (in_array($current_page, $outlet_page)) ? 'active' : ''; ?>">
                         <a href="admin.outlet.php"><span class="fas fa-store mr-3"></span>&nbsp;Outlets</a>
                     </li>
-                    <li class="<?php echo (in_array($current_page, $product_page)) ? 'active' : ''; ?>">
-                        <a href="admin.products.php"><span class="fas fa-box mr-3"></span>&nbsp;Products</a>
+                    <li class="<?php echo (in_array($current_page, $pcategory_page)) ? 'active' : ''; ?>">
+                        <a href="admin.product.category.php"><span class="fas fa-list mr-3"></span>&nbsp;Product Category</a>
                     </li>
+                    <!-- <li class="<?php //echo (in_array($current_page, $product_page)) ? 'active' : ''; ?>">
+                        <a href="admin.products.php"><span class="fas fa-box mr-3"></span>&nbsp;Products</a>
+                    </li> -->
                     <li class="<?php echo ($current_page == 'admin.settings.php') ? 'active' : ''; ?>">
                         <a href="admin.settings.php"><span class="fas fa-cog mr-3"></span>&nbsp;Settings</a>
                     </li>

@@ -210,3 +210,14 @@ $(document).ready(function () {
     lengthChange: true,
     });
 });
+
+//p category table
+$(document).ready(function () {
+    var table = $('#pcategory_table').DataTable({
+    searching: true,
+    paging: true,
+    info: true,
+    ordering: true,
+    lengthChange: true,
+    });
+});
