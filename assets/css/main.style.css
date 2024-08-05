@@ -285,7 +285,7 @@ a[data-toggle="collapse"] {
     visibility: hidden;
 }
 .product-card input[type="checkbox"]:checked + .product-image {
-    /* border: 2px solid green; */
+    border: 4px solid green;
     background: #DA1884;
 }
 .product-image {

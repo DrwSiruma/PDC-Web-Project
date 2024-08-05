@@ -59,48 +59,42 @@ $outlet_row=mysqli_fetch_array($outlet_qry);
                         </div>
                         <div class="info-wrapper">
                             <div class="info-header">Our Menu Categories</div>
-                            <div class="row">
-                                <div class="col-md-3 mb-2">
-                                    <a href="menu.donuts.php?id=<?php echo $outlet_id; ?>" target="_blank">
-                                        <div class="card shadow-sm">
-                                            <img src="../assets/img/menu/donuts.jpg" class="card-img-top" alt="">
-                                            <div class="card-body text-center">
-                                                <div class="card-title menu-title m-0">Donuts <i class="fas fa-angle-right"></i></div>
+                            <div class="categ-slider swiper">
+                                <div class="swiper-wrapper align-items-center">
+                                    <?php
+                                        $outlet_qry2 = mysqli_query($conn, "SELECT tomc.id AS outlet_categ_id, tomc.category_id, tomc.outlet_id, tpc.id AS category_id, tpc.name AS product_name, tpc.img_name AS img_categ FROM tbl_outlet tbo LEFT JOIN tbl_outlet_pcategory tomc ON tbo.id = tomc.outlet_id LEFT JOIN tbl_product_category tpc ON tomc.category_id = tpc.id WHERE tomc.outlet_id = $outlet_id;");
+
+                                        if (mysqli_num_rows($outlet_qry2 ) > 0) {
+                                            while($outlet_row2 = mysqli_fetch_array($outlet_qry2)) { 
+                                    ?>
+                                            <div class="swiper-slide">
+                                                <div class="card shadow-sm">
+                                                    <img src="../uploads/product_category/<?php echo $outlet_row2['img_categ']; ?>" class="card-img-top" alt="">
+                                                    <div class="card-body text-center">
+                                                        <div class="card-title menu-title m-0"><?php echo $outlet_row2['product_name']; ?></div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </a>
+                                    <?php
+                                            }
+                                        } 
+                                    ?>
                                 </div>
-                                <div class="col-md-3 mb-2">
-                                    <a href="menu.beverages.php?id=<?php echo $outlet_id; ?>" target="_blank">
-                                        <div class="card shadow-sm">
-                                            <img src="../assets/img/menu/beverages.jpg" class="card-img-top" alt="">
-                                            <div class="card-body text-center">
-                                                <div class="card-title menu-title m-0">Beverages <i class="fas fa-angle-right"></i></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 mb-2">
-                                    <a href="menu.savory.php?id=<?php echo $outlet_id; ?>" target="_blank">
-                                        <div class="card shadow-sm">
-                                            <img src="../assets/img/menu/savory.jpg" class="card-img-top" alt="">
-                                            <div class="card-body text-center">
-                                                <div class="card-title menu-title m-0">Savory <i class="fas fa-angle-right"></i></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="col-md-3 mb-2">
-                                    <a href="menu.bakery.php?id=<?php echo $outlet_id; ?>" target="_blank">
-                                        <div class="card shadow-sm">
-                                            <img src="../assets/img/menu/bundles.jpg" class="card-img-top" alt="">
-                                            <div class="card-body text-center">
-                                                <div class="card-title menu-title m-0">Bakery <i class="fas fa-angle-right"></i></div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                <!-- Navigation buttons -->
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
                             </div>
+                            <?php 
+                                if (mysqli_num_rows($outlet_qry2 ) <= 0) {
+                            ?>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="alert alert-warning text-center" role="alert">
+                                            No available products.
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

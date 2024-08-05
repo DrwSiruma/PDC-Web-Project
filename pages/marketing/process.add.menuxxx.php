@@ -6,16 +6,16 @@ $id = $_GET['id'];
 $id = intval($id); // Sanitize the input
 
 // Fetch existing products for this outlet
-$outlet_qry = mysqli_query($conn, "SELECT category_id FROM tbl_outlet_pcategory WHERE outlet_id = $id");
+$outlet_qry = mysqli_query($conn, "SELECT product_id FROM tbl_outlet_menu WHERE outlet_id = $id");
 $existing_products = [];
 while ($row = mysqli_fetch_assoc($outlet_qry)) {
-    $existing_products[] = $row['category_id'];
+    $existing_products[] = $row['product_id'];
 }
 
 // Get the products selected from the form submission
 $selected_products = [];
 foreach ($_POST as $key => $value) {
-    if (strpos($key, 'pcategory') === 0) {
+    if (strpos($key, 'donut') === 0 || strpos($key, 'beverage') === 0 || strpos($key, 'bakery') === 0 || strpos($key, 'savory') === 0) {
         $selected_products[] = intval($value);
     }
 }
@@ -26,13 +26,13 @@ $products_to_remove = array_diff($existing_products, $selected_products);
 
 // Add new products to the outlet menu
 foreach ($products_to_add as $product_id) {
-    $qry = "INSERT INTO tbl_outlet_pcategory (category_id, outlet_id, status, post_date) VALUES ($product_id, $id, 'Posted', NOW())";
+    $qry = "INSERT INTO tbl_outlet_menu (product_id, outlet_id, status, post_date) VALUES ($product_id, $id, 'Posted', NOW())";
     mysqli_query($conn, $qry);
 }
 
 // Remove unselected products from the outlet menu
 foreach ($products_to_remove as $product_id) {
-    $qry = "DELETE FROM tbl_outlet_pcategory WHERE category_id = $product_id AND outlet_id = $id";
+    $qry = "DELETE FROM tbl_outlet_menu WHERE product_id = $product_id AND outlet_id = $id";
     mysqli_query($conn, $qry);
 }
 

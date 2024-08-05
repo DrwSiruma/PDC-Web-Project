@@ -134,4 +134,41 @@ window.addEventListener('scroll', () => {
       },
   });
 
+  new Swiper('.categ-slider', {
+    speed: 400,
+    loop: false,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    slidesPerView: 'auto',
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   type: 'bullets',
+    //   clickable: true
+    // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    breakpoints: {
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 30
+      },
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      },
+      640: {
+        slidesPerView: 3,
+        spaceBetween: 40
+      },
+      992: {
+        slidesPerView: 4,
+        spaceBetween: 30
+      }
+    }
+  });
+
 })()
