@@ -172,3 +172,18 @@ window.addEventListener('scroll', () => {
   });
 
 })()
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // Initialize the toast
+  var reminderAlert = new bootstrap.Toast(document.getElementById('reminderAlert'));
+
+  // Show the toast (alert) after a delay or on some condition
+  setTimeout(() => {
+      reminderAlert.show();
+  }, 3000); // Show after 3 seconds for example
+
+  // Alternatively, you can show the alert on some other event, like a button click
+  // document.getElementById('someButton').addEventListener('click', () => {
+  //     reminderAlert.show();
+  // });
+});

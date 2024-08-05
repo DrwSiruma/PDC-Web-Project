@@ -210,4 +210,15 @@
     </section>
     <!-- ======= End Join-main Section ======= -->
 
+    <div id="reminderAlert" class="toast align-items-center text-bg-info border-0 position-fixed bottom-0 end-0 p-3" role="alert" aria-live="assertive" style="z-index: 1000; width: 500px;" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                <i class="fas fa-exclamation-circle"></i>&nbsp;<b>Attention: Not an E-Commerce Site</b>
+                <br>
+                <p>Please note that this website is not an e-commerce platform. As such, you cannot place orders or make purchases directly through this site. We provide information, product details, and other relevant content, but all transactions must be completed through our physical stores or other specified channels. Thank you for your understanding.</p>
+            </div>
+            <button type="button" class="btn-close me-2" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+
 <?php include('footer.php'); ?>
