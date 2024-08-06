@@ -110,7 +110,7 @@
                             </svg>
                             <i class="fas fa-trophy"></i>
                         </div>
-                        <h4><a href="">Award Title 1</a></h4>
+                        <h4><a href="">2023 Franchisee of the Year Award</a></h4>
                         <p>This is a short description for the award.</p>
                     </div>
                 </div>
