@@ -17,7 +17,7 @@ function log_activity($conn, $user_id, $activity, $type) {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = intval($_POST['id']);
-    $title = $_POST['title'];
+    $title = $_POST["title"];
     $status = $_POST['status'];
     $modified_by = $_SESSION['id'];
     $file_path = '';
@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Update the record
-    $updateQuery = "UPDATE tbl_home_hero SET title = '$title', file_path = '$file_path', status = '$status', updated = NOW(), modified_by = '$modified_by' WHERE id = '$id'";
+    $updateQuery = "UPDATE tbl_home_hero SET title = ".$title.", file_path = '$file_path', status = '$status', updated = NOW(), modified_by = '$modified_by' WHERE id = '$id'";
     if (mysqli_query($conn, $updateQuery)) {
         // Log the activity
         log_activity($conn, $modified_by, "Updated hero section in Home page with ID $id", "Content");
